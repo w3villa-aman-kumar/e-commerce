@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white:white;
+    --primary-grey: #767575;
+    --primary-blue:	#1C39BB;
+    --sunglow:#ffcc33;
+    --flamingo-orange:#e96630;
+    --black:#000000;
+    --desert-storm:#F8F8F8;
+    --pale-gray:#FDFDFD;
+    --porcelain:#EEF2F5;
+    --Montserrat:Montserrat;
+    --bright-grey:#3A4855;
+}
+
+body{
+    font-family: var(--Montserrat);
+}
+/********** Common class css start here **********/
+
+/********** Common class css end here ************/
+
+
+/**************************************
+ **** Home section css start here **** 
+ **************************************/
+
+/* Header container .top-nav css */
+.dropdown{
+    display: inline;
+}
+
+.top-nav a{
+    text-decoration: none;
+    color: var(--primary-grey);
+}
+
+.top-nav .currency{
+    text-align: center;
+}
+
+.top-nav .delivery{
+    text-align: right;
+}
+
+.top-nav-menu a{
+    padding-right: 10px;
+}
+
+.currency .lang-dropdown{
+    padding-right: 10px;
+}
+
+.delivery .mome-dropdown{
+    padding-right: 10px;
+}
+
+
+/* Header container middel-nav css */
+.middel-nav-wrapper{
+    background-color: var(--desert-storm);
+}
+
+.middel-nav{
+    padding: 20px 0;
+}
+
+.signup-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}Compare
+
+.signup-container i{
+    font-size: 16px;
+}
+
+.middel-nav .cart{
+    text-align: right;
+}
+
+
+/* header section bottom-nav */
+.bottom-nav-wrapper{
+    background-color: var(--primary-blue);
+}
+
+.bottom-nav span{
+    padding: 15px 15px;
+    color: white;
+    display: inline-block;
+}
+
+#menu-span-id{
+    background-color: var(--sunglow);
+    color: black;
+}
+
+#sale-span{
+    background-color: var(--flamingo-orange);
+    padding: 0px 5px;
+    margin-left: 10px;
+    bottom: 25px;
+    position: relative;
+}
+
+#new-span{
+    background-color: var(--sunglow);
+    padding: 0px 5px;
+    bottom: 30px;
+    position: relative;
+    right: 30px;
+    color: black;
+}
+
+#megamenu-span{
+    padding-right: 0px;
+}
+
+#fullwidth-span{
+    padding-left: 0px;
+}
+
+.phone-number{
+    text-align: end;
+}
+
+.phone-number span:last-child{
+    background-color: var(--sunglow);
+    color: var(--black);
+}
+
+
+/* home banner css */
+.home-banner{
+    background-color: var(--pale-gray);
+    padding: 20px 0px;
+}
+
+.home-banner-c_inner{
+    height: 100%;
+    border-radius: 15px;
+}
+
+.home-banner-c_inner img{
+    height: 500px;
+    object-fit: contain;
+    object-position: right;
+}
+
+.home-banner-c_item{
+    background-color: var(--porcelain);
+    height: 100%;
+}
+
+#myCarousel{
+    height: 100%;
+}
+
+.carousel-indicators{
+    justify-content: start;
+    margin-left: 5%;
+}
+
+.carousel-indicators li{
+    background-color: var(--flamingo-orange);
+    height: 5px;
+    width: 25px;
+    border-radius: 11px;
+}
+
+.carousel-caption{
+    left: 5%;
+    text-align: left;
+    font-family: var(--Montserrat);
+    font-size: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.carousel-caption h2{
+    color: var(--black);
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.carousel-caption .btn-title{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.side-banner-img{
+    width: 100%;
+    text-align: end;
+    position: relative;
+    background-color: var(--porcelain);
+    border-radius: 15px;
+}
+
+.side-banner-img img{
+    height: 250px;
+    object-fit: contain;
+    object-position: right;
+}
+
+.side-banner-text{
+    position: absolute;
+    top: 50%;
+    text-align: left !important;
+    transform: translateY(-50%);
+    width: 50%;
+    left: 5%;
+}
+
+.side-banner-text p{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.side-up-banner{
+    padding-bottom: 15px;
+}
+
+.side-down-banner{
+    padding-top: 15px;
+}
+
+
+/* bottom bar css */
+.home-bottom-bar{
+    background-color: var(--bright-grey);
+    padding: 40px 0;
+}
+
+.bottom-bar-element{
+    display: flex;
+}
+
+.element-icon{
+    width: 18%;
+}
+
+.element-icon-container{
+    height: 100%;
+    position: relative;
+}
+
+.element-icon-container i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.element-text p{
+    margin: 0;
+}
+
+/********** Home section css end here ************/
+
+
+/********** Media Screen css start here **********/
+@media screen and (min-width:1800px) {
+    .container{
+        max-width: 1620px !important;
+    }
+}
+
+@media screen and (max-width:1800px) and (min-width:1074px) {
+    .container{
+        max-width: 90vw;
+    }
+    
+}
+
+@media screen and (max-width:1074px) {
+    .container{
+        max-width: 966px;
+    }
+    
+}
+
+/********** Media Screen css end here ************/
