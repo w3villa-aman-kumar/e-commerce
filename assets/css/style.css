@@ -15,14 +15,56 @@
     --porcelain:#EEF2F5;
     --Montserrat:Montserrat;
     --bright-grey:#3A4855;
+    --light-grey:#D7DADF;
 }
 
 body{
     font-family: var(--Montserrat);
 }
+
+
 /********** Common class css start here **********/
+.common-heading{
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.common-divider{
+    width: 5%;
+    margin: auto;
+    padding: 1px 0;
+    background-color: var(--flamingo-orange);
+}
+
+.common-desc{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-container{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-group .btn{
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+.btn-group .active{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
 
 /********** Common class css end here ************/
+
 
 
 /**************************************
@@ -260,8 +302,246 @@ body{
 .element-text p{
     margin: 0;
 }
-
 /********** Home section css end here ************/
+
+
+
+/**************************************
+ **** Why Buy section css start here **** 
+ **************************************/
+.why-buy{
+    padding: 70px 0;
+}
+
+/* why buy owl carousel css */
+.top-category{
+    padding: 20px 0;
+}
+
+#top-category-carousel .owl-item img{
+    width: 95%;
+    height: 400px;
+    object-position: center;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.top-category-item{
+    position: relative;
+}
+
+.top-category-btn{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.top-category-btn .btn{
+    background-color: var(--pale-gray);
+    color: var(--black);
+    font-weight: bold;
+}
+
+/********** Why Buy section css end here ************/
+
+
+/**************************************
+**** Featured Product section css start here **** 
+**************************************/
+.featured-products{
+   background-color: var(--desert-storm);
+   padding: 70px 0;
+}
+
+#featured-product-carousel .owl-item img{
+    width: 95%;
+    height: 400px;
+    object-position: center;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.featured-products-card{
+   height: 600px;
+   width: 95%;
+}
+
+.fp-card-img{
+   height: 60%;
+   width: 100%;
+   background-color: var(--white);
+}
+
+.fp-card-img img{
+   width: 100%;
+   object-fit: contain;
+   object-position: center;
+}
+
+.fp-seller{
+   height: 10%;
+   width: 100%;
+   background-color: var(--porcelain);
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10px;
+   align-items: center;
+}
+
+.fp-details{
+    height: 20%;
+    width: 100%;
+    background-color: var(--white);
+    padding: 0 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.fp-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fp-add-cart .btn{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.fp-wishlist i{
+    color: var(--primary-grey);
+}
+
+.fp-wishlist a:first-child{
+    padding-right: 15px;
+}
+
+.fp-buy-now{
+    height: 10%;
+    width: 100%;
+    background-color: var(--porcelain);
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fp-buy-now a:first-child i{
+    border: 0.8px solid green;
+    border-radius: 5px;
+    color: green;
+}
+
+.fp-buy-now a:last-child i{
+    color: red;
+}
+
+.featured-products .see-all-container{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.featured-products .see-all{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+
+/********** Featured Products section css end here ************/
+
+
+/****************************************
+*Featured Category section css start here* 
+******************************************/
+
+.featured-category{
+    background-color: var(--porcelain);
+    padding: 70px 0;
+}
+
+.featured-category-fashion{
+    height: 550px;
+    display: flex;
+    padding-top: 30px;
+}
+
+.featured-category .fashion{
+    width: 20%;
+    background-color: var(--light-grey);
+}
+
+.fashion-wrapper{
+    padding: 20px;
+    height: 100%;
+}
+
+.fashion-img{
+    height: 50%;
+}
+
+.fashion-img img{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.featured-category .new-fashion{
+    width: 80%;
+    background-color: var(--white);
+}
+
+.new-fashion-wrapper{
+    padding: 20px;
+    height: 100%;
+}
+
+.new-fashion-text{
+    height: 10%;
+}
+
+.new-fashion-card-wrapper{
+    height: 90%;
+}
+
+.new-fashion-card{
+    padding: 5px;
+    height: 100%;
+    border: 1px solid lightgrey;
+}
+
+.new-fashion-img{
+    height: 60%;
+}
+
+.new-fashion-card-content{
+    height: 40%;
+}
+
+.new-fashion-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+#new-fashion-carousel .owl-item img{
+    width: 100%;
+    height: 250px;
+    object-position: center;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#new-fashion-carousel .item{
+    padding-right: 10px;
+}
+
+/********** Featured Category section css end here ************/
+
 
 
 /********** Media Screen css start here **********/
