@@ -16,6 +16,8 @@
     --Montserrat:Montserrat;
     --bright-grey:#3A4855;
     --light-grey:#D7DADF;
+    --lapis-blue:#103A8E;
+    --limed-spruce:#3A4855;
 }
 
 body{
@@ -63,12 +65,16 @@ body{
     display: flex;
 }
 
+.common-text{
+    font-size: 1.5em;
+    font-weight: bold;
+}
 /********** Common class css end here ************/
 
 
 
 /**************************************
- **** Home section css start here **** 
+ **** Home Section css start here **** 
  **************************************/
 
 /* Header container .top-nav css */
@@ -540,7 +546,249 @@ input[type=number]::-webkit-outer-spin-button {
     padding-right: 10px;
 }
 
+.new-fashion-card-content p:first-child{
+    color: var(--primary-blue);
+}
+
+.new-fashion-btn .btn{
+    background-color: var(--lapis-blue);
+    color: var(--white);
+    padding: 0 5px;
+}
+
+.new-fashion-btn a{
+    color: var(--primary-grey);
+}
+
+.new-fashion-btn a:first-child{
+    padding-right: 15px;
+}
 /********** Featured Category section css end here ************/
+
+
+
+/**************************************
+ **** Shop By Brand css start here **** 
+ **************************************/
+.shop-by-brand{
+    padding: 70px 0;
+}
+
+#shop-brand-carousel .owl-item img{
+    width: 100%;
+    height: 160px;
+    object-position: center;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+#shop-brand-carousel{
+    padding-top: 40px;
+}
+
+#shop-brand-carousel .item{
+    padding: 0 8px;
+}
+
+.shop-brand-img{
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+}
+
+/********** Shop By Brand css end here ************/
+
+
+/**************************************
+**** Gallery Module css start here **** 
+**************************************/
+.gallery-module{
+    padding: 70px 0;
+    background-color: var(--bright-grey);
+    color: white;
+}
+
+.gallery-module .common-desc{
+    color: var(--primary-grey);
+    font-weight: bold;
+}
+
+.gallery-container{
+    display: flex;
+    padding-top: 40px;
+}
+
+.gallery-img{
+    height: 160px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.gallery-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+/********** Gallery Module css end here ************
+
+
+/**************************************
+**** From Our Blog css start here **** 
+**************************************/
+.our-blog{
+    padding:70px 0;
+    background-color: var(--porcelain);
+}
+
+#our-blog-cards{
+    padding-top: 40px;
+}
+
+#our-blog-cards .owl-item img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.blog-card-wrapper{
+    height: 600px;
+    padding: 0 10px;
+}
+
+.blog-card-header{
+    height: 50%;
+    position: relative;
+}
+
+
+.blog-card-header p{
+    position: absolute;
+    top: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 56px;
+    left: 5px;
+    background-color: var(--lapis-blue);
+    color: white;
+}
+
+.blog-card-header .blog-card-button{
+    position: absolute;
+    bottom: 0;
+    opacity: 0.8;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.blog-card-button span{
+    padding: 0 10px;
+}
+
+.blog-card-container{
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-card-content{
+    background-color: var(--white);
+    text-align: center;
+    padding: 0 15px;
+    height: 50%;
+}
+
+.blog-card-content p:first-child{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+}
+/********** From Our Blog css end here ************
+
+
+/**************************************
+**** People Feedback css start here **** 
+**************************************/
+.feedback-section{
+    padding: 70px 0 30px 0;
+}
+
+#feedback-carousel .owl-item img{
+    width: 20%;
+    margin: auto;
+}
+
+#feedback-carousel{
+    padding-top: 40px;
+}
+
+#feedback-carousel .owl-dots{
+    padding-top: 40px;
+}
+
+.owl-dots{
+    color: var(--flamingo-orange);
+}
+
+.feedback-card{
+    text-align: center;
+    padding: 0 20px;
+}
+
+/********** People Feedback css end here ************/
+
+
+/**************************************
+**** Most Viewed css start here **** 
+**************************************/
+.most-viewed-section{
+    background-color: var(--bright-grey);
+    padding: 50px 0;
+}
+
+.most-viewed-divider{
+    width: 10%;
+    padding: 1px 0;
+    background-color: var(--flamingo-orange);
+}
+
+.most-view-product-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.most-view-product{
+    height: 110px;
+    display: flex;
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 24%;
+}
+
+.product-img img{
+    object-position: center;
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+.most-view-product .product-detail{
+    padding: 5px 10px 0 10px;
+}
+
+.product-detail p:first-child{
+    font-weight: bold;
+}
+
+.product-detail i{
+    padding-right: 15px;
+}
+
+/********** Most Viewed css end here ************/
 
 
 
