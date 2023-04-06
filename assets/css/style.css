@@ -25,7 +25,9 @@ body{
 }
 
 
-/********** Common class css start here **********/
+/**************************************
+ **** Common class css start here **** 
+ **************************************/
 .common-heading{
     font-weight: bold;
     font-size: 2em;
@@ -146,6 +148,7 @@ body{
 .logo h1{
     font-weight: 1000;
 }
+
 
 /* header section bottom-nav */
 .bottom-nav-wrapper{
@@ -353,6 +356,7 @@ body{
     padding: 70px 0;
 }
 
+
 /* why buy owl carousel css */
 .top-category{
     padding: 20px 0;
@@ -382,8 +386,8 @@ body{
     color: var(--black);
     font-weight: bold;
 }
-
 /********** Why Buy section css end here ************/
+
 
 
 /**************************************
@@ -488,15 +492,13 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: var(--primary-blue);
     color: var(--white);
 }
-
-
 /********** Featured Products section css end here ************/
+
 
 
 /****************************************
 *Featured Category section css start here* 
 ******************************************/
-
 .featured-category{
     background-color: var(--porcelain);
     padding: 70px 0;
@@ -530,7 +532,6 @@ input[type=number]::-webkit-outer-spin-button {
     height: 100%;
     border-radius: 5px;
 }
-
 
 .featured-category .new-fashion{
     width: 80%;
@@ -642,8 +643,8 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid var(--light-grey);
     border-radius: 10px;
 }
-
 /********** Shop By Brand css end here ************/
+
 
 
 /**************************************
@@ -678,8 +679,8 @@ input[type=number]::-webkit-outer-spin-button {
     object-position: center;
     border-radius: 8px;
 }
-
 /********** Gallery Module css end here ************
+
 
 
 /**************************************
@@ -758,6 +759,7 @@ input[type=number]::-webkit-outer-spin-button {
 /********** From Our Blog css end here ************
 
 
+
 /**************************************
 **** People Feedback css start here **** 
 **************************************/
@@ -788,6 +790,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /********** People Feedback css end here ************/
+
 
 
 /**************************************
@@ -837,6 +840,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /********** Most Viewed css end here ************/
+
 
 
 /**************************************
@@ -919,7 +923,10 @@ input[type=number]::-webkit-outer-spin-button {
 /********** Footer Section css end here ************/
 
 
-/********** Media Screen css start here **********/
+
+/**************************************
+**** Media Query css start here **** 
+**************************************/
 @media screen and (min-width:1800px) {
     .container{
         max-width: 1620px !important;
@@ -939,5 +946,4 @@ input[type=number]::-webkit-outer-spin-button {
     }
     
 }
-
-/********** Media Screen css end here ************/
+/********** Media Query css end here ************/
