@@ -118,7 +118,7 @@
                         <div class="col-lg-6 search">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                    <button class="btn btn-outline-secondary dropdown-toggle common-bg" type="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#">Action</a>
@@ -129,7 +129,7 @@
                                 <input type="text" class="form-control" aria-label="Text input with dropdown button"
                                     placeholder="Search here...">
                                 <div class="input-group-append">
-                                    <span class="input-group-text">
+                                    <span class="input-group-text common-bg">
                                         <i class="fa-regular fa-magnifying-glass"></i>
                                     </span>
                                 </div>
@@ -158,7 +158,7 @@
                         <div class="col-lg-2 cart">
                             <div class="cart-container">
                                 <span>0 item(s)- $ 0.00</span>
-                                <a href="#"><i class="fa-regular fa-cart-shopping fa-2xl"></i></a>
+                                <a href="#" class="common-bg"><i class="fa-regular fa-cart-shopping fa-2xl"></i></a>
                             </div>
                         </div>
                     </div>
@@ -656,7 +656,7 @@
                     <div class="new-fashion-wrapper">
                         <div class="new-fashion-text">
                             <p class="common-text">New in Fashion</p>
-                            <hr>
+                            <hr class="new-fashion-divider">
                         </div>
                         <div class="new-fashion-card-wrapper">
                             <!-- new fashion owl carousel start -->
@@ -1185,7 +1185,90 @@
     </section>
     <!--********** Most Viewed section end here ***********-->
 
+
+    <!--********** Footer section start here ***********-->
+    <section class="footer-section">
+        <!-- social html here -->
+        <div class="social-wrapper">
+            <div class="container">
+                <a href="#"><img src="./assets/image/facebook-circled-64.png" alt="facebook"></a>
+                <a href="#"><img src="./assets/image/twitter-circled-64.png" alt="twitter"></a>
+                <a href="#"><img src="./assets/image/instagram-circle-64.png" alt="instagram"></a>
+                <a href="#"><img src="./assets/image/linkedin-circled-64.png" alt="linkdin"></a>
+                <a href="#"><img src="./assets/image/youtube-squared-64.png" alt="youtube"></a>
+                <a href="#"><img src="./assets/image/skype-64.png" alt="skype"></a>
+                <a href="#"><img src="./assets/image/google-plus-circled-64.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- information html here -->
+        <div class="information-wrapper">
+            <div class="container information-container">
+                <div class="information-link-container">
+                    <p class="common-text">About Us</p>
+                    <hr>
+                    <a href="#">About Us</a>
+                    <a href="#">Delivery</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Condition</a>
+                    <a href="#">Custom Links</a>
+                </div>
+                <div class="information-link-container">
+                    <p class="common-text">Customer Service</p>
+                    <hr>
+                    <a href="#">Contact</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Site Map</a>
+                    <a href="#">Brands</a>
+                    <a href="#">Unlimited Links</a>
+                </div>
+                <div class="information-link-container">
+                    <p class="common-text">My Account</p>
+                    <hr>
+                    <a href="#">My Account</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Affiliates</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Gift Certificates</a>
+                </div>
+                <div class="information-link-container">
+                    <p class="common-text">Newsletter</p>
+                    <hr>
+                    <p class="newsletter-text">Stay up to date with news and promotions by signing up for 
+                        our newsletter
+                    </p>
+                    <input type="email" placeholder="Your email">
+                    <button class="btn"><i class="fa-regular fa-envelope"></i> Send</button>
+                    <div class="agree-terms-checkbox">
+                        <input type="checkbox" id="agree_terms" name="agree_terms">
+                        <label for="agree_terms">I have read and agree to the <a href="#">Privacy Policy</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom footer html here -->
+        <div class="bottom-footer-wrapper">
+            <div class="container bottom-footer-container">
+                <div class="copyright-date">
+                    <p>Copyright <i class="fa-regular fa-copyright"></i> 2014, Your Store, All Rights Reserved</p>
+                </div>
+                <div class="card-brands">
+                    <i class="fa-brands fa-cc-visa fa-2xl"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-2xl"></i>
+                    <i class="fa-brands fa-cc-amex fa-2xl"></i>
+                    <i class="fa-brands fa-cc-discover fa-2xl"></i>
+                    <i class="fa-brands fa-cc-paypal fa-2xl"></i>
+                    <i class="fa-brands fa-cc-stripe fa-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--********** Footer section end here ***********-->
     
+
     <!-- javascript start from here -->
     <script>
 
@@ -1224,7 +1307,7 @@
             $('#top-category-carousel').owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
+            nav: false,
             responsive: {
                 0: {
                     items: 1
@@ -1241,7 +1324,7 @@
             $('#featured-product-carousel').owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
+            nav: false,
             responsive: {
                 0: {
                     items: 1
