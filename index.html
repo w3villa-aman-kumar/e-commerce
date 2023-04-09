@@ -21,6 +21,7 @@
 
     <!-- font family cdn link -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
     <!-- Owl Carousel css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -41,7 +42,7 @@
 <body>
     <!--********** Home section start here ***********-->
     <section class="home">
-        <header>
+        <header class="desktop-view-header">
             <!-- header top-nav -->
             <div class="container-fluid top-nav-wrapper">
                 <div class="container">
@@ -113,10 +114,10 @@
             <div class="container-fluid middel-nav-wrapper">
                 <div class="container">
                     <div class="row middel-nav">
-                        <div class="col-lg-2 logo">
+                        <div class="logo">
                             <h1>JOURNAL</h1>
                         </div>
-                        <div class="col-lg-6 search">
+                        <div class="search">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary dropdown-toggle common-bg" type="button"
@@ -127,8 +128,7 @@
                                         <a class="dropdown-item" href="#">Something else here</a>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                                    placeholder="Search here...">
+                                <input type="text" class="form-control" placeholder="Search here...">
                                 <div class="input-group-append">
                                     <span class="input-group-text common-bg">
                                         <i class="fa-regular fa-magnifying-glass"></i>
@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 signup">
+                        <div class="signup">
                             <div class="signup-container">
                                 <div class="login-div">
                                     <i class="fa-solid fa-circle-user fa-2xl"></i>
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 cart">
+                        <div class="cart">
                             <div class="cart-container">
                                 <span>0 item(s)- $ 0.00</span>
                                 <a href="#" class="common-bg"><i class="fa-regular fa-cart-shopping fa-2xl"></i></a>
@@ -188,11 +188,70 @@
         </header>
         <!-- header bottom-nav end-->
 
+        <!-- mobile view nav bar start -->
+        <header class="mobile-view-header">
+            <div class="mv-top-nav">
+                <div class="container">
+                    <div class="mv-signup">
+                        <div class="mv-login-div">
+                            <i class="fa-solid fa-circle-user fa-xl"></i>
+                            <span>Login</span>
+                        </div>
+                        <div class="mv-register-div">
+                            <i class="fa-regular fa-pen-to-square fa-xl"></i>
+                            <span>Register</span>
+                        </div>
+                    </div>
+                    <div class="mv-currency">
+                        <div class="dropdown show currency-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-regular fa-dollar-sign"></i> US Dollar
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownCurrLink">
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-euro-sign"></i> Euro</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-indian-rupee-sign"></i>
+                                    Rupees</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-ruble-sign"></i> Ruble</a>
+                            </div>
+                        </div>
+                        <div class="dropdown show lang-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownLangLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="./assets/image/united-kingdom.png" alt="uk"> English
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLangLink">
+                                <a class="dropdown-item" href="#"><img src="./assets/image/india.png" alt="india">
+                                    Hindi</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/russia.png" alt="russia">
+                                    Russian</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/japan.png" alt="japan">
+                                    Japan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mv-bottom-nav">
+                <div class="container">
+                    <div class="logo">
+                        <h1>JOURNAL</h1>
+                    </div>
+                    <div class="mv-menu">
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                        <i class="fa-regular fa-cart-shopping fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile view nav bar end -->
+
         <!-- home-banner start-->
         <div class="home-banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -202,7 +261,7 @@
                             <div class="carousel-inner home-banner-c_inner">
                                 <div class="carousel-item home-banner-c_item active">
                                     <img src="./assets/image/mobile.png" alt="image" class="d-block w-100">
-                                    <div class="carousel-caption d-none d-md-block">
+                                    <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">MOBILE</a>
                                         <h2>Best mobile options at any resolution</h2>
                                         <a href="#" class="btn btn-outline-secondary">LEARN MORE <i
@@ -211,7 +270,7 @@
                                 </div>
                                 <div class="carousel-item home-banner-c_item">
                                     <img src="./assets/image/headphone.png" alt="image" class="d-block w-100">
-                                    <div class="carousel-caption d-none d-md-block">
+                                    <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">HEADPHONE</a>
                                         <h2>Best headphone options at any resolution</h2>
                                         <a href="#" class="btn btn-outline-secondary">LEARN MORE <i
@@ -219,8 +278,8 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item home-banner-c_item">
-                                    <img src="./assets/image/watch.png" alt="image" class="d-block w-100">
-                                    <div class="carousel-caption d-none d-md-block">
+                                    <img src="./assets/image/banner_watch.png" alt="image" class="d-block w-100">
+                                    <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">WATCH</a>
                                         <h2>Best watch options at any resolution</h2>
                                         <a href="#" class="btn btn-outline-secondary">LEARN MORE <i
@@ -230,11 +289,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="row row-col">
+                    <div class="col-lg-4">
+                        <div class="row row-cols-lg-1">
                             <div class="col side-up-banner">
                                 <div class="side-banner-img">
-                                    <img src="./assets/image/apple-watch.png" alt="watch">
+                                    <img src="./assets/image/white-watch.png" alt="watch">
                                     <div class="side-banner-text">
                                         <a href="#">WEARBLES</a>
                                         <p>Intelligent & Durable Design</p>
@@ -243,7 +302,7 @@
                             </div>
                             <div class="col side-down-banner">
                                 <div class="side-banner-img">
-                                    <img src="./assets/image/desktop.png" alt="watch">
+                                    <img src="./assets/image/desktop-2.png" alt="watch">
                                     <div class="side-banner-text">
                                         <a href="#">Computers</a>
                                         <p>Intelligent & Durable Design</p>
@@ -260,7 +319,7 @@
         <!-- home-bottom-bar start-->
         <div class="home-bottom-bar">
             <div class="container">
-                <div class="row">
+                <div class="row row-cols-md-4 row-cols-sm-2 gy-sm-2">
                     <div class="col-md-3">
                         <div class="bottom-bar-element">
                             <div class="element-icon">
@@ -331,13 +390,11 @@
                 in 2013. Tried and tested by over 20K people, Joournal
                 is the best Opencart theme framework on the market today. <a href="#">Learn more</a>
             </p>
-            <div class="btn-container">
-                <div class="btn-group" id="button-group">
-                    <button type="button" class="btn active">TOP CATEGORIES</button>
-                    <button type="button" class="btn">ELECTRONICS</button>
-                    <button type="button" class="btn">BEAUTY</button>
-                    <button type="button" class="btn">FASHION</button>
-                </div>
+            <div id="btn-grp" class="btn-container">
+                <button type="button" class="btn active" onclick="tgl_btn(this,'btn-grp')">TOP CATEGORIES</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'btn-grp')">ELECTRONICS</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'btn-grp')">BEAUTY</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'btn-grp')">FASHION</button>
             </div>
             <!-- top-category-owl-carousel start -->
             <div id="top-category-carousel" class="owl-carousel owl-theme top-category">
@@ -466,21 +523,22 @@
                 in 2013. Tried and tested by over 20K people, Joournal
                 is the best Opencart theme framework on the market today.
             </p>
-            <div class="btn-container">
-                <div class="btn-group" id="button-group">
-                    <button type="button" class="btn active">FEATURED</button>
-                    <button type="button" class="btn">LATEST</button>
-                    <button type="button" class="btn">BESTSELLERS</button>
-                    <button type="button" class="btn">SPECIALS</button>
-                </div>
+            <div id="fp-btn-grp" class="btn-container">
+                <button type="button" class="btn active" onclick="tgl_btn(this,'fp-btn-grp')">FEATURED</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'fp-btn-grp')">LATEST</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'fp-btn-grp')">BESTSELLERS</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'fp-btn-grp')">SPECIALS</button>
             </div>
 
             <!-- featured product owl-carousel start -->
             <div id="featured-product-carousel" class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="featured-products-card">
-                        <div class="fp-card-img">
+                        <div class="fp-card-img common-tag">
                             <img src="./assets/image/headphone.png" alt="headphone">
+                            <div class="card-tag left"><span>CUSTOM LABELS</span></div>
+                            <div class="card-tag right top"><span>-70%</span></div>
+                            <div class="card-tag right bottom"><span>HOT</span></div>
                         </div>
                         <div class="fp-seller">
                             <a href="#">Ericksson</a>
@@ -495,8 +553,8 @@
                                     <button class="btn">Add to Cart</button>
                                 </div>
                                 <div class="fp-wishlist">
-                                    <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-xl"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -508,24 +566,26 @@
                 </div>
                 <div class="item">
                     <div class="featured-products-card">
-                        <div class="fp-card-img">
+                        <div class="fp-card-img common-tag">
                             <img src="./assets/image/high_heel.png" alt="headphone">
+                            <div class="card-tag left"><span>2-3 DAYS</span></div>
+                            <div class="card-tag right"><span>TOP BRAND</span></div>
                         </div>
                         <div class="fp-seller">
-                            <a href="#">Ericksson</a>
-                            <p>Model 519</p>
+                            <a href="#">NY Fashion</a>
+                            <p>Model 206</p>
                         </div>
                         <div class="fp-details">
-                            <p>Headphones</p>
-                            <p>$999.00 <strike>$3,299.00</strike></p>
+                            <p>Maria Pump</p>
+                            <p>$425.00</p>
                             <div class="fp-button">
                                 <div class="fp-add-cart">
                                     <input type="number" id="quantity" min="1" max="5" value="1">
                                     <button class="btn">Add to Cart</button>
                                 </div>
                                 <div class="fp-wishlist">
-                                    <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-xl"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -537,24 +597,26 @@
                 </div>
                 <div class="item">
                     <div class="featured-products-card">
-                        <div class="fp-card-img">
+                        <div class="fp-card-img common-tag">
                             <img src="./assets/image/smart_tv.png" alt="headphone">
+                            <div class="card-tag left left-top"><span>FREE</span></div>
+                            <div class="card-tag left bottom"><span>PRE-ORDER</span></div>
                         </div>
                         <div class="fp-seller">
                             <a href="#">Ericksson</a>
-                            <p>Model 519</p>
+                            <p>Model 995</p>
                         </div>
                         <div class="fp-details">
-                            <p>Headphones</p>
-                            <p>$999.00 <strike>$3,299.00</strike></p>
+                            <p>Toshiba Smart TV</p>
+                            <p>$599.00</p>
                             <div class="fp-button">
                                 <div class="fp-add-cart">
                                     <input type="number" id="quantity" min="1" max="5" value="1">
                                     <button class="btn">Add to Cart</button>
                                 </div>
                                 <div class="fp-wishlist">
-                                    <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-xl"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -566,24 +628,26 @@
                 </div>
                 <div class="item">
                     <div class="featured-products-card">
-                        <div class="fp-card-img">
+                        <div class="fp-card-img common-tag">
                             <img src="./assets/image/digital_camera.png" alt="headphone">
+                            <div class="card-tag left"><span>PRE ORDER</span></div>
+                            <div class="card-tag right"><span>HOT</span></div>
                         </div>
                         <div class="fp-seller">
                             <a href="#">Ericksson</a>
                             <p>Model 519</p>
                         </div>
                         <div class="fp-details">
-                            <p>Headphones</p>
-                            <p>$999.00 <strike>$3,299.00</strike></p>
+                            <p>Digital Camera</p>
+                            <p>$2189.00</p>
                             <div class="fp-button">
                                 <div class="fp-add-cart">
                                     <input type="number" id="quantity" min="1" max="5" value="1">
                                     <button class="btn">Add to Cart</button>
                                 </div>
                                 <div class="fp-wishlist">
-                                    <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-xl"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                    <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -671,7 +735,11 @@
                                 <div class="item">
                                     <div class="new-fashion-card">
                                         <div class="new-fashion-img">
-                                            <img src="./assets/image/fashion.jpg" alt="fashion">
+                                            <div class="common-tag">
+                                                <img src="./assets/image/new-fashion-1.jpg" alt="fashion">
+                                                <div class="card-tag left"><span>2-3 DAYS</span></div>
+                                                <div class="card-tag right"><span>NEW</span></div>
+                                            </div>
                                         </div>
                                         <div class="new-fashion-card-content">
                                             <p>Bodycorn Dress</p>
@@ -689,8 +757,12 @@
                                 </div>
                                 <div class="item">
                                     <div class="new-fashion-card">
-                                        <div class="new-fashion-img">
-                                            <img src="./assets/image/fashion.jpg" alt="fashion">
+                                        <div class="new-fashion-img common-tag">
+                                            <div class="common-tag">
+                                                <img src="./assets/image/new-fashion-2.jpg" alt="fashion">
+                                                <div class="card-tag right top"><span>NEW</span></div>
+                                                <div class="card-tag right bottom"><span>HOT</span></div>
+                                            </div>
                                         </div>
                                         <div class="new-fashion-card-content">
                                             <p>Bodycorn Dress</p>
@@ -708,8 +780,12 @@
                                 </div>
                                 <div class="item">
                                     <div class="new-fashion-card">
-                                        <div class="new-fashion-img">
-                                            <img src="./assets/image/fashion.jpg" alt="fashion">
+                                        <div class="new-fashion-img common-tag">
+                                            <div class="common-tag">
+                                                <img src="./assets/image/new-fashion-3.jpg" alt="fashion">
+                                                <div class="card-tag right top"><span>TOP BRAND</span></div>
+                                                <div class="card-tag right bottom"><span>HOT</span></div>
+                                            </div>
                                         </div>
                                         <div class="new-fashion-card-content">
                                             <p>Bodycorn Dress</p>
@@ -727,8 +803,12 @@
                                 </div>
                                 <div class="item">
                                     <div class="new-fashion-card">
-                                        <div class="new-fashion-img">
-                                            <img src="./assets/image/fashion.jpg" alt="fashion">
+                                        <div class="new-fashion-img common-tag">
+                                            <div class="common-tag">
+                                                <img src="./assets/image/new-fashion-4.jpg" alt="fashion">
+                                                <div class="card-tag right top"><span>-70%</span></div>
+                                                <div class="card-tag right bottom"><span>HOT</span></div>
+                                            </div>
                                         </div>
                                         <div class="new-fashion-card-content">
                                             <p>Bodycorn Dress</p>
@@ -746,8 +826,12 @@
                                 </div>
                                 <div class="item">
                                     <div class="new-fashion-card">
-                                        <div class="new-fashion-img">
-                                            <img src="./assets/image/fashion.jpg" alt="fashion">
+                                        <div class="new-fashion-img common-tag">
+                                            <div class="common-tag">
+                                                <img src="./assets/image/new-fashion-1.jpg" alt="fashion">
+                                                <div class="card-tag right top"><span>-70%</span></div>
+                                                <div class="card-tag right bottom"><span>HOT</span></div>
+                                            </div>
                                         </div>
                                         <div class="new-fashion-card-content">
                                             <p>Bodycorn Dress</p>
@@ -785,62 +869,62 @@
             <div id="shop-brand-carousel" class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-1.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-2.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-3.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-4.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-5.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-6.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-7.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-8.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-1.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-2.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-3.png" alt="brand_logo">
                     </div>
                 </div>
                 <div class="item">
                     <div class="shop-brand-img">
-                        <img src="./assets/image/palm.png" alt="brand_logo">
+                        <img src="./assets/image/brand-4.png" alt="brand_logo">
                     </div>
                 </div>
             </div>
@@ -869,25 +953,25 @@
                     <img src="./assets/image/gallery-2.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-1.jpg" alt="">
+                    <img src="./assets/image/gallery-3.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-2.jpg" alt="">
+                    <img src="./assets/image/gallery-4.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-1.jpg" alt="">
+                    <img src="./assets/image/gallery-5.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-2.jpg" alt="">
+                    <img src="./assets/image/gallery-6.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-1.jpg" alt="">
+                    <img src="./assets/image/gallery-7.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-2.jpg" alt="">
+                    <img src="./assets/image/gallery-8.jpg" alt="">
                 </div>
                 <div class="gallery-img">
-                    <img src="./assets/image/gallery-1.jpg" alt="">
+                    <img src="./assets/image/gallery-9.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -904,11 +988,9 @@
             <p class="common-desc">Journal has been the best selling and most loved Opencart theme since first launch
                 in 2013. Tried and tested by over 20K people.
             </p>
-            <div class="btn-container">
-                <div class="btn-group" id="button-group">
-                    <button type="button" class="btn active">LATEST POST</button>
-                    <button type="button" class="btn">MOST READ</button>
-                </div>
+            <div id="blog-btn-grp" class="btn-container">
+                <button type="button" class="btn active" onclick="tgl_btn(this,'blog-btn-grp')">LATEST POST</button>
+                <button type="button" class="btn" onclick="tgl_btn(this,'blog-btn-grp')">MOST READ</button>
             </div>
 
             <!-- blog owl-carousel start here -->
@@ -1128,9 +1210,74 @@
         <div class="container">
             <p class="common-text">Most Viewed</p>
             <hr class="most-viewed-divider">
-
-            <div class="most-view-product-container">
-                <div class="most-view-product">
+            <!-- most view owl-carousel start here -->
+            <div id="most-view-carousel" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="most-view-product">
+                    <div class="product-img">
+                        <img src="./assets/image/sunglass.png" alt="">
+                    </div>
+                    <div class="product-detail">
+                        <p>Sunglasses</p>
+                        <p>$397.00</p>
+                        <div>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-right-left"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                    <div class="product-img">
+                        <img src="./assets/image/headphone.png" alt="">
+                    </div>
+                    <div class="product-detail">
+                        <p>Headphone</p>
+                        <p>$397.00</p>
+                        <div>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-right-left"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                    <div class="product-img">
+                        <img src="./assets/image/water-watch.png" alt="">
+                    </div>
+                    <div class="product-detail">
+                        <p>Watch</p>
+                        <p>$397.00</p>
+                        <div>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-right-left"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                    <div class="product-img">
+                        <img src="./assets/image/digital_camera.png" alt="">
+                    </div>
+                    <div class="product-detail">
+                        <p>Camera</p>
+                        <p>$397.00</p>
+                        <div>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-right-left"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
                     <div class="product-img">
                         <img src="./assets/image/sunglass.png" alt="">
                     </div>
@@ -1144,21 +1291,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/headphone.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Oversized Sunglasses For Lon...</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
-                        </div>
-                    </div>
                 </div>
-                <div class="most-view-product">
+                <div class="item">
+                    <div class="most-view-product">
                     <div class="product-img">
                         <img src="./assets/image/sunglass.png" alt="">
                     </div>
@@ -1172,21 +1307,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/headphone.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Oversized Sunglasses For Lon...</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <!-- most view owl carousel end -->
         </div>
     </section>
     <!--********** Most Viewed section end here ***********-->
@@ -1198,57 +1321,81 @@
         <!-- social html here -->
         <div class="social-wrapper">
             <div class="container">
-                <a href="#"><img src="./assets/image/facebook-circled-64.png" alt="facebook"></a>
-                <a href="#"><img src="./assets/image/twitter-circled-64.png" alt="twitter"></a>
-                <a href="#"><img src="./assets/image/instagram-circle-64.png" alt="instagram"></a>
-                <a href="#"><img src="./assets/image/linkedin-circled-64.png" alt="linkdin"></a>
-                <a href="#"><img src="./assets/image/youtube-squared-64.png" alt="youtube"></a>
-                <a href="#"><img src="./assets/image/skype-64.png" alt="skype"></a>
-                <a href="#"><img src="./assets/image/google-plus-circled-64.png" alt=""></a>
+                <div class="social-container">
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-skype"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a></div>
+                </div>
             </div>
         </div>
 
         <!-- information html here -->
         <div class="information-wrapper">
-            <div class="container information-container">
-                <div class="information-link-container">
-                    <p class="common-text">About Us</p>
-                    <hr>
-                    <a href="#">About Us</a>
-                    <a href="#">Delivery</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Condition</a>
-                    <a href="#">Custom Links</a>
-                </div>
-                <div class="information-link-container">
-                    <p class="common-text">Customer Service</p>
-                    <hr>
-                    <a href="#">Contact</a>
-                    <a href="#">Returns</a>
-                    <a href="#">Site Map</a>
-                    <a href="#">Brands</a>
-                    <a href="#">Unlimited Links</a>
-                </div>
-                <div class="information-link-container">
-                    <p class="common-text">My Account</p>
-                    <hr>
-                    <a href="#">My Account</a>
-                    <a href="#">Order History</a>
-                    <a href="#">Affiliates</a>
-                    <a href="#">Newsletter</a>
-                    <a href="#">Gift Certificates</a>
-                </div>
-                <div class="information-link-container">
-                    <p class="common-text">Newsletter</p>
-                    <hr>
-                    <p class="newsletter-text">Stay up to date with news and promotions by signing up for 
-                        our newsletter
-                    </p>
-                    <input type="email" placeholder="Your email">
-                    <button class="btn"><i class="fa-regular fa-envelope"></i> Send</button>
-                    <div class="agree-terms-checkbox">
-                        <input type="checkbox" id="agree_terms" name="agree_terms">
-                        <label for="agree_terms">I have read and agree to the <a href="#">Privacy Policy</a></label>
+            <div class="container">
+                <div class="information-container">
+                    <div class="information-link-container">
+                        <p class="common-text">About Us</p>
+                        <hr>
+                        <a href="#">About Us</a>
+                        <a href="#">Delivery</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Condition</a>
+                        <a href="#">Custom Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Customer Service</p>
+                        <hr>
+                        <a href="#">Contact</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Site Map</a>
+                        <a href="#">Brands</a>
+                        <a href="#">Unlimited Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">My Account</p>
+                        <hr>
+                        <a href="#">My Account</a>
+                        <a href="#">Order History</a>
+                        <a href="#">Affiliates</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Gift Certificates</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Newsletter</p>
+                        <hr>
+                        <p class="newsletter-text">Stay up to date with news and promotions by signing up for 
+                            our newsletter
+                        </p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">Send</button>
+                            </div>
+                          </div>
+                        <!-- <input type="email" placeholder="Your email">
+                        <button class="btn"><i class="fa-regular fa-envelope"></i> Send</button> -->
+                        <div class="agree-terms-checkbox">
+                            <input type="checkbox" id="agree_terms" name="agree_terms">
+                            <label for="agree_terms">I have read and agree to the <a href="#">Privacy Policy</a></label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1277,17 +1424,14 @@
 
     <!--********** Javascript start here ***********-->
     <script>
-        var btnContainer = document.getElementById("button-group");
 
-        var btns = btnContainer.getElementsByClassName("btn");
-
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
+        function tgl_btn(self,parent_id){
+            var btnContainer = document.getElementById(parent_id);
+            var current_active = btnContainer.getElementsByClassName("active");
+            current_active[0].classList.remove("active");
+            self.classList.add("active")
         }
+        
     </script>
 
     <!-- jquery cdn -->
@@ -1313,13 +1457,19 @@
             margin: 10,
             nav: false,
             responsive: {
-                0: {
+                1: {
                     items: 1
                 },
-                600: {
+                700: {
+                    items: 2
+                },
+                900: {
                     items: 3
                 },
-                1000: {
+                1400: {
+                    items: 4
+                },
+                1600: {
                     items: 5
                 }
             }
@@ -1330,13 +1480,16 @@
             margin: 10,
             nav: false,
             responsive: {
-                0: {
+                1: {
                     items: 1
                 },
-                600: {
+                700: {
                     items: 2
                 },
-                1000: {
+                1200: {
+                    items: 3
+                },
+                1600: {
                     items: 4
                 }
             }
@@ -1350,10 +1503,13 @@
                 0: {
                     items: 1
                 },
-                600: {
+                900: {
                     items: 2
                 },
-                1000: {
+                1200: {
+                    items: 3
+                },
+                1600: {
                     items: 4
                 }
             }
@@ -1365,12 +1521,24 @@
             nav: false,
             responsive: {
                 0: {
+                    items: 1
+                },
+                400: {
                     items: 3
                 },
                 600: {
+                    items: 4
+                },
+                800: {
                     items: 5
                 },
                 1000: {
+                    items: 6
+                },
+                1200: {
+                    items: 7
+                },
+                1400: {
                     items: 9
                 }
             }
@@ -1406,6 +1574,23 @@
                 },
                 1000: {
                     items: 3
+                }
+            }
+            })
+
+            $('#most-view-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                945: {
+                    items: 3
+                },
+                1400: {
+                    items: 4
                 }
             }
             })
