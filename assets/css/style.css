@@ -28,7 +28,20 @@ body{
     font-family: var(--Montserrat);
 }
 
+#move_page_btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--lapis-blue);
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    display: none;
+}
 
+#move_page_btn i{
+    color: var(--white);
+}
 /**************************************
  **** Common class css start here **** 
  **************************************/
@@ -225,6 +238,15 @@ body{
     color: var(--primary-grey);
 }
 
+.middel-nav .signup{
+    width: 19%;
+    color: var(--primary-grey);
+}
+
+.middel-nav .signup a{
+    color: var(--primary-grey);
+}
+
 .common-bg{
     background-color: var(--primary-blue);
     color: var(--white);
@@ -246,11 +268,6 @@ body{
 
 .search .form-control{
     padding: 1.375rem 0.75rem;
-}
-
-.middel-nav .signup{
-    width: 19%;
-    color: var(--primary-grey);
 }
 
 /* header section bottom-nav */
@@ -320,6 +337,18 @@ body{
 .home-banner-c_item{
     background-color: var(--porcelain);
     height: 100%;
+    position: relative;
+}
+
+.overlay-home-img{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--porcelain);
+    z-index: 9;
+    opacity: 0.3;
+    display: none;
 }
 
 #myCarousel{
@@ -381,6 +410,7 @@ body{
     transform: translateY(-50%);
     width: 50%;
     left: 5%;
+    z-index: 99;
 }
 
 .side-banner-text p{
@@ -1311,10 +1341,6 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 13px;
     }
 
-    /* .bottom-bar-element{
-        justify-content: center;
-    } */
-
     .information-link-container{
         width: 100%;
     }
@@ -1328,9 +1354,9 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 20px;
     }
 
-    /* .btn-container{
-        width: 90%;
-    } */
+    .overlay-home-img{
+        display: block;
+    }
 }
 
 /********** Media Query css end here ************/

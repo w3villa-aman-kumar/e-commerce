@@ -40,6 +40,7 @@
 </head>
 
 <body>
+    <button id="move_page_btn" onclick="move_top()"><i class="fa-solid fa-arrow-up"></i></button>
     <!--********** Home section start here ***********-->
     <section class="home">
         <header class="desktop-view-header">
@@ -140,19 +141,19 @@
                             <div class="signup-container">
                                 <div class="login-div">
                                     <i class="fa-solid fa-circle-user fa-2xl"></i>
-                                    <p>Login</p>
+                                    <p><a href="#">Login</a></p>
                                 </div>
                                 <div class="register-div">
                                     <i class="fa-regular fa-pen-to-square fa-2xl"></i>
-                                    <p>Register</p>
+                                    <p><a href="#">Register</a></p>
                                 </div>
                                 <div class="wishlist-div">
                                     <i class="fa-regular fa-heart fa-2xl"></i>
-                                    <p>Wishlist</p>
+                                    <p><a href="#">Wishlist</a></p>
                                 </div>
                                 <div class="compare-div">
                                     <i class="fa-regular fa-arrow-right-arrow-left fa-2xl"></i>
-                                    <p>Compare</p>
+                                    <p><a href="#">Compare</a></p>
                                 </div>
                             </div>
                         </div>
@@ -261,6 +262,7 @@
                             <div class="carousel-inner home-banner-c_inner">
                                 <div class="carousel-item home-banner-c_item active">
                                     <img src="./assets/image/mobile.png" alt="image" class="d-block w-100">
+                                    <div class="overlay-home-img"></div>
                                     <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">MOBILE</a>
                                         <h2>Best mobile options at any resolution</h2>
@@ -270,6 +272,7 @@
                                 </div>
                                 <div class="carousel-item home-banner-c_item">
                                     <img src="./assets/image/headphone.png" alt="image" class="d-block w-100">
+                                    <div class="overlay-home-img"></div>
                                     <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">HEADPHONE</a>
                                         <h2>Best headphone options at any resolution</h2>
@@ -279,6 +282,7 @@
                                 </div>
                                 <div class="carousel-item home-banner-c_item">
                                     <img src="./assets/image/banner_watch.png" alt="image" class="d-block w-100">
+                                    <div class="overlay-home-img"></div>
                                     <div class="carousel-caption d-md-block">
                                         <a href="#" class="btn btn-title">WATCH</a>
                                         <h2>Best watch options at any resolution</h2>
@@ -294,6 +298,7 @@
                             <div class="col side-up-banner">
                                 <div class="side-banner-img">
                                     <img src="./assets/image/white-watch.png" alt="watch">
+                                    <div class="overlay-home-img"></div>
                                     <div class="side-banner-text">
                                         <a href="#">WEARBLES</a>
                                         <p>Intelligent & Durable Design</p>
@@ -303,6 +308,7 @@
                             <div class="col side-down-banner">
                                 <div class="side-banner-img">
                                     <img src="./assets/image/desktop-2.png" alt="watch">
+                                    <div class="overlay-home-img"></div>
                                     <div class="side-banner-text">
                                         <a href="#">Computers</a>
                                         <p>Intelligent & Durable Design</p>
@@ -1214,99 +1220,99 @@
             <div id="most-view-carousel" class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/sunglass.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Sunglasses</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/sunglass.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Sunglasses</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/headphone.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Headphone</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/headphone.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Headphone</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/water-watch.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Watch</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/digital_camera.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Camera</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/sunglass.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Oversized Sunglasses For Lon...</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="item">
                     <div class="most-view-product">
-                    <div class="product-img">
-                        <img src="./assets/image/sunglass.png" alt="">
-                    </div>
-                    <div class="product-detail">
-                        <p>Oversized Sunglasses For Lon...</p>
-                        <p>$397.00</p>
-                        <div>
-                            <i class="fa-regular fa-cart-shopping"></i>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-right-left"></i>
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <!-- most view owl carousel end -->
@@ -1424,6 +1430,20 @@
 
     <!--********** Javascript start here ***********-->
     <script>
+        window.addEventListener('scroll',()=>{
+                let height = window.pageYOffset;
+                let move_page = document.getElementById("move_page_btn");
+                if(height>100){
+                    move_page.style.display = 'block';
+                    move_page.style.transition = '200ms linear';
+                }else{
+                    move_page.style.display = 'none';
+                }
+            })
+        
+        function move_top(){
+            document.documentElement.scrollTop=0
+        }
 
         function tgl_btn(self,parent_id){
             var btnContainer = document.getElementById(parent_id);
