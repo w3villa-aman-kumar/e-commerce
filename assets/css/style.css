@@ -928,12 +928,18 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     padding: 0 15px;
     height: 50%;
+    color: var(--primary-grey);
 }
 
 .blog-card-content p:first-child{
     font-size: 1.5em;
     font-weight: bold;
     padding-top: 10px;
+    color: var(--black);
+}
+
+.blog-card-content a{
+    color: var(--primary-grey);
 }
 /********** From Our Blog css end here ************
 
@@ -966,6 +972,11 @@ input[type=number]::-webkit-outer-spin-button {
 .feedback-card{
     text-align: center;
     padding: 0 20px;
+    color: var(--primary-grey);
+}
+
+.feedback-card .feedback-name{
+    font-weight: bold;
 }
 
 /********** People Feedback css end here ************/
@@ -977,19 +988,22 @@ input[type=number]::-webkit-outer-spin-button {
 **************************************/
 .most-viewed-section{
     background-color: var(--bright-grey);
-    padding: 50px 0;
+    padding: 40px 0;
+}
+
+.most-viewed-section .common-text{
+    color: var(--white);
+    margin-bottom: 0;
+    font-size: 1em;
 }
 
 .most-viewed-divider{
-    width: 10%;
-    padding: 1px 0;
+    width: 120px;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    padding:0.1px 0;
     background-color: var(--flamingo-orange);
 }
-
-/* .most-view-product-container{
-    display: flex;
-    justify-content: space-between;
-} */
 
 .most-view-product{
     display: flex;
@@ -1003,13 +1017,6 @@ input[type=number]::-webkit-outer-spin-button {
     object-position: center;
     object-fit: contain;
 }
-
-/* .product-img img{
-    object-position: center;
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
-} */
 
 .most-view-product .product-detail{
     padding: 5px 10px;
@@ -1083,7 +1090,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .information-link-container hr{
     width: 15%;
-    padding: 1px 0;
+    padding: 0.1px 0;
     background-color: var(--flamingo-orange);
 }
 
@@ -1104,6 +1111,10 @@ input[type=number]::-webkit-outer-spin-button {
 .information-link-container .btn{
     background-color: var(--lapis-blue);
     color: var(--white);
+}
+
+.information-link-container .input-group{
+    max-width: 366px;
 }
 
 .agree-terms-checkbox{
