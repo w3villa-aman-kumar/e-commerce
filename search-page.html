@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default"
+        disabledhref="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d" />
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-df1bd4d47fc6bf066625b27b61ccafe7.css?vsn=d" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css" />
+
+    <!-- font family cdn link -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Owl Carousel css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./assets/css/search-page.css">
+
+    <title>E-Commerce</title>
+</head>
+<body>
+    <button id="move_page_btn" onclick="move_top()"><i class="fa-solid fa-arrow-up"></i></button>
+    <!--********** Home section start here ***********-->
+    <section class="home">
+        <header class="desktop-view-header">
+            <!-- header top-nav -->
+            <div class="container-fluid top-nav-wrapper">
+                <div class="container">
+                    <div class="row top-nav">
+                        <div class="col-md-5 top-nav-menu">
+                            <a href="#"><i class="fa-regular fa-house"></i> Home</a>
+                            <a href="#"><i class="fa-regular fa-circle-star"></i> About Us</a>
+                            <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
+                            <div class="dropdown show">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownFAQLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-circle-question"></i> FAQ
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownFAQLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 currency">
+                            <div class="dropdown show lang-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownLangLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./assets/image/united-kingdom.png" alt="uk"> English
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownLangLink">
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/india.png" alt="india">
+                                        Hindi</a>
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/russia.png" alt="russia">
+                                        Russian</a>
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/japan.png" alt="japan">
+                                        Japan</a>
+                                </div>
+                            </div>
+                            <div class="dropdown show">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-dollar-sign"></i> US Dollar
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownCurrLink">
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-euro-sign"></i> Euro</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-indian-rupee-sign"></i>
+                                        Rupees</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-ruble-sign"></i> Ruble</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 delivery">
+                            <div class="dropdown show mome-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMoMeLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-user-minus"></i> More Menus
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMoMeCurrLink">
+                                    <a class="dropdown-item" href="#">Address</a>
+                                    <a class="dropdown-item" href="#">Contact Us</a>
+                                    <a class="dropdown-item" href="#">Suggestion</a>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fa-regular fa-truck"></i> Delivery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top-nav end-->
+
+            <!-- header middel-nav start-->
+            <div class="container-fluid middel-nav-wrapper">
+                <div class="container">
+                    <div class="row middel-nav">
+                        <div class="logo">
+                            <h1>JOURNAL</h1>
+                        </div>
+                        <div class="search">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary dropdown-toggle common-bg" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <div class="input-group-append">
+                                    <span class="input-group-text common-bg">
+                                        <i class="fa-regular fa-magnifying-glass"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signup">
+                            <div class="signup-container">
+                                <div class="login-div">
+                                    <i class="fa-solid fa-circle-user fa-2xl"></i>
+                                    <p><a href="#">Login</a></p>
+                                </div>
+                                <div class="register-div">
+                                    <i class="fa-regular fa-pen-to-square fa-2xl"></i>
+                                    <p><a href="#">Register</a></p>
+                                </div>
+                                <div class="wishlist-div">
+                                    <i class="fa-regular fa-heart fa-2xl"></i>
+                                    <p><a href="#">Wishlist</a></p>
+                                </div>
+                                <div class="compare-div">
+                                    <i class="fa-regular fa-arrow-right-arrow-left fa-2xl"></i>
+                                    <p><a href="#">Compare</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart">
+                            <div class="cart-container">
+                                <span>0 item(s)- $ 0.00</span>
+                                <a href="#" class="common-bg"><i class="fa-regular fa-cart-shopping fa-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header middel-nav end-->
+
+            <!-- header bottom-nav start-->
+            <div class="container-fluid bottom-nav-wrapper">
+                <div class="container">
+                    <div class="row bottom-nav">
+                        <div class="col-md-8 bottom-nav-menu">
+                            <span id="menu-span-id"><i class="fa-regular fa-bars-staggered"></i> ALL DEPARTMENTS <span
+                                    id="sale-span">Sale</span></span>
+                            <span>MULTILEVEL</span>
+                            <span id="megamenu-span">MEGAMENU <span id="new-span">New</span></span>
+                            <span id="fullwidth-span">FULLWIDTH</span>
+                        </div>
+                        <div class="col-md-4 phone-number">
+                            <span class="menu-span"><i class="fa-regular fa-phone-volume"></i> 1.800.555.6789</span>
+                            <span class="menu-span"><i class="fa-regular fa-message"></i> BLOG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header bottom-nav end-->
+
+        <!-- mobile view nav bar start -->
+        <header class="mobile-view-header">
+            <div class="mv-top-nav">
+                <div class="container">
+                    <div class="mv-signup">
+                        <div class="mv-login-div">
+                            <i class="fa-solid fa-circle-user fa-xl"></i>
+                            <span>Login</span>
+                        </div>
+                        <div class="mv-register-div">
+                            <i class="fa-regular fa-pen-to-square fa-xl"></i>
+                            <span>Register</span>
+                        </div>
+                    </div>
+                    <div class="mv-currency">
+                        <div class="dropdown show currency-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-regular fa-dollar-sign"></i> US Dollar
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownCurrLink">
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-euro-sign"></i> Euro</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-indian-rupee-sign"></i>
+                                    Rupees</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-ruble-sign"></i> Ruble</a>
+                            </div>
+                        </div>
+                        <div class="dropdown show lang-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownLangLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="./assets/image/united-kingdom.png" alt="uk"> English
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLangLink">
+                                <a class="dropdown-item" href="#"><img src="./assets/image/india.png" alt="india">
+                                    Hindi</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/russia.png" alt="russia">
+                                    Russian</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/japan.png" alt="japan">
+                                    Japan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mv-bottom-nav">
+                <div class="container">
+                    <div class="logo">
+                        <h1>JOURNAL</h1>
+                    </div>
+                    <div class="mv-menu">
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                        <i class="fa-regular fa-cart-shopping fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile view nav bar end -->
+    </section>
+
+
+    
+
+
+    <!--********** Most Viewed section start here ***********-->
+    <section class="most-viewed-section">
+        <div class="container">
+            <p class="common-text">MOST VIEWED</p>
+            <hr class="most-viewed-divider">
+            <!-- most view owl-carousel start here -->
+            <div id="most-view-carousel" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/sunglass.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Sunglasses</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/headphone.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Headphone</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- most view owl carousel end -->
+        </div>
+    </section>
+    <!--********** Most Viewed section end here ***********-->
+
+
+
+    <!--********** Footer section start here ***********-->
+    <section class="footer-section">
+        <!-- social html here -->
+        <div class="social-wrapper">
+            <div class="container">
+                <div class="social-container">
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-skype"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- information html here -->
+        <div class="information-wrapper">
+            <div class="container">
+                <div class="information-container">
+                    <div class="information-link-container">
+                        <p class="common-text">About Us</p>
+                        <hr>
+                        <a href="#">About Us</a>
+                        <a href="#">Delivery</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Condition</a>
+                        <a href="#">Custom Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Customer Service</p>
+                        <hr>
+                        <a href="#">Contact</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Site Map</a>
+                        <a href="#">Brands</a>
+                        <a href="#">Unlimited Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">My Account</p>
+                        <hr>
+                        <a href="#">My Account</a>
+                        <a href="#">Order History</a>
+                        <a href="#">Affiliates</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Gift Certificates</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Newsletter</p>
+                        <hr>
+                        <p class="newsletter-text">Stay up to date with news and promotions by signing up for 
+                            our newsletter
+                        </p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">Send</button>
+                            </div>
+                          </div>
+                        <!-- <input type="email" placeholder="Your email">
+                        <button class="btn"><i class="fa-regular fa-envelope"></i> Send</button> -->
+                        <div class="agree-terms-checkbox">
+                            <input type="checkbox" id="agree_terms" name="agree_terms">
+                            <label for="agree_terms">I have read and agree to the <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom footer html here -->
+        <div class="bottom-footer-wrapper">
+            <div class="container bottom-footer-container">
+                <div class="copyright-date">
+                    <p>Copyright <i class="fa-regular fa-copyright"></i> 2014, Your Store, All Rights Reserved</p>
+                </div>
+                <div class="card-brands">
+                    <i class="fa-brands fa-cc-visa fa-2xl"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-2xl"></i>
+                    <i class="fa-brands fa-cc-amex fa-2xl"></i>
+                    <i class="fa-brands fa-cc-discover fa-2xl"></i>
+                    <i class="fa-brands fa-cc-paypal fa-2xl"></i>
+                    <i class="fa-brands fa-cc-stripe fa-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--********** Footer section end here ***********-->
+
+
+
+</body>
+</html>
