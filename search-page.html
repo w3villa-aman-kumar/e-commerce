@@ -249,7 +249,198 @@
     </section>
 
 
-    
+    <!--********** Main section start here ***********-->
+    <main class="main-section">
+        <div class="container home-icon">
+            <p><i class="fa-regular fa-house"></i> <i class="fa-solid fa-arrow-right"></i> Search</p>
+        </div>
+        <div class="container search-heading-container">
+            <h2>Search camera</h2>
+            <hr class="common-divider">
+        </div>
+
+        <section class="main-content">
+            <div class="container main-content-container">
+                <!-- filter section start here -->
+                <div class="filter">
+                    <div class="filter-container">
+                        <div class="filter-clear-div">
+                            <div class="filter-tag">
+                                <p>Filter</p>
+                                <hr class="common-divider">
+                            </div>
+                            <div>
+                                <button class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- filter section end here -->
+
+                <!-- all item list section start here -->
+                <div class="all-item-list">
+                    <div class="all-item-list-container">
+                        <form action="#" class="search-form">
+                            <div class="search-input">
+                                <input type="text" placeholder="camera">
+                                <select name="categories" id="category">
+                                    <option value="all categories">All Categories</option>
+                                    <option value="camera">Camera</option>
+                                    <option value="cloth">Cloth</option>
+                                    <option value="grocery">Grocery</option>
+                                </select>
+                            </div>
+                            <div class="subcategories-div">
+                                <input type="checkbox" id="subcategories">
+                                <label for="subcategories">Search in subcategories</label>
+                            </div>
+                            <div class="prod_desc-div">
+                                <input type="checkbox" id="prod_desc">
+                                <label for="prod_desc">Search in product description</label>
+                            </div>
+                            <button class="search-btn common-btn">SEARCH</button>
+                        </form>
+                        <div class="searched-item-title">
+                            <p>Products meeting the search criteria</p>
+                            <hr class="common-divider">
+                        </div>
+                        <div class="button-grp">
+                            <div class="left-btn-grp">
+                                <i class="fa-solid fa-table-cells fa-lg"></i>
+                                <i class="fa-solid fa-list-ul fa-lg"></i>
+                                <span class="prod-compare">
+                                    <span class="search-compare-cicle">
+                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                    </span>
+                                    Product Compare
+                                </span>
+                            </div>
+                            <div class="right-btn-grp">
+                                <label for="default">Sort By:</label>
+                                <select id="sort-by">
+                                    <option value="default">Default</option>
+                                    <option value="camera">Low</option>
+                                    <option value="cloth">High</option>
+                                    <option value="grocery">Trending</option>
+                                </select>
+
+                                <label for="default">Show:</label>
+                                <select id="sort-by">
+                                    <option value="12">12</option>
+                                    <option value="6">6</option>
+                                    <option value="3">3</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="searched-item-div">
+                            <div class="searched-card-div">
+                                <div class="featured-products-card">
+                                    <div class="fp-card-img common-tag">
+                                        <img src="./assets/image/headphone.png" alt="headphone">
+                                        <div class="card-tag left"><span>CUSTOM LABELS</span></div>
+                                        <div class="card-tag right top"><span>-70%</span></div>
+                                        <div class="card-tag right bottom"><span>HOT</span></div>
+                                    </div>
+                                    <div class="fp-seller">
+                                        <a href="#">Ericksson</a>
+                                        <p>Model 519</p>
+                                    </div>
+                                    <div class="fp-details">
+                                        <p>Headphones</p>
+                                        <p>$999.00 <strike>$3,299.00</strike></p>
+                                        <div class="fp-button">
+                                            <div class="fp-add-cart">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button class="btn">Add to Cart</button>
+                                            </div>
+                                            <div class="fp-wishlist">
+                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fp-buy-now">
+                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="featured-products-card">
+                                    <div class="fp-card-img common-tag">
+                                        <img src="./assets/image/digital_camera.png" alt="headphone">
+                                        <div class="card-tag left"><span>PRE ORDER</span></div>
+                                        <div class="card-tag right"><span>HOT</span></div>
+                                    </div>
+                                    <div class="fp-seller">
+                                        <a href="#">Ericksson</a>
+                                        <p>Model 519</p>
+                                    </div>
+                                    <div class="fp-details">
+                                        <p>Digital Camera</p>
+                                        <p>$2189.00</p>
+                                        <div class="fp-button">
+                                            <div class="fp-add-cart">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button class="btn">Add to Cart</button>
+                                            </div>
+                                            <div class="fp-wishlist">
+                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fp-buy-now">
+                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="featured-products-card">
+                                    <div class="fp-card-img common-tag">
+                                        <img src="./assets/image/headphone.png" alt="headphone">
+                                        <div class="card-tag left"><span>CUSTOM LABELS</span></div>
+                                        <div class="card-tag right top"><span>-70%</span></div>
+                                        <div class="card-tag right bottom"><span>HOT</span></div>
+                                    </div>
+                                    <div class="fp-seller">
+                                        <a href="#">Ericksson</a>
+                                        <p>Model 519</p>
+                                    </div>
+                                    <div class="fp-details">
+                                        <p>Headphones</p>
+                                        <p>$999.00 <strike>$3,299.00</strike></p>
+                                        <div class="fp-button">
+                                            <div class="fp-add-cart">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button class="btn">Add to Cart</button>
+                                            </div>
+                                            <div class="fp-wishlist">
+                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fp-buy-now">
+                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="bottom-text">You have reached the end of the list</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!--********** Main section end here ***********-->
 
 
     <!--********** Most Viewed section start here ***********-->
