@@ -255,12 +255,17 @@
 
     <!--********** Main section start here ***********-->
     <main class="main-section">
-        <div class="container home-icon">
-            <p><i class="fa-regular fa-house"></i> <i class="fa-solid fa-arrow-right"></i> Search</p>
+        <div class="home-icon-wrapper">
+            <div class="container home-icon">
+                <p><i class="fa-regular fa-house"></i> <i class="fa-solid fa-arrow-right"></i> Search</p>
+            </div>
         </div>
-        <div class="container search-heading-container">
-            <h2>Search camera</h2>
-            <hr class="common-divider">
+        
+        <div class="search-heading-wrapper">
+            <div class="container search-heading-container">
+                <h2>Search camera</h2>
+                <hr class="common-divider">
+            </div>
         </div>
 
         <section class="main-content">
@@ -275,13 +280,13 @@
                                 <hr class="common-divider">
                             </div>
                             <div>
-                                <button class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
+                                <button style="padding: 0 5px;" class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
                             </div>
                         </div>
 
                         <!-- filter price section -->
                         <div class="filter-section" id="filter-price">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-price','price-plus')">
+                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-price','price-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>PRICE</p></div>
                                     <div class="right-text">
@@ -291,17 +296,21 @@
                             <div class="slide open" >
                                 <div class="line-circle"></div>
                                 <div class="price-input">
-                                    <input type="number" placeholder="70">
-                                    <label>$</label>
-                                    <input type="number" placeholder="1718">
-                                    <label for="">$</label>
+                                    <div>
+                                        <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="70">
+                                        <label>$</label>
+                                    </div>
+                                    <div>
+                                        <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="1718">
+                                        <label for="">$</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- filter availability section -->
                         <div class="filter-section" id="filter-availabel">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-availabel','availabel-plus')">
+                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-availabel','availabel-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>AVAILABILITY</p></div>
                                     <div class="right-text">
@@ -322,7 +331,7 @@
 
                         <!-- filter subcategories section -->
                         <div class="filter-section" id="filter-subcat">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-subcat','subcat-plus')">
+                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-subcat','subcat-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>SUBCATEGORIES</p></div>
                                     <div class="right-text">
@@ -339,7 +348,7 @@
 
                         <!-- filter brand section -->
                         <div class="filter-section" id="filter-brand">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-brand','brand-plus')">
+                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-brand','brand-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>BRANDS</p></div>
                                     <div class="right-text">
@@ -357,7 +366,7 @@
 
                         <!-- filter select section -->
                         <div class="filter-section" id="filter-select">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-select','select-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-select','select-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>SELECT</p></div>
                                     <div class="right-text">
@@ -371,7 +380,7 @@
 
                         <!-- filter radio section -->
                         <div class="filter-section" id="filter-radio">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-radio','radio-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-radio','radio-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>RADIO</p></div>
                                     <div class="right-text">
@@ -385,7 +394,7 @@
 
                         <!-- filter color section -->
                         <div class="filter-section" id="filter-color">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-color','color-plus')">
+                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-color','color-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>COLOR</p></div>
                                     <div class="right-text">
@@ -404,7 +413,7 @@
 
                         <!-- filter clockspeed section -->
                         <div class="filter-section" id="filter-clockspeed">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-clockspeed','clockspeed-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-clockspeed','clockspeed-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>CLOCKSPEED</p></div>
                                     <div class="right-text">
@@ -418,7 +427,7 @@
 
                         <!-- filter test 1 section -->
                         <div class="filter-section" id="filter-test">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-test','test-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-test','test-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>TEST 1</p></div>
                                     <div class="right-text">
@@ -432,7 +441,7 @@
 
                         <!-- filter no. of cores section -->
                         <div class="filter-section" id="filter-core">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-core','core-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-core','core-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>NO. OF CORES</p></div>
                                     <div class="right-text">
@@ -446,7 +455,7 @@
 
                         <!-- filter style section -->
                         <div class="filter-section" id="filter-style">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-style','style-plus')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-style','style-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>STYLE</p></div>
                                     <div class="right-text">
@@ -470,21 +479,23 @@
                         <!-- search form -->
                         <form action="#" class="search-form">
                             <div class="search-input">
-                                <input type="text" placeholder="camera">
-                                <select name="categories" id="category">
+                                <input type="text" class="search-input-child" placeholder="camera">
+                                <select name="categories" class="search-input-child" id="category">
                                     <option value="all categories">All Categories</option>
                                     <option value="camera">Camera</option>
                                     <option value="cloth">Cloth</option>
                                     <option value="grocery">Grocery</option>
                                 </select>
                             </div>
-                            <div class="subcategories-div">
-                                <input type="checkbox" id="subcategories">
-                                <label for="subcategories">Search in subcategories</label>
-                            </div>
-                            <div class="prod_desc-div">
-                                <input type="checkbox" id="prod_desc">
-                                <label for="prod_desc">Search in product description</label>
+                            <div class="search-input-checkbox">
+                                <div class="subcategories-div">
+                                    <input type="checkbox" id="subcategories">
+                                    <label for="subcategories">Search in subcategories</label>
+                                </div>
+                                <div class="prod_desc-div">
+                                    <input type="checkbox" id="prod_desc">
+                                    <label for="prod_desc">Search in product description</label>
+                                </div>
                             </div>
                             <button class="search-btn common-btn">SEARCH</button>
                         </form>
@@ -498,31 +509,34 @@
                         <!-- item list button grp -->
                         <div class="button-grp">
                             <div class="left-btn-grp">
-                                <i class="fa-solid fa-table-cells fa-lg"></i>
+                                <i style="padding-right: 5px;" class="fa-solid fa-table-cells fa-lg"></i>
                                 <i class="fa-solid fa-list-ul fa-lg"></i>
+                                <span class="search-compare-cicle">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </span>
                                 <span class="prod-compare">
-                                    <span class="search-compare-cicle">
-                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                    </span>
                                     Product Compare
                                 </span>
                             </div>
                             <div class="right-btn-grp">
-                                <label for="default">Sort By:</label>
-                                <select id="sort-by">
-                                    <option value="default">Default</option>
-                                    <option value="camera">Low</option>
-                                    <option value="cloth">High</option>
-                                    <option value="grocery">Trending</option>
-                                </select>
-
-                                <label for="default">Show:</label>
-                                <select id="sort-by">
-                                    <option value="12">12</option>
-                                    <option value="6">6</option>
-                                    <option value="3">3</option>
-                                    <option value="1">1</option>
-                                </select>
+                                <div>
+                                    <label for="default">Sort By:</label>
+                                    <select id="sort-by">
+                                        <option value="default">Default</option>
+                                        <option value="camera">Low</option>
+                                        <option value="cloth">High</option>
+                                        <option value="grocery">Trending</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="default">Show:</label>
+                                    <select id="show">
+                                        <option value="12">12</option>
+                                        <option value="6">6</option>
+                                        <option value="3">3</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
@@ -890,8 +904,22 @@
 
 
     <script>
+        window.addEventListener('scroll',()=>{
+            let height = window.pageYOffset;
+            let move_page = document.getElementById('move_page_btn')
+            if (height>100) {
+                move_page.style.display = 'block'
+                move_page.style.transition = '200ms linear'
+            } else {
+                move_page.style.display = 'none'
+            }
+        })
 
-        function rightBtnSlider(parent_id,plus_id){
+        function move_top(){
+            document.documentElement.scrollTop=0
+        }
+
+        function rightBtnSlider(self, parent_id, plus_id){
             var slide_parent = document.getElementById(parent_id)
             var plus = document.getElementById(plus_id)
             var slide = slide_parent.getElementsByClassName("slide");
@@ -907,9 +935,11 @@
             if (plus.classList.contains('fa-plus')) {
                     plus.classList.remove('fa-plus');
                     plus.classList.add('fa-minus');
+                    self.style.color = 'var(--lapis-blue)'
                 } else {
                     plus.classList.remove('fa-minus');
                     plus.classList.add('fa-plus');
+                    self.style.color = 'var(--primary-grey)'
             }
         }
 
@@ -935,6 +965,7 @@
         $(document).ready(function(){
             $('#most-view-carousel').owlCarousel({
             loop: true,
+            autoplay:true,
             margin: 10,
             nav: false,
             responsive: {
