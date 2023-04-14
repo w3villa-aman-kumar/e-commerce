@@ -285,7 +285,7 @@
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>PRICE</p></div>
                                     <div class="right-text">
-                                        <i id="price-plus" class="fa-solid fa-plus"></i></div>
+                                        <i id="price-plus" class="fa-solid fa-minus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -305,7 +305,7 @@
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>AVAILABILITY</p></div>
                                     <div class="right-text">
-                                        <i id="availabel-plus" class="fa-solid fa-plus"></i></div>
+                                        <i id="availabel-plus" class="fa-solid fa-minus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -326,7 +326,7 @@
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>SUBCATEGORIES</p></div>
                                     <div class="right-text">
-                                        <i id="subcat-plus" class="fa-solid fa-plus"></i></div>
+                                        <i id="subcat-plus" class="fa-solid fa-minus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -343,7 +343,7 @@
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>BRANDS</p></div>
                                     <div class="right-text">
-                                        <i id="brand-plus" class="fa-solid fa-plus"></i></div>
+                                        <i id="brand-plus" class="fa-solid fa-minus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -357,11 +357,11 @@
 
                         <!-- filter select section -->
                         <div class="filter-section" id="filter-select">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-select')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-select','select-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>SELECT</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="select-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -371,11 +371,11 @@
 
                         <!-- filter radio section -->
                         <div class="filter-section" id="filter-radio">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-radio')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-radio','radio-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>RADIO</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="radio-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -385,11 +385,11 @@
 
                         <!-- filter color section -->
                         <div class="filter-section" id="filter-color">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-color')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-color','color-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>COLOR</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="color-plus" class="fa-solid fa-minus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -404,11 +404,11 @@
 
                         <!-- filter clockspeed section -->
                         <div class="filter-section" id="filter-clockspeed">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-clockspeed')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-clockspeed','clockspeed-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>CLOCKSPEED</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="clockspeed-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -417,12 +417,12 @@
                         </div>
 
                         <!-- filter test 1 section -->
-                        <div class="filter-section">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider()">
+                        <div class="filter-section" id="filter-test">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-test','test-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>TEST 1</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="test-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -432,11 +432,11 @@
 
                         <!-- filter no. of cores section -->
                         <div class="filter-section" id="filter-core">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-core')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-core','core-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>NO. OF CORES</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="core-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -446,11 +446,11 @@
 
                         <!-- filter style section -->
                         <div class="filter-section" id="filter-style">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-style')">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-style','style-plus')">
                                 <div class="filter-section-heading">
                                     <div class="left-text"><p>STYLE</p></div>
                                     <div class="right-text">
-                                        <i class="fa-solid fa-plus"></i></div>
+                                        <i id="style-plus" class="fa-solid fa-plus"></i></div>
                                 </div>
                             </a>
                             <div class="slide open" >
@@ -858,20 +858,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        // var slide = document.querySelector('.slide')
-        // var right_text_minus = document.getElementById('right-text-minus')
-        // var right_text_plus = document.getElementById('right-text-plus')
-        // console.log(slide)
-        
 
-        function rightBtnSlider(parent_id){
-            var slide_parent = document.getElementById(parent_id);
-            console.log(slide_parent)
+        function rightBtnSlider(parent_id,plus_id){
+            var slide_parent = document.getElementById(parent_id)
+            var plus = document.getElementById(plus_id)
             var slide = slide_parent.getElementsByClassName("slide");
-            var plus = slide_parent.getElementsByClassName('fa-plus')
-            console.log(plus)
 
-            console.log(slide)
             if (slide[0].classList.contains('open')) {
                     slide[0].classList.remove('open');
                     slide[0].classList.add('closed');
@@ -880,12 +872,12 @@
                     slide[0].classList.add('open');
             }
 
-            if (plus[0].classList.contains('fa-plus')) {
-                    plus[0].classList.remove('fa-plus');
-                    plus[0].classList.add('fa-minus');
+            if (plus.classList.contains('fa-plus')) {
+                    plus.classList.remove('fa-plus');
+                    plus.classList.add('fa-minus');
                 } else {
-                    plus[0].classList.remove('fa-minus');
-                    plus[0].classList.add('fa-plus');
+                    plus.classList.remove('fa-minus');
+                    plus.classList.add('fa-plus');
             }
         }
     </script>
