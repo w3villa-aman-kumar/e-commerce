@@ -40,6 +40,8 @@
 </head>
 <body>
     <button id="move_page_btn" onclick="move_top()"><i class="fa-solid fa-arrow-up"></i></button>
+
+
     <!--********** Home section start here ***********-->
     <section class="home">
         <header class="desktop-view-header">
@@ -247,6 +249,8 @@
         </header>
         <!-- mobile view nav bar end -->
     </section>
+    <!--********** Home section end here ***********-->
+
 
 
     <!--********** Main section start here ***********-->
@@ -261,7 +265,8 @@
 
         <section class="main-content">
             <div class="container main-content-container">
-                <!-- filter section start here -->
+
+                <!-- ********** filter section start here ********** -->
                 <div class="filter">
                     <div class="filter-container">
                         <div class="filter-clear-div">
@@ -273,13 +278,196 @@
                                 <button class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
                             </div>
                         </div>
+
+                        <!-- filter price section -->
+                        <div class="filter-section" id="filter-price">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-price','price-plus')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>PRICE</p></div>
+                                    <div class="right-text">
+                                        <i id="price-plus" class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                                <div class="line-circle"></div>
+                                <div class="price-input">
+                                    <input type="number" placeholder="70">
+                                    <label>$</label>
+                                    <input type="number" placeholder="1718">
+                                    <label for="">$</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter availability section -->
+                        <div class="filter-section" id="filter-availabel">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-availabel','availabel-plus')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>AVAILABILITY</p></div>
+                                    <div class="right-text">
+                                        <i id="availabel-plus" class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                                <div>
+                                    <input type="checkbox">
+                                    <label for="">In Stock</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox">
+                                    <label for="">Out of Stock</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter subcategories section -->
+                        <div class="filter-section" id="filter-subcat">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-subcat','subcat-plus')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>SUBCATEGORIES</p></div>
+                                    <div class="right-text">
+                                        <i id="subcat-plus" class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                                <div class="subcat-content">
+                                    <div><img src="./assets/image/game.jpg" alt=""></div>
+                                    <p>Electronics</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter brand section -->
+                        <div class="filter-section" id="filter-brand">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-brand','brand-plus')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>BRANDS</p></div>
+                                    <div class="right-text">
+                                        <i id="brand-plus" class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                                <div class="slide-brand">
+                                    <img src="./assets/image/brand-1.png" alt="">
+                                    <img src="./assets/image/brand-2.png" alt="">
+                                    <img src="./assets/image/brand-3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter select section -->
+                        <div class="filter-section" id="filter-select">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-select')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>SELECT</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
+                        <!-- filter radio section -->
+                        <div class="filter-section" id="filter-radio">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-radio')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>RADIO</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
+                        <!-- filter color section -->
+                        <div class="filter-section" id="filter-color">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-color')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>COLOR</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                                <div class="color-div">
+                                    <div style="background-color: aqua;"></div>
+                                    <div style="background-color: violet;"></div>
+                                    <div style="background-color: skyblue;"></div>
+                                    <div style="background-color: mediumseagreen;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter clockspeed section -->
+                        <div class="filter-section" id="filter-clockspeed">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-clockspeed')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>CLOCKSPEED</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
+                        <!-- filter test 1 section -->
+                        <div class="filter-section">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider()">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>TEST 1</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
+                        <!-- filter no. of cores section -->
+                        <div class="filter-section" id="filter-core">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-core')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>NO. OF CORES</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
+                        <!-- filter style section -->
+                        <div class="filter-section" id="filter-style">
+                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider('filter-style')">
+                                <div class="filter-section-heading">
+                                    <div class="left-text"><p>STYLE</p></div>
+                                    <div class="right-text">
+                                        <i class="fa-solid fa-plus"></i></div>
+                                </div>
+                            </a>
+                            <div class="slide open" >
+                            
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <!-- filter section end here -->
+                <!-- ********** filter section start here ********** -->
 
-                <!-- all item list section start here -->
+
+                <!--********** all item list section start here **********-->
                 <div class="all-item-list">
                     <div class="all-item-list-container">
+
+                        <!-- search form -->
                         <form action="#" class="search-form">
                             <div class="search-input">
                                 <input type="text" placeholder="camera">
@@ -300,10 +488,14 @@
                             </div>
                             <button class="search-btn common-btn">SEARCH</button>
                         </form>
+
+                        <!-- searched item title -->
                         <div class="searched-item-title">
                             <p>Products meeting the search criteria</p>
                             <hr class="common-divider">
                         </div>
+
+                        <!-- item list button grp -->
                         <div class="button-grp">
                             <div class="left-btn-grp">
                                 <i class="fa-solid fa-table-cells fa-lg"></i>
@@ -333,8 +525,11 @@
                                 </select>
                             </div>
                         </div>
+
+                        <!-- searched item card -->
                         <div class="searched-item-div">
                             <div class="searched-card-div">
+
                                 <div class="featured-products-card">
                                     <div class="fp-card-img common-tag">
                                         <img src="./assets/image/headphone.png" alt="headphone">
@@ -431,15 +626,13 @@
 
                         <p class="bottom-text">You have reached the end of the list</p>
 
-
-
                     </div>
                 </div>
+                <!--********** all item list section start here **********-->
+
             </div>
         </section>
-        
     </main>
-
     <!--********** Main section end here ***********-->
 
 
@@ -659,7 +852,43 @@
     </section>
     <!--********** Footer section end here ***********-->
 
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script>
+        // var slide = document.querySelector('.slide')
+        // var right_text_minus = document.getElementById('right-text-minus')
+        // var right_text_plus = document.getElementById('right-text-plus')
+        // console.log(slide)
+        
+
+        function rightBtnSlider(parent_id){
+            var slide_parent = document.getElementById(parent_id);
+            console.log(slide_parent)
+            var slide = slide_parent.getElementsByClassName("slide");
+            var plus = slide_parent.getElementsByClassName('fa-plus')
+            console.log(plus)
+
+            console.log(slide)
+            if (slide[0].classList.contains('open')) {
+                    slide[0].classList.remove('open');
+                    slide[0].classList.add('closed');
+                } else {
+                    slide[0].classList.remove('closed');
+                    slide[0].classList.add('open');
+            }
+
+            if (plus[0].classList.contains('fa-plus')) {
+                    plus[0].classList.remove('fa-plus');
+                    plus[0].classList.add('fa-minus');
+                } else {
+                    plus[0].classList.remove('fa-minus');
+                    plus[0].classList.add('fa-plus');
+            }
+        }
+    </script>
 
 </body>
 </html>
