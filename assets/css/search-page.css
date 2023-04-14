@@ -28,6 +28,19 @@ body{
     font-family: var(--Montserrat);
 }
 /* common css start here */
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+.owl-carousel .owl-item img{
+    margin: auto;
+}
+
+.common-text{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 .common-divider{
     width: 60px;
     padding: 1px 0;
@@ -651,6 +664,20 @@ body{
     color: var(--white);
     margin-bottom: 0;
     font-size: 1em;
+    margin-right: 15px;
+    padding-bottom: 10px;
+}
+
+.most-viewed-section .common-text:hover{
+    cursor: pointer;
+}
+
+.most-v-border{
+    border-bottom: 1px solid var(--flamingo-orange);
+}
+
+.recent-view-container{
+    display: flex;
 }
 
 .most-viewed-divider{
@@ -690,6 +717,13 @@ body{
 .product-detail i{
     padding-right: 23px;
     color: var(--primary-grey);
+}
+
+.product-img img{
+    width: 150px;
+    height: 100px;
+    object-position: center;
+    object-fit: contain;
 }
 
 /********** Most Viewed css end here ************/
