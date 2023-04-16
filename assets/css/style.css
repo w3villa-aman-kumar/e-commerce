@@ -34,7 +34,9 @@ body{
     right: 30px;
     background-color: var(--lapis-blue);
     width: 50px;
-    border-radius: 50%;
+    border-radius: 20%;
+    border: none;
+    z-index: 999;
     height: 50px;
     display: none;
 }
@@ -440,17 +442,13 @@ body{
     height: 70px;
 }
 
-.element-icon{
+.element-icon-container{
+    position: relative;
     width: 60px;
-    height: 100%;
+    height: 60px;
     border: 2px solid var(--primary-blue);
     border-radius: 50px;
     color: var(--flamingo-orange);
-}
-
-.element-icon-container{
-    height: 100%;
-    position: relative;
 }
 
 .element-icon-container i{
@@ -603,6 +601,7 @@ body{
    overflow: hidden;
    border-radius: 10px;
    margin: auto;
+   border: 1px solid lightgrey;
 }
 
 .fp-card-img{
@@ -637,7 +636,7 @@ body{
     height: 20%;
     width: 100%;
     background-color: var(--white);
-    padding: 0 10px;
+    padding: 7px 10px;
 }
 
 .featured-products-card .fp-details p:first-child{
@@ -657,6 +656,7 @@ input[type=number]::-webkit-outer-spin-button {
 .fp-button{
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .fp-add-cart .btn{
@@ -708,6 +708,10 @@ input[type=number]::-webkit-outer-spin-button {
 .featured-products .see-all{
     background-color: var(--primary-blue);
     color: var(--white);
+}
+
+.featured-products-card p{
+    margin-bottom: 0;
 }
 /********** Featured Products section css end here ************/
 
@@ -790,7 +794,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .new-fashion-card-content p:first-child{
     color: var(--primary-blue);
-    padding-top: 5px;
+    padding: 10px 0;
+}
+
+.new-fashion-card-wrapper p{
+    margin-bottom: 0;
 }
 
 .new-fashion-btn .btn{
@@ -941,6 +949,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: white;
     text-align: center;
     width: 100%;
+    padding: 5px;
 }
 
 .blog-card-button span{
@@ -966,6 +975,11 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bold;
     padding-top: 10px;
     color: var(--black);
+}
+
+.blog-card-content p:nth-child(2){
+    height: 62%;
+    overflow: hidden;
 }
 
 .blog-card-content a{
@@ -1087,8 +1101,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .logo-container{
     border-radius: 50px;
-    height: 70px;
-    width: 70px;
+    height: 56px;
+    width: 56px;
     background-color: var(--primary-blue);
     display: flex;
     justify-content: center;
