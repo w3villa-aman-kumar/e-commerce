@@ -269,381 +269,387 @@
         </div>
 
         <section class="main-content">
-            <div class="container main-content-container">
+            <div class="container">
+                <div class="main-content-container">
+                    <!-- ********** filter section start here ********** -->
+                    <div class="filter">
+                        <div class="filter-container">
+                            <div class="filter-clear-div">
+                                <div class="filter-tag">
+                                    <p>Filter</p>
+                                    <hr class="common-divider">
+                                </div>
+                                <div>
+                                    <button style="padding: 0 5px;" class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
+                                </div>
+                            </div>
+    
+                            <!-- filter price section -->
+                            <div class="filter-section" id="filter-price">
+                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-price','price-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>PRICE</p></div>
+                                        <div class="right-text">
+                                            <i id="price-plus" class="fa-solid fa-minus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                    <div class="line-circle"></div>
+                                    <div class="price-input">
+                                        <div>
+                                            <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="70">
+                                            <label>$</label>
+                                        </div>
+                                        <div>
+                                            <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="1718">
+                                            <label for="">$</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- filter availability section -->
+                            <div class="filter-section" id="filter-availabel">
+                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-availabel','availabel-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>AVAILABILITY</p></div>
+                                        <div class="right-text">
+                                            <i id="availabel-plus" class="fa-solid fa-minus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                    <div>
+                                        <input type="checkbox">
+                                        <label for="">In Stock</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox">
+                                        <label for="">Out of Stock</label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- filter subcategories section -->
+                            <div class="filter-section" id="filter-subcat">
+                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-subcat','subcat-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>SUBCATEGORIES</p></div>
+                                        <div class="right-text">
+                                            <i id="subcat-plus" class="fa-solid fa-minus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                    <div class="subcat-content">
+                                        <div><img src="./assets/image/game.jpg" alt=""></div>
+                                        <p>Electronics</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- filter brand section -->
+                            <div class="filter-section" id="filter-brand">
+                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-brand','brand-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>BRANDS</p></div>
+                                        <div class="right-text">
+                                            <i id="brand-plus" class="fa-solid fa-minus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                    <div class="slide-brand">
+                                        <img src="./assets/image/brand-1.png" alt="">
+                                        <img src="./assets/image/brand-2.png" alt="">
+                                        <img src="./assets/image/brand-3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- filter select section -->
+                            <div class="filter-section" id="filter-select">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-select','select-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>SELECT</p></div>
+                                        <div class="right-text">
+                                            <i id="select-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
+    
+                            <!-- filter radio section -->
+                            <div class="filter-section" id="filter-radio">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-radio','radio-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>RADIO</p></div>
+                                        <div class="right-text">
+                                            <i id="radio-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
+    
+                            <!-- filter color section -->
+                            <div class="filter-section" id="filter-color">
+                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-color','color-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>COLOR</p></div>
+                                        <div class="right-text">
+                                            <i id="color-plus" class="fa-solid fa-minus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                    <div class="color-div">
+                                        <div style="background-color: aqua;"></div>
+                                        <div style="background-color: violet;"></div>
+                                        <div style="background-color: skyblue;"></div>
+                                        <div style="background-color: mediumseagreen;"></div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- filter clockspeed section -->
+                            <div class="filter-section" id="filter-clockspeed">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-clockspeed','clockspeed-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>CLOCKSPEED</p></div>
+                                        <div class="right-text">
+                                            <i id="clockspeed-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
+    
+                            <!-- filter test 1 section -->
+                            <div class="filter-section" id="filter-test">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-test','test-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>TEST 1</p></div>
+                                        <div class="right-text">
+                                            <i id="test-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
+    
+                            <!-- filter no. of cores section -->
+                            <div class="filter-section" id="filter-core">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-core','core-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>NO. OF CORES</p></div>
+                                        <div class="right-text">
+                                            <i id="core-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
+    
+                            <!-- filter style section -->
+                            <div class="filter-section" id="filter-style">
+                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-style','style-plus')">
+                                    <div class="filter-section-heading">
+                                        <div class="left-text"><p>STYLE</p></div>
+                                        <div class="right-text">
+                                            <i id="style-plus" class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                </a>
+                                <div class="slide open" >
+                                
+                                </div>
+                            </div>
 
-                <!-- ********** filter section start here ********** -->
-                <div class="filter">
-                    <div class="filter-container">
-                        <div class="filter-clear-div">
-                            <div class="filter-tag">
-                                <p>Filter</p>
+                        </div>
+                    </div>
+                    <!-- ********** filter section start here ********** -->
+    
+    
+                    <!--********** all item list section start here **********-->
+                    <div class="all-item-list">
+                        <div class="all-item-list-container">
+    
+                            <!-- search form -->
+                            <form action="#" class="search-form">
+                                <div class="search-input">
+                                    <input type="text" class="search-input-child" placeholder="camera">
+                                    <select name="categories" class="search-input-child" id="category">
+                                        <option value="all categories">All Categories</option>
+                                        <option value="camera">Camera</option>
+                                        <option value="cloth">Cloth</option>
+                                        <option value="grocery">Grocery</option>
+                                    </select>
+                                </div>
+                                <div class="search-input-checkbox">
+                                    <div class="subcategories-div">
+                                        <input type="checkbox" id="subcategories">
+                                        <label for="subcategories">Search in subcategories</label>
+                                    </div>
+                                    <div class="prod_desc-div">
+                                        <input type="checkbox" id="prod_desc">
+                                        <label for="prod_desc">Search in product description</label>
+                                    </div>
+                                </div>
+                                <button class="search-btn common-btn">SEARCH</button>
+                            </form>
+    
+                            <!-- searched item title -->
+                            <div class="searched-item-title">
+                                <p>Products meeting the search criteria</p>
                                 <hr class="common-divider">
                             </div>
-                            <div>
-                                <button style="padding: 0 5px;" class="common-btn"><i class="fa-regular fa-circle-xmark"></i> Clear</button>
-                            </div>
-                        </div>
-
-                        <!-- filter price section -->
-                        <div class="filter-section" id="filter-price">
-                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-price','price-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>PRICE</p></div>
-                                    <div class="right-text">
-                                        <i id="price-plus" class="fa-solid fa-minus"></i></div>
+    
+                            <!-- item list button grp -->
+                            <div class="button-grp">
+                                <div class="left-btn-grp">
+                                    <i style="padding-right: 5px;" class="fa-solid fa-table-cells fa-lg"></i>
+                                    <span class="lis"><i class="fa-solid fa-list-ul fa-lg"></i></span>
+                                    <span class="search-compare-cicle">
+                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                    </span>
+                                    <span class="prod-compare">
+                                        Product Compare
+                                    </span>
                                 </div>
-                            </a>
-                            <div class="slide open" >
-                                <div class="line-circle"></div>
-                                <div class="price-input">
+                                <div class="right-btn-grp">
                                     <div>
-                                        <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="70">
-                                        <label>$</label>
+                                        <label for="default">Sort By:</label>
+                                        <select id="sort-by">
+                                            <option value="default">Default</option>
+                                            <option value="camera">Low</option>
+                                            <option value="cloth">High</option>
+                                            <option value="grocery">Trending</option>
+                                        </select>
                                     </div>
                                     <div>
-                                        <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="1718">
-                                        <label for="">$</label>
+                                        <label for="default">Show:</label>
+                                        <select id="show">
+                                            <option value="12">12</option>
+                                            <option value="6">6</option>
+                                            <option value="3">3</option>
+                                            <option value="1">1</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- filter availability section -->
-                        <div class="filter-section" id="filter-availabel">
-                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-availabel','availabel-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>AVAILABILITY</p></div>
-                                    <div class="right-text">
-                                        <i id="availabel-plus" class="fa-solid fa-minus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                                <div>
-                                    <input type="checkbox">
-                                    <label for="">In Stock</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox">
-                                    <label for="">Out of Stock</label>
+    
+                            <!-- searched item card -->
+                            <div class="searched-item-div">
+                                <div class="searched-card-div">
+    
+                                    <div class="searched-card-grid">
+                                        <div class="search-card-img common-tag">
+                                            <img src="./assets/image/headphone.png" alt="headphone">
+                                            <div class="card-tag left"><span>CUSTOM LABELS</span></div>
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                        <div class="search-card-bottom">
+                                            <div class="search-seller">
+                                                <a href="#">Ericksson</a>
+                                                <p>Model 519</p>
+                                            </div>
+                                            <div class="search-details">
+                                                <p>Headphones</p>
+                                                <p>$999.00 <strike>$3,299.00</strike></p>
+                                                <div class="search-button">
+                                                    <div class="search-add-cart">
+                                                        <input type="number" id="quantity" min="1" max="5" value="1">
+                                                        <button class="btn">Add to Cart</button>
+                                                    </div>
+                                                    <div class="search-wishlist">
+                                                        <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="searched-card-grid">
+                                        <div class="search-card-img common-tag">
+                                            <img src="./assets/image/digital_camera.png" alt="headphone">
+                                            <div class="card-tag left"><span>PRE ORDER</span></div>
+                                            <div class="card-tag right"><span>HOT</span></div>
+                                        </div>
+                                        <div class="search-card-bottom">
+                                            <div class="search-seller">
+                                                <a href="#">Ericksson</a>
+                                                <p>Model 519</p>
+                                            </div>
+                                            <div class="search-details">
+                                                <p>Digital Camera</p>
+                                                <p>$2189.00</p>
+                                                <div class="search-button">
+                                                    <div class="search-add-cart">
+                                                        <input type="number" id="quantity" min="1" max="5" value="1">
+                                                        <button class="btn">Add to Cart</button>
+                                                    </div>
+                                                    <div class="search-wishlist">
+                                                        <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="searched-card-grid">
+                                        <div class="search-card-img common-tag">
+                                            <img src="./assets/image/headphone.png" alt="headphone">
+                                            <div class="card-tag left"><span>CUSTOM LABELS</span></div>
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                        <div class="search-card-bottom">
+                                            <div class="search-seller">
+                                                <a href="#">Ericksson</a>
+                                                <p>Model 519</p>
+                                            </div>
+                                            <div class="search-details">
+                                                <p>Headphones</p>
+                                                <p>$999.00 <strike>$3,299.00</strike></p>
+                                                <div class="search-button">
+                                                    <div class="search-add-cart">
+                                                        <input type="number" id="quantity" min="1" max="5" value="1">
+                                                        <button class="btn">Add to Cart</button>
+                                                    </div>
+                                                    <div class="search-wishlist">
+                                                        <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                                        <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+    
+                            <p class="bottom-text">You have reached the end of the list</p>
+    
                         </div>
-
-                        <!-- filter subcategories section -->
-                        <div class="filter-section" id="filter-subcat">
-                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-subcat','subcat-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>SUBCATEGORIES</p></div>
-                                    <div class="right-text">
-                                        <i id="subcat-plus" class="fa-solid fa-minus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                                <div class="subcat-content">
-                                    <div><img src="./assets/image/game.jpg" alt=""></div>
-                                    <p>Electronics</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- filter brand section -->
-                        <div class="filter-section" id="filter-brand">
-                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-brand','brand-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>BRANDS</p></div>
-                                    <div class="right-text">
-                                        <i id="brand-plus" class="fa-solid fa-minus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                                <div class="slide-brand">
-                                    <img src="./assets/image/brand-1.png" alt="">
-                                    <img src="./assets/image/brand-2.png" alt="">
-                                    <img src="./assets/image/brand-3.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- filter select section -->
-                        <div class="filter-section" id="filter-select">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-select','select-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>SELECT</p></div>
-                                    <div class="right-text">
-                                        <i id="select-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
-                        <!-- filter radio section -->
-                        <div class="filter-section" id="filter-radio">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-radio','radio-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>RADIO</p></div>
-                                    <div class="right-text">
-                                        <i id="radio-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
-                        <!-- filter color section -->
-                        <div class="filter-section" id="filter-color">
-                            <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-color','color-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>COLOR</p></div>
-                                    <div class="right-text">
-                                        <i id="color-plus" class="fa-solid fa-minus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                                <div class="color-div">
-                                    <div style="background-color: aqua;"></div>
-                                    <div style="background-color: violet;"></div>
-                                    <div style="background-color: skyblue;"></div>
-                                    <div style="background-color: mediumseagreen;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- filter clockspeed section -->
-                        <div class="filter-section" id="filter-clockspeed">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-clockspeed','clockspeed-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>CLOCKSPEED</p></div>
-                                    <div class="right-text">
-                                        <i id="clockspeed-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
-                        <!-- filter test 1 section -->
-                        <div class="filter-section" id="filter-test">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-test','test-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>TEST 1</p></div>
-                                    <div class="right-text">
-                                        <i id="test-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
-                        <!-- filter no. of cores section -->
-                        <div class="filter-section" id="filter-core">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-core','core-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>NO. OF CORES</p></div>
-                                    <div class="right-text">
-                                        <i id="core-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
-                        <!-- filter style section -->
-                        <div class="filter-section" id="filter-style">
-                            <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-style','style-plus')">
-                                <div class="filter-section-heading">
-                                    <div class="left-text"><p>STYLE</p></div>
-                                    <div class="right-text">
-                                        <i id="style-plus" class="fa-solid fa-plus"></i></div>
-                                </div>
-                            </a>
-                            <div class="slide open" >
-                            
-                            </div>
-                        </div>
-
                     </div>
+                    <!--********** all item list section start here **********-->
                 </div>
-                <!-- ********** filter section start here ********** -->
-
-
-                <!--********** all item list section start here **********-->
-                <div class="all-item-list">
-                    <div class="all-item-list-container">
-
-                        <!-- search form -->
-                        <form action="#" class="search-form">
-                            <div class="search-input">
-                                <input type="text" class="search-input-child" placeholder="camera">
-                                <select name="categories" class="search-input-child" id="category">
-                                    <option value="all categories">All Categories</option>
-                                    <option value="camera">Camera</option>
-                                    <option value="cloth">Cloth</option>
-                                    <option value="grocery">Grocery</option>
-                                </select>
-                            </div>
-                            <div class="search-input-checkbox">
-                                <div class="subcategories-div">
-                                    <input type="checkbox" id="subcategories">
-                                    <label for="subcategories">Search in subcategories</label>
-                                </div>
-                                <div class="prod_desc-div">
-                                    <input type="checkbox" id="prod_desc">
-                                    <label for="prod_desc">Search in product description</label>
-                                </div>
-                            </div>
-                            <button class="search-btn common-btn">SEARCH</button>
-                        </form>
-
-                        <!-- searched item title -->
-                        <div class="searched-item-title">
-                            <p>Products meeting the search criteria</p>
-                            <hr class="common-divider">
-                        </div>
-
-                        <!-- item list button grp -->
-                        <div class="button-grp">
-                            <div class="left-btn-grp">
-                                <i style="padding-right: 5px;" class="fa-solid fa-table-cells fa-lg"></i>
-                                <i class="fa-solid fa-list-ul fa-lg"></i>
-                                <span class="search-compare-cicle">
-                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                </span>
-                                <span class="prod-compare">
-                                    Product Compare
-                                </span>
-                            </div>
-                            <div class="right-btn-grp">
-                                <div>
-                                    <label for="default">Sort By:</label>
-                                    <select id="sort-by">
-                                        <option value="default">Default</option>
-                                        <option value="camera">Low</option>
-                                        <option value="cloth">High</option>
-                                        <option value="grocery">Trending</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="default">Show:</label>
-                                    <select id="show">
-                                        <option value="12">12</option>
-                                        <option value="6">6</option>
-                                        <option value="3">3</option>
-                                        <option value="1">1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- searched item card -->
-                        <div class="searched-item-div">
-                            <div class="searched-card-div">
-
-                                <div class="featured-products-card">
-                                    <div class="fp-card-img common-tag">
-                                        <img src="./assets/image/headphone.png" alt="headphone">
-                                        <div class="card-tag left"><span>CUSTOM LABELS</span></div>
-                                        <div class="card-tag right top"><span>-70%</span></div>
-                                        <div class="card-tag right bottom"><span>HOT</span></div>
-                                    </div>
-                                    <div class="fp-seller">
-                                        <a href="#">Ericksson</a>
-                                        <p>Model 519</p>
-                                    </div>
-                                    <div class="fp-details">
-                                        <p>Headphones</p>
-                                        <p>$999.00 <strike>$3,299.00</strike></p>
-                                        <div class="fp-button">
-                                            <div class="fp-add-cart">
-                                                <input type="number" id="quantity" min="1" max="5" value="1">
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                            <div class="fp-wishlist">
-                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
-                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="fp-buy-now">
-                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
-                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
-                                    </div>
-                                </div>
-                            
-                                <div class="featured-products-card">
-                                    <div class="fp-card-img common-tag">
-                                        <img src="./assets/image/digital_camera.png" alt="headphone">
-                                        <div class="card-tag left"><span>PRE ORDER</span></div>
-                                        <div class="card-tag right"><span>HOT</span></div>
-                                    </div>
-                                    <div class="fp-seller">
-                                        <a href="#">Ericksson</a>
-                                        <p>Model 519</p>
-                                    </div>
-                                    <div class="fp-details">
-                                        <p>Digital Camera</p>
-                                        <p>$2189.00</p>
-                                        <div class="fp-button">
-                                            <div class="fp-add-cart">
-                                                <input type="number" id="quantity" min="1" max="5" value="1">
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                            <div class="fp-wishlist">
-                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
-                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="fp-buy-now">
-                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
-                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
-                                    </div>
-                                </div>
-                            
-                                <div class="featured-products-card">
-                                    <div class="fp-card-img common-tag">
-                                        <img src="./assets/image/headphone.png" alt="headphone">
-                                        <div class="card-tag left"><span>CUSTOM LABELS</span></div>
-                                        <div class="card-tag right top"><span>-70%</span></div>
-                                        <div class="card-tag right bottom"><span>HOT</span></div>
-                                    </div>
-                                    <div class="fp-seller">
-                                        <a href="#">Ericksson</a>
-                                        <p>Model 519</p>
-                                    </div>
-                                    <div class="fp-details">
-                                        <p>Headphones</p>
-                                        <p>$999.00 <strike>$3,299.00</strike></p>
-                                        <div class="fp-button">
-                                            <div class="fp-add-cart">
-                                                <input type="number" id="quantity" min="1" max="5" value="1">
-                                                <button class="btn">Add to Cart</button>
-                                            </div>
-                                            <div class="fp-wishlist">
-                                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
-                                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="fp-buy-now">
-                                        <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
-                                        <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="bottom-text">You have reached the end of the list</p>
-
-                    </div>
-                </div>
-                <!--********** all item list section start here **********-->
-
             </div>
         </section>
     </main>
@@ -847,7 +853,7 @@
                     <div class="information-link-container">
                         <p class="common-text">Newsletter</p>
                         <hr>
-                        <p class="newsletter-text">Stay up to date with news and promotions by signing up for 
+                        <p class="newsletter-text">Stay up to date with news and promsearchotions by signing up for 
                             our newsletter
                         </p>
                         <div class="input-group mb-3">
