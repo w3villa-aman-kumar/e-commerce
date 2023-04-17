@@ -163,6 +163,20 @@ body{
     top: 15%;
     background-color:red;
 }
+
+.owl-dot.active span{
+    background-color: var(--flamingo-orange) !important;
+}
+
+.common-desc a{
+    color: var(--lapis-blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-container .btn:not(:last-child){
+    border-right: 1px solid var(--light-grey);
+}
 /********** Common class css end here ************/
 
 
@@ -181,6 +195,10 @@ body{
 
 .dropdown{
     display: inline;
+}
+
+.top-nav{
+    font-size: 14px;
 }
 
 .top-nav a{
@@ -229,6 +247,7 @@ body{
 .signup-container p{
     font-size: 14px;
     margin-bottom: 0;
+    padding-top: 5px;
 }
 
 .signup-container i{
@@ -254,9 +273,25 @@ body{
     color: var(--white);
 }
 
+.cart-container span{
+    padding-right: 10px;
+}
+
 .cart-container a{
     padding: 12px 10px;
     border-radius: 5px;
+}
+
+.cart-container a:hover{
+    color: #D7DADF;
+}
+
+.cart-container a i{
+    transition: transform .2s;
+}
+
+.cart-container a i:hover{
+    transform: scale(1.1);
 }
 
 .logo h1{
@@ -268,8 +303,33 @@ body{
     width: 45%;
 }
 
+.search .input-group-prepend .btn:hover{
+    color: white;
+    opacity: 0.9;
+}
+
+.search .input-group-append:hover{
+    cursor:pointer;
+    opacity: 0.9;
+}
+
+.search .input-group-append i{
+    transition: transform .2s;
+}
+
+.search .input-group-append i:hover{
+    transform: scale(1.1);
+}
+
 .search .form-control{
     padding: 1.375rem 0.75rem;
+}
+
+.compare-div div{
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid;
+    width: 29px;
 }
 
 /* header section bottom-nav */
@@ -703,6 +763,7 @@ input[type=number]::-webkit-outer-spin-button {
 .featured-products .see-all{
     background-color: var(--primary-blue);
     color: var(--white);
+    padding: 12px 18px;
 }
 
 /********** Featured Products section css end here ************/
