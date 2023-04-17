@@ -7,7 +7,6 @@
     --Montserrat:Montserrat;
     --secondary-fp:Roboto;
     --white:white;
-    --light-grey: #767575;
     --primary-light-grey:#eee;
     --primary-grey: #696973;
     --primary-blue:	#1C39BB;
@@ -22,6 +21,7 @@
     --light-grey:#D7DADF;
     --lapis-blue:#103A8E;
     --limed-spruce:#3A4855;
+    --semi-light-grey:#a2a7b0;
 }
 
 body{
@@ -242,6 +242,7 @@ body{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 
 .signup-container p{
@@ -925,7 +926,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .gallery-module .common-desc{
-    color: var(--primary-grey);
+    color: var(--semi-light-grey);
     font-weight: bold;
 }
 
@@ -1275,6 +1276,10 @@ input[type=number]::-webkit-outer-spin-button {
     .signup{
         width: 25%;
     }
+
+    .signup-container{
+        column-gap: 7px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -1339,12 +1344,21 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .featured-category .fashion{
-        width: 80%;
+        width: 100%;
+    }
+
+    .fashion-img img{
+        object-position: bottom;
+        height: 350px;
     }
 
     .featured-category .new-fashion{
-        width: 80%;
+        width: 100%;
         margin-top: 5%;
+    }
+
+    .featured-products-card{
+        width: 100%;
     }
 
     .btn-container{
@@ -1371,6 +1385,10 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 0;
         text-align: left;
         width: 100%;
+    }
+
+    .btn-container .btn:not(:last-child) {
+        border-right: 0;
     }
 }
 
