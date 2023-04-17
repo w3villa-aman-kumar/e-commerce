@@ -7,7 +7,6 @@
     --Montserrat:Montserrat;
     --secondary-fp:Roboto;
     --white:white;
-    --light-grey: #767575;
     --primary-light-grey:#eee;
     --primary-grey: #696973;
     --primary-blue:	#1C39BB;
@@ -22,6 +21,7 @@
     --light-grey:#D7DADF;
     --lapis-blue:#103A8E;
     --limed-spruce:#3A4855;
+    --semi-light-grey:#a2a7b0;
 }
 
 body{
@@ -34,7 +34,9 @@ body{
     right: 30px;
     background-color: var(--lapis-blue);
     width: 50px;
-    border-radius: 50%;
+    border-radius: 20%;
+    border: none;
+    z-index: 999;
     height: 50px;
     display: none;
 }
@@ -161,6 +163,20 @@ body{
     top: 15%;
     background-color:red;
 }
+
+.owl-dot.active span{
+    background-color: var(--flamingo-orange) !important;
+}
+
+.common-desc a{
+    color: var(--lapis-blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn-container .btn:not(:last-child){
+    border-right: 1px solid var(--light-grey);
+}
 /********** Common class css end here ************/
 
 
@@ -179,6 +195,10 @@ body{
 
 .dropdown{
     display: inline;
+}
+
+.top-nav{
+    font-size: 14px;
 }
 
 .top-nav a{
@@ -222,11 +242,13 @@ body{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 
 .signup-container p{
     font-size: 14px;
     margin-bottom: 0;
+    padding-top: 5px;
 }
 
 .signup-container i{
@@ -252,9 +274,25 @@ body{
     color: var(--white);
 }
 
+.cart-container span{
+    padding-right: 10px;
+}
+
 .cart-container a{
     padding: 12px 10px;
     border-radius: 5px;
+}
+
+.cart-container a:hover{
+    color: #D7DADF;
+}
+
+.cart-container a i{
+    transition: transform .2s;
+}
+
+.cart-container a i:hover{
+    transform: scale(1.1);
 }
 
 .logo h1{
@@ -266,8 +304,33 @@ body{
     width: 45%;
 }
 
+.search .input-group-prepend .btn:hover{
+    color: white;
+    opacity: 0.9;
+}
+
+.search .input-group-append:hover{
+    cursor:pointer;
+    opacity: 0.9;
+}
+
+.search .input-group-append i{
+    transition: transform .2s;
+}
+
+.search .input-group-append i:hover{
+    transform: scale(1.1);
+}
+
 .search .form-control{
     padding: 1.375rem 0.75rem;
+}
+
+.compare-div div{
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid;
+    width: 29px;
 }
 
 /* header section bottom-nav */
@@ -440,17 +503,13 @@ body{
     height: 70px;
 }
 
-.element-icon{
+.element-icon-container{
+    position: relative;
     width: 60px;
-    height: 100%;
+    height: 60px;
     border: 2px solid var(--primary-blue);
     border-radius: 50px;
     color: var(--flamingo-orange);
-}
-
-.element-icon-container{
-    height: 100%;
-    position: relative;
 }
 
 .element-icon-container i{
@@ -592,41 +651,39 @@ body{
 
 #featured-product-carousel .owl-item img{
     width: 95%;
-    height: 400px;
+    height: 350px;
     object-position: center;
     object-fit: contain;
 }
 
 .featured-products-card{
-   height: 600px;
    width: 95%;
    overflow: hidden;
    border-radius: 10px;
    margin: auto;
+   border: 1px solid lightgrey;
 }
 
 .fp-card-img{
-   height: 60%;
    width: 100%;
    background-color: var(--white);
    position: relative;
 }
 
-.fp-card-img img{
-   width: 100%;
-   object-fit: contain;
-   object-position: center;
-}
+
 
 .featured-products-card .fp-seller{
-   height: 10%;
    width: 100%;
    background-color: var(--porcelain);
    display: flex;
    justify-content: space-between;
-   padding: 0 10px;
+   padding: 10px;
    align-items: center;
    color: var(--primary-grey);
+}
+
+.fp-seller p{
+    margin-bottom: 0;
 }
 
 .featured-products-card a{
@@ -634,10 +691,9 @@ body{
 }
 
 .featured-products-card .fp-details{
-    height: 20%;
     width: 100%;
     background-color: var(--white);
-    padding: 0 10px;
+    padding: 18px 10px;
 }
 
 .featured-products-card .fp-details p:first-child{
@@ -657,6 +713,7 @@ input[type=number]::-webkit-outer-spin-button {
 .fp-button{
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .fp-add-cart .btn{
@@ -679,10 +736,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .fp-buy-now{
-    height: 10%;
     width: 100%;
     background-color: var(--porcelain);
-    padding: 0 10px;
+    padding:10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -708,7 +764,9 @@ input[type=number]::-webkit-outer-spin-button {
 .featured-products .see-all{
     background-color: var(--primary-blue);
     color: var(--white);
+    padding: 12px 18px;
 }
+
 /********** Featured Products section css end here ************/
 
 
@@ -790,7 +848,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .new-fashion-card-content p:first-child{
     color: var(--primary-blue);
-    padding-top: 5px;
+    padding: 10px 0;
+}
+
+.new-fashion-card-wrapper p{
+    margin-bottom: 0;
 }
 
 .new-fashion-btn .btn{
@@ -864,7 +926,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .gallery-module .common-desc{
-    color: var(--primary-grey);
+    color: var(--semi-light-grey);
     font-weight: bold;
 }
 
@@ -941,6 +1003,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: white;
     text-align: center;
     width: 100%;
+    padding: 5px;
 }
 
 .blog-card-button span{
@@ -966,6 +1029,11 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bold;
     padding-top: 10px;
     color: var(--black);
+}
+
+.blog-card-content p:nth-child(2){
+    height: 62%;
+    overflow: hidden;
 }
 
 .blog-card-content a{
@@ -1087,8 +1155,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .logo-container{
     border-radius: 50px;
-    height: 70px;
-    width: 70px;
+    height: 56px;
+    width: 56px;
     background-color: var(--primary-blue);
     display: flex;
     justify-content: center;
@@ -1208,6 +1276,10 @@ input[type=number]::-webkit-outer-spin-button {
     .signup{
         width: 25%;
     }
+
+    .signup-container{
+        column-gap: 7px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -1272,12 +1344,21 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .featured-category .fashion{
-        width: 80%;
+        width: 100%;
+    }
+
+    .fashion-img img{
+        object-position: bottom;
+        height: 350px;
     }
 
     .featured-category .new-fashion{
-        width: 80%;
+        width: 100%;
         margin-top: 5%;
+    }
+
+    .featured-products-card{
+        width: 100%;
     }
 
     .btn-container{
@@ -1304,6 +1385,10 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 0;
         text-align: left;
         width: 100%;
+    }
+
+    .btn-container .btn:not(:last-child) {
+        border-right: 0;
     }
 }
 
