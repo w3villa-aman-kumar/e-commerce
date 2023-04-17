@@ -590,13 +590,12 @@ body{
 
 #featured-product-carousel .owl-item img{
     width: 95%;
-    height: 400px;
+    height: 350px;
     object-position: center;
     object-fit: contain;
 }
 
 .featured-products-card{
-   height: 600px;
    width: 95%;
    overflow: hidden;
    border-radius: 10px;
@@ -605,27 +604,25 @@ body{
 }
 
 .fp-card-img{
-   height: 60%;
    width: 100%;
    background-color: var(--white);
    position: relative;
 }
 
-.fp-card-img img{
-   width: 100%;
-   object-fit: contain;
-   object-position: center;
-}
+
 
 .featured-products-card .fp-seller{
-   height: 10%;
    width: 100%;
    background-color: var(--porcelain);
    display: flex;
    justify-content: space-between;
-   padding: 0 10px;
+   padding: 10px;
    align-items: center;
    color: var(--primary-grey);
+}
+
+.fp-seller p{
+    margin-bottom: 0;
 }
 
 .featured-products-card a{
@@ -633,10 +630,9 @@ body{
 }
 
 .featured-products-card .fp-details{
-    height: 20%;
     width: 100%;
     background-color: var(--white);
-    padding: 7px 10px;
+    padding: 18px 10px;
 }
 
 .featured-products-card .fp-details p:first-child{
@@ -679,10 +675,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .fp-buy-now{
-    height: 10%;
     width: 100%;
     background-color: var(--porcelain);
-    padding: 0 10px;
+    padding:10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -710,9 +705,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--white);
 }
 
-.featured-products-card p{
-    margin-bottom: 0;
-}
 /********** Featured Products section css end here ************/
 
 
