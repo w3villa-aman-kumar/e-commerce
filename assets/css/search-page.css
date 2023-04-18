@@ -428,6 +428,10 @@ body{
     justify-content: space-between;
 }
 
+.filter-tag{
+    font-weight: bold;
+}
+
 .filter-section{
     padding: 20px 0;
     border-bottom: 1px solid var(--light-grey);
@@ -598,6 +602,7 @@ body{
 .searched-item-title{
     border-bottom: 1px solid var(--light-grey);
     padding-top: 15px;
+    font-weight: bold;
 }
 
 .search-input-checkbox{
