@@ -699,6 +699,7 @@ body{
     overflow: hidden;
     border-radius: 10px;
     flex-direction: column;
+    border: 1px solid var(--light-grey);
 }
 
 .search-card-img{
