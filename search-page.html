@@ -46,11 +46,12 @@
     <section class="home">
         <header class="desktop-view-header">
             <!-- header top-nav -->
+            <!-- header top-nav -->
             <div class="container-fluid top-nav-wrapper">
                 <div class="container">
                     <div class="row top-nav">
                         <div class="col-md-5 top-nav-menu">
-                            <a href="#"><i class="fa-regular fa-house"></i> Home</a>
+                            <a href="./index.html"><i class="fa-regular fa-house"></i> Home</a>
                             <a href="#"><i class="fa-regular fa-circle-star"></i> About Us</a>
                             <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
                             <div class="dropdown show">
@@ -122,8 +123,8 @@
                         <div class="search">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle common-bg" type="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
+                                    <button class="btn dropdown-toggle common-bg" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="">All</button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#">Action</a>
                                         <a class="dropdown-item" href="#">Another action</a>
@@ -132,29 +133,41 @@
                                 </div>
                                 <input type="text" class="form-control" placeholder="Search here...">
                                 <div class="input-group-append">
-                                    <span class="input-group-text common-bg">
-                                        <i class="fa-regular fa-magnifying-glass"></i>
-                                    </span>
+                                    <a href="./search-page.html" class="input-group-text common-bg">
+                                        <span>
+                                            <i class="fa-regular fa-magnifying-glass"></i>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="signup">
                             <div class="signup-container">
                                 <div class="login-div">
-                                    <i class="fa-solid fa-circle-user fa-2xl"></i>
-                                    <p><a href="#">Login</a></p>
+                                    <a href="#">
+                                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                                        <p>Login</p>
+                                    </a>
                                 </div>
                                 <div class="register-div">
-                                    <i class="fa-regular fa-pen-to-square fa-2xl"></i>
-                                    <p><a href="#">Register</a></p>
+                                    <a href="#">
+                                        <i class="fa-regular fa-pen-to-square fa-2xl"></i>
+                                        <p>Register</p>
+                                    </a>
                                 </div>
                                 <div class="wishlist-div">
-                                    <i class="fa-regular fa-heart fa-2xl"></i>
-                                    <p><a href="#">Wishlist</a></p>
+                                    <a href="#">
+                                        <i class="fa-regular fa-heart fa-2xl"></i>
+                                        <p>Wishlist</p>
+                                    </a>
                                 </div>
                                 <div class="compare-div">
-                                    <i class="fa-regular fa-arrow-right-arrow-left fa-2xl"></i>
-                                    <p><a href="#">Compare</a></p>
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa-regular fa-arrow-right-arrow-left" style="font-size: 15px;"></i>
+                                        </div>
+                                        <p style="padding-top: 3px;">Compare</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -286,7 +299,7 @@
     
                             <!-- filter price section -->
                             <div class="filter-section" id="filter-price">
-                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-price','price-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-price','price-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>PRICE</p></div>
                                         <div class="right-text">
@@ -294,23 +307,28 @@
                                     </div>
                                 </a>
                                 <div class="slide open" >
-                                    <div class="line-circle"></div>
-                                    <div class="price-input">
-                                        <div>
-                                            <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="70">
-                                            <label>$</label>
+                                    <div class="range">
+                                        <div class="range-input">
+                                          <input type="range" class="min" min="0" max="1000" value="0" step="10">
+                                          <input type="range" class="max" min="0" max="1000" value="1000" step="10">
                                         </div>
-                                        <div>
-                                            <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="1718">
-                                            <label for="">$</label>
+                                        <div class="price-input">
+                                            <div>
+                                                <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="70">
+                                                <label>$</label>
+                                            </div>
+                                            <div>
+                                                <input class="search-input-child" style="padding: 2px 0;" type="number" placeholder="1718">
+                                                <label for="">$</label>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
     
                             <!-- filter availability section -->
                             <div class="filter-section" id="filter-availabel">
-                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-availabel','availabel-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-availabel','availabel-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>AVAILABILITY</p></div>
                                         <div class="right-text">
@@ -331,7 +349,7 @@
     
                             <!-- filter subcategories section -->
                             <div class="filter-section" id="filter-subcat">
-                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-subcat','subcat-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-subcat','subcat-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>SUBCATEGORIES</p></div>
                                         <div class="right-text">
@@ -348,7 +366,7 @@
     
                             <!-- filter brand section -->
                             <div class="filter-section" id="filter-brand">
-                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-brand','brand-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-brand','brand-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>BRANDS</p></div>
                                         <div class="right-text">
@@ -366,7 +384,7 @@
     
                             <!-- filter select section -->
                             <div class="filter-section" id="filter-select">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-select','select-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-select','select-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>SELECT</p></div>
                                         <div class="right-text">
@@ -380,7 +398,7 @@
     
                             <!-- filter radio section -->
                             <div class="filter-section" id="filter-radio">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-radio','radio-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-radio','radio-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>RADIO</p></div>
                                         <div class="right-text">
@@ -394,7 +412,7 @@
     
                             <!-- filter color section -->
                             <div class="filter-section" id="filter-color">
-                                <a href="#" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-color','color-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" style="color: var(--lapis-blue);" onclick="rightBtnSlider(this,'filter-color','color-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>COLOR</p></div>
                                         <div class="right-text">
@@ -413,7 +431,7 @@
     
                             <!-- filter clockspeed section -->
                             <div class="filter-section" id="filter-clockspeed">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-clockspeed','clockspeed-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-clockspeed','clockspeed-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>CLOCKSPEED</p></div>
                                         <div class="right-text">
@@ -427,7 +445,7 @@
     
                             <!-- filter test 1 section -->
                             <div class="filter-section" id="filter-test">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-test','test-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-test','test-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>TEST 1</p></div>
                                         <div class="right-text">
@@ -441,7 +459,7 @@
     
                             <!-- filter no. of cores section -->
                             <div class="filter-section" id="filter-core">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-core','core-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-core','core-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>NO. OF CORES</p></div>
                                         <div class="right-text">
@@ -455,7 +473,7 @@
     
                             <!-- filter style section -->
                             <div class="filter-section" id="filter-style">
-                                <a href="#" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-style','style-plus')">
+                                <a href="javascript:void();" class="plus-minus-btn" onclick="rightBtnSlider(this,'filter-style','style-plus')">
                                     <div class="filter-section-heading">
                                         <div class="left-text"><p>STYLE</p></div>
                                         <div class="right-text">
@@ -469,7 +487,7 @@
 
                         </div>
                     </div>
-                    <!-- ********** filter section start here ********** -->
+                        <!--********** Filter section end here ***********-->
     
     
                     <!--********** all item list section start here **********-->
@@ -509,8 +527,8 @@
                             <!-- item list button grp -->
                             <div class="button-grp">
                                 <div class="left-btn-grp">
-                                    <i style="padding-right: 5px;" class="fa-solid fa-table-cells fa-lg"></i>
-                                    <span class="lis"><i class="fa-solid fa-list-ul fa-lg"></i></span>
+                                    <img onclick="tglGridList('grid')" src="./assets/image/grid.png" alt="">
+                                    <span onclick="tglGridList('list')" class="lis"><i class="fa-solid fa-list-ul fa-lg"></i></span>
                                     <span class="search-compare-cicle">
                                         <i class="fa-solid fa-arrow-right-arrow-left"></i>
                                     </span>
@@ -540,25 +558,27 @@
                                 </div>
                             </div>
     
-                            <!-- searched item card -->
+                            <!-- searched item card grid or list view -->
                             <div class="searched-item-div">
-                                <div class="searched-card-div">
-    
-                                    <div class="searched-card-grid">
+                                <div id="searched-card-div-id" class="searched-card-gd">
+                                    
+                                    <!-- searched card -->
+                                    <div class="common-search searched-card-grid">
                                         <div class="search-card-img common-tag">
                                             <img src="./assets/image/headphone.png" alt="headphone">
                                             <div class="card-tag left"><span>CUSTOM LABELS</span></div>
                                             <div class="card-tag right top"><span>-70%</span></div>
                                             <div class="card-tag right bottom"><span>HOT</span></div>
                                         </div>
+
                                         <div class="search-card-bottom">
                                             <div class="search-seller">
                                                 <a href="#">Ericksson</a>
                                                 <p>Model 519</p>
                                             </div>
                                             <div class="search-details">
-                                                <p>Headphones</p>
-                                                <p>$999.00 <strike>$3,299.00</strike></p>
+                                                <p class="search-card-title">Headphones</p>
+                                                <p class="search-price">$999.00 <strike>$3,299.00</strike></p>
                                                 <div class="search-button">
                                                     <div class="search-add-cart">
                                                         <input type="number" id="quantity" min="1" max="5" value="1">
@@ -575,9 +595,31 @@
                                                 <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
                                             </div>
                                         </div>
+                                        
+                                        <!-- search-card list view bottom -->
+                                        <div class="search-card-bottom-list">
+                                            <p class="top-title"><span>Brand: <a href="#">apple</a></span> <span>Model: Product 15</span></p>
+                                            <p class="search-card-title">Headphones</p>
+                                            <p class="search-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo iste iure, eaque rerum explicabo est earum alias amet sapiente doloribus ducimus assumenda nostrum atque dolores harum et, minus veritatis?</p>
+                                            <div class="search-price-container">
+                                                <p class="search-price"><span style="color:orange;">70.61$</span> <strike>78.46$</strike></p>
+                                                <p>Ex Tax:70.61 $</p>
+                                            </div>
+                                            <div class="search-button-list">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                                                <div><i class="fa-regular fa-heart"></i></div>
+                                                <div><i class="fa-solid fa-right-left"></i></div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 
-                                    <div class="searched-card-grid">
+                                    <!-- searched card -->
+                                    <div class="common-search searched-card-grid">
                                         <div class="search-card-img common-tag">
                                             <img src="./assets/image/digital_camera.png" alt="headphone">
                                             <div class="card-tag left"><span>PRE ORDER</span></div>
@@ -589,8 +631,8 @@
                                                 <p>Model 519</p>
                                             </div>
                                             <div class="search-details">
-                                                <p>Digital Camera</p>
-                                                <p>$2189.00</p>
+                                                <p class="search-card-title">Digital Camera</p>
+                                                <p class="search-price">$2189.00</p>
                                                 <div class="search-button">
                                                     <div class="search-add-cart">
                                                         <input type="number" id="quantity" min="1" max="5" value="1">
@@ -607,9 +649,31 @@
                                                 <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
                                             </div>
                                         </div>
+
+                                        <!-- search-card list view bottom -->
+                                        <div class="search-card-bottom-list">
+                                            <p class="top-title"><span>Brand: <a href="#">apple</a></span> <span>Model: Product 15</span></p>
+                                            <p class="search-card-title">Headphones</p>
+                                            <p class="search-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo iste iure, eaque rerum explicabo est earum alias amet sapiente doloribus ducimus assumenda nostrum atque dolores harum et, minus veritatis?</p>
+                                            <div class="search-price-container">
+                                                <p class="search-price"><span style="color: black;">70.61$</span></p>
+                                                <p>Ex Tax:70.61 $</p>
+                                            </div>
+                                            <div class="search-button-list">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                                                <div><i class="fa-regular fa-heart"></i></div>
+                                                <div><i class="fa-solid fa-right-left"></i></div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 
-                                    <div class="searched-card-grid">
+                                    <!-- search card -->
+                                    <div class="common-search searched-card-grid">
                                         <div class="search-card-img common-tag">
                                             <img src="./assets/image/headphone.png" alt="headphone">
                                             <div class="card-tag left"><span>CUSTOM LABELS</span></div>
@@ -622,8 +686,8 @@
                                                 <p>Model 519</p>
                                             </div>
                                             <div class="search-details">
-                                                <p>Headphones</p>
-                                                <p>$999.00 <strike>$3,299.00</strike></p>
+                                                <p class="search-card-title">Headphones</p>
+                                                <p class="search-price">$999.00 <strike>$3,299.00</strike></p>
                                                 <div class="search-button">
                                                     <div class="search-add-cart">
                                                         <input type="number" id="quantity" min="1" max="5" value="1">
@@ -634,6 +698,27 @@
                                                         <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="search-buy-now">
+                                                <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+                                                <a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- search-card list view bottom -->
+                                        <div class="search-card-bottom-list">
+                                            <p class="top-title"><span>Brand: <a href="#">apple</a></span> <span>Model: Product 15</span></p>
+                                            <p class="search-card-title">Headphones</p>
+                                            <p class="search-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo iste iure, eaque rerum explicabo est earum alias amet sapiente doloribus ducimus assumenda nostrum atque dolores harum et, minus veritatis?</p>
+                                            <div class="search-price-container">
+                                                <p class="search-price"><span style="color:orange;">70.61$</span> <strike>78.46$</strike></p>
+                                                <p>Ex Tax:70.61 $</p>
+                                            </div>
+                                            <div class="search-button-list">
+                                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                                <button><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                                                <div><i class="fa-regular fa-heart"></i></div>
+                                                <div><i class="fa-solid fa-right-left"></i></div>
                                             </div>
                                             <div class="search-buy-now">
                                                 <a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
@@ -965,6 +1050,27 @@
                 most_view.style.display = 'none'
             }
         }
+
+        function tglGridList(tgl_value){
+            var search_card = document.getElementById('searched-card-div-id')
+            var grid_list =search_card.getElementsByClassName('common-search')
+
+            for(i in grid_list){
+                if (tgl_value=='list') {
+                    grid_list[i].classList.remove('searched-card-grid');
+                    grid_list[i].classList.add('searched-card-list');
+                    search_card.classList.remove('searched-card-gd')
+                    search_card.classList.add('searched-card-li')
+                } else {
+                    grid_list[i].classList.remove('searched-card-list');
+                    grid_list[i].classList.add('searched-card-grid');
+                    search_card.classList.remove('searched-card-li')
+                    search_card.classList.add('searched-card-gd')
+                }
+            }
+
+        }
+
     </script>
 
     <script>
