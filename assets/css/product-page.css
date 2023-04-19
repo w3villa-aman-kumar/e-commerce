@@ -85,11 +85,11 @@ body{
 }
 
 .common-tag .top{
-    top: 5%;
+    top: 2%;
 }
 
 .common-tag .bottom{
-    top: 15%;
+    top: 7%;
     background-color:red;
 }
 
@@ -411,12 +411,58 @@ body{
     width: 100px;
 }
 
+/* main content css  */
+.main-content-container{
+    display: flex;
+}
+
+/* product image section */
+.prdt-img-section{
+    display: flex;
+    flex: 1 1 0px;
+    column-gap: 15px;
+}
+
+.multi-img-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 20%;
+}
+
+.multi-img, .focus-img{
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.multi-img img, .focus-img img{
+    width: 100%;
+}
+
+.multi-img img:hover{
+    cursor: pointer;
+}
+
+.focus-img:hover{
+    cursor: zoom-in;
+}
+
+/* product desccription section */
+.prdt-descp-section{
+    flex: 1 1 0px;
+}
+
+
 
 
 
 
 
 /********** Main css end here ************/
+
+
 
 
 /**************************************
