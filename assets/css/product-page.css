@@ -454,14 +454,369 @@ body{
     flex: 1 1 0px;
 }
 
+.prdt-descp-wrapper{
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+.prdt-descp-wrapper .detail-grp{
+    font-weight: bold;
+    color: var(--primary-grey);
+    padding-bottom: 8px;
+}
+
+.detail-grp span{
+    margin-right: 15px;
+    padding-bottom: 8px;
+}
+
+.detail-grp span:hover{
+    cursor: pointer;
+}
+
+.detail-grp .active{
+    color: var(--black);
+    border-bottom: 2px solid var(--flamingo-orange);
+}
+
+.descp-text-wrapper{
+    padding: 20px 0;
+    color: var(--bright-grey);
+    position: relative;
+    overflow-y: hidden;
+    height: 85px;
+}
+
+.descp-text-wrapper::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 0.8) 90%);
+    width: 100%;
+    height: 20px;
+}
+
+.descp-btn{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--lapis-blue);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 0 10px;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+.star-wrapper{
+    padding: 20px 0;
+}
+
+.write-review a{
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.price-stock-wrapper{
+    display: flex;
+    padding: 20px 0;
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.price-wrapper{
+    flex: 1 1 0px;
+    border-right: 1px solid var(--light-grey);
+}
+
+.price-wrapper .original-price{
+    font-size: 1.5em;
+    color: var(--bright-grey);
+    font-weight: bold;
+}
+
+.price-wrapper .discount-price{
+    font-size: 2em;
+    color: rgb(196, 40, 40);
+    font-weight: bold;
+}
+
+.price-wrapper .offer-price{
+    color: var(--primary-grey);
+}
+
+.price-wrapper p{
+    margin-bottom: 10px;
+}
+
+.stock-wrapper{
+    flex: 2 2 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+
+.stock-wrapper .stock-left{
+    font-size: 14px;
+}
+
+.stock-wrapper .in-stock{
+    color: green;
+    font-weight: bold;
+}
+
+.stock-img{
+    width: 150px;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stock-img img{
+    width: 100%;
+}
+
+.stock-img a{
+    text-decoration: underline;
+}
 
 
+.select-wrapper{
+    padding-top: 20px;
+    border-bottom: 1px solid var(--light-grey);
+}
 
+.select-wrapper div{
+    padding-bottom: 20px;
+}
 
+.select-wrapper label span{
+    color: red;
+}
 
+.select-wrapper label,select{
+    display: block;
+}
 
+.select-wrapper select{
+    padding: 5px;
+    width: 30%;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    color: var(--primary-grey);
+}
+
+.radio button{
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.single-choice span:not(:first-child){
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--light-grey);
+}
+
+.select-wrapper .common-input{
+    border: 1px solid var(--light-grey);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.textarea textarea{
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.file button{
+    background-color: var(--lapis-blue);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+.select-wrapper .common-calendar{
+    background-color: var(--lapis-blue);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bottom-btn-grp{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+
+.wl-comp{
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid var(--light-grey);
+}
+
+.bottom-btn-grp img{
+    height: 20px;
+    width: 20px;
+}
+
+.bottom-btn-grp input{
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.bottom-btn-grp button{
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--white);
+}
+
+.bottom-btn-grp .add-cart{
+    background-color: var(--lapis-blue);
+    width: 60%;
+}
+
+.bottom-btn-grp .buy-now{
+    background-color: green;
+    opacity: 0.9;
+    width: 20%;
+}
+
+.bottom-btn-grp .que{
+    background-color: red;
+    width: 10%;
+}
+
+.min-quantity{
+    background-color: #c0d5eb;
+    padding: 8px 0;
+}
+
+.min-quantity p{
+    margin-bottom: 0;
+    padding-left: 15px;
+    color: #4879ac;
+}
+
+.social-grp{
+    padding: 20px 0;
+}
+
+.social-grp span{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #a2a4a6;
+    color: var(--white);
+    position: relative;
+    border-radius: 5px;
+}
+
+.social-grp span i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 /********** Main css end here ************/
 
+/**************************************
+**** Related product css start here **** 
+**************************************/
+.related-ppl-bought-wrapper{
+    background-color: var(--porcelain);
+    padding: 40px 0;
+}
+
+.related-ppl-bought-wrapper .common-text{
+    color: var(--primary-grey);
+    margin-bottom: 0;
+    font-size: 1em;
+    margin-right: 15px;
+    padding-bottom: 10px;
+ }
+
+.related-product-wrapper{
+    display: flex;
+    column-gap: 20px;
+}
+
+.people-also-bought-wrapper{
+    display: none;
+    column-gap: 20px;
+}
+
+.related-product-card{
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.related-product-img img{
+    width: 300px;
+    height: 320px;
+    object-position: center;
+    object-fit: contain;
+}
+
+.related-product-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.related-product-card-content p{
+    color: var(--primary-grey);
+}
+
+.related-product-card-content p:first-child{
+    color: var(--primary-blue);
+    padding: 10px 0;
+}
+
+.related-product-card-wrapper p{
+    margin-bottom: 0;
+}
+
+.related-product-btn .btn{
+    background-color: var(--lapis-blue);
+    color: var(--white);
+    padding: 0 5px;
+}
+
+.related-product-btn a{
+    color: var(--primary-grey);
+}
+
+.related-product-wish-compare a{
+    padding-right: 20px;
+}
+
+.related-ppl-bought-wrapper .common-text:hover{
+    cursor: pointer;
+}
+
+/********** Related product end here ************/
 
 
 

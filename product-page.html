@@ -308,17 +308,273 @@
 
                     <!-- product description section start here -->
                     <section class="prdt-descp-section">
-                        
+                        <div class="prdt-descp-wrapper">
+                            <div class="detail-grp">
+                                <span id="detail-descp" class="active" onclick="tglDetailGrp(this)">DESCRIPTION</span>
+                                <span id="detail-specf" onclick="tglDetailGrp(this)">SPECIFICATIONS</span>
+                                <span id="detail-review" onclick="tglDetailGrp(this)">REVIEWS</span>
+                                <span id="detail-custom" onclick="tglDetailGrp(this)">CUSTOM TABS</span>
+                            </div>
+
+                            <div class="descp-text-wrapper">
+                                <p class="descp-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim incidunt magni adipisci natus, beatae nesciunt at fugiat consectetur harum, illo dolores ullam fuga cumque officiis. Repellat illum soluta facilis ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa delectus labore perspiciatis ipsa eius, repellat perferendis, minus veritatis dolor tenetur rem at, reiciendis ea? Nobis numquam architecto iusto possimus error!</p>
+                                <button class="descp-btn" onclick="tglHeight(this)"><i class="fa-solid fa-angle-down"></i> Show More</button>
+                            </div>
+
+                            <div class="star-wrapper">
+                                <span class="star">
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="write-review">
+                                    <a href="#">Based on 1 reviews.</a>
+                                    -
+                                    <a href="#">Write a review</a>
+                                </span>
+                            </div>
+
+                            <div class="price-stock-wrapper">
+                                <div class="price-wrapper">
+                                    <p class="original-price"><strike>78.46 $</strike></p>
+                                    <p class="discount-price">70.61 $</p>
+                                    <p class="offer-price">Ex Tax: 70.61 $</p>
+                                    <p class="offer-price">Price in reward points: 400</p>
+                                    <ul class="offer-price" style="list-style-type: none;">
+                                        <li>10 or more 69.04$</li>
+                                        <li>20 or more 60.41$</li>
+                                        <li>30 or more 51.78$</li>
+                                    </ul>
+                                </div>
+                                <div class="stock-wrapper">
+                                    <div class="stock-left">
+                                        <p class="in-stock"><i class="fa-solid fa-check"></i> IN STOCK</p>
+                                        <ul>
+                                            <li>Reward Points: 100</li>
+                                            <li>Model: Product 15</li>
+                                            <li>Weight: 12.50kg</li>
+                                            <li>Dimension: 1.00cm x 2.00cm x 3.00cm</li>
+                                        </ul>
+                                    </div>
+                                    <div class="stock-right">
+                                        <div class="stock-img">
+                                            <img src="./assets/image/apple-logo.png" alt="apple-logo">
+                                            <p><a href="#">apple</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="select-wrapper">
+                                <div>
+                                    <label for="another">Another Select <span>*</span></label>
+                                    <select name="another" id="another">
+                                        <option value="Random">---Please Select---</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="another">Select List <span>*</span></label>
+                                    <select name="another" id="another">
+                                        <option value="Random">---Another Select---</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                    </select>
+                                </div>
+
+                                <div class="radio">
+                                    <label for="radio">Radio <span>*</span></label>
+                                    <button>Small (+7.85$)</button>
+                                    <button>Medium (+15.69$)</button>
+                                    <button>Large (+23.54$)</button>
+                                </div>
+
+                                <div class="single-choice">
+                                    <label for="choice">Single choice (with image) <span>*</span></label>
+                                    <span style="background-color: aqua;"></span>
+                                    <span style="background-color: violet;"></span>
+                                    <span style="background-color: skyblue;"></span>
+                                    <span style="background-color: red;"></span>
+                                </div>
+
+                                <div class="text">
+                                    <label for="choice">Text<span>*</span></label>
+                                    <input class="common-input" type="text" placeholder="test">
+                                </div>
+
+                                <div class="textarea">
+                                    <label for="choice">Textarea<span>*</span></label>
+                                    <textarea placeholder="TextArea" rows="6"></textarea>
+                                </div>
+
+                                <div class="file">
+                                    <label for="choice">File</label>
+                                    <button><i class="fa-solid fa-arrow-up-from-bracket"></i> UPLOAD FILE</button>
+                                </div>
+
+                                <div class="date">
+                                    <label for="choice">Date<span>*</span></label>
+                                    <input class="common-input" type="text" placeholder="2011-02-22">
+                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                </div>
+
+                                <div class="date">
+                                    <label for="choice">Time<span>*</span></label>
+                                    <input class="common-input" type="text" placeholder="22:55">
+                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                </div>
+
+                                <div class="date">
+                                    <label for="choice">Date & Time<span>*</span></label>
+                                    <input class="common-input" type="text" placeholder="2011-02-22 22:55">
+                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="bottom-btn-grp">
+                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                <button class="add-cart"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+
+                                <button class="buy-now"><img src="./assets/image/circle-dollar.png" alt=""> <span class="tgl-btn-grp">BUY NOW</span> </button>
+
+                                <button class="que"><i class="fa-regular fa-circle-question"></i></button>
+
+                                <div class="wl-comp">
+                                    <span style="padding-right: 8px;"><i class="fa-regular fa-heart" style="color: #e41111;"></i> <span class="tgl-btn-grp">Add Wish List</span></span>
+
+                                    <span><i class="fa-solid fa-arrow-right-arrow-left" style="color: #1e4a94;"></i> <span class="tgl-btn-grp">Compare This Product</span></span>
+                                </div>
+                            </div>
+
+                            <div class="min-quantity">
+                                <p><i class="fa-solid fa-circle-info"></i> This product has a minimum quantity of 2</p>
+                            </div>
+
+                            <div class="social-grp">
+                                <span><i class="fa-brands fa-facebook"></i></span>
+                                <span><i class="fa-brands fa-twitter"></i></span>
+                                <span><i class="fa-brands fa-pinterest-p"></i></span>
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                <span><i class="fa-solid fa-plus"></i></span>
+                            </div>
+
+                        </div>
                     </section>
                     <!-- product description section end here -->
+
 
                 </div>
             </div>
         </section>
         <!-- main content section end here -->
-
     </main>
     <!--********** Main section end here ***********-->
+
+    <!--********** Related product section start here ***********-->
+    <section class="related-ppl-bought-wrapper">
+        <div class="container">
+            <div style="padding-bottom: 20px;">
+                <span id="related-product-text" class="common-text most-v-border" onclick="tglRecommende(this)">RELATED PRODUCTS</span>
+                <span id="people-also-bought-text" class="common-text" onclick="tglRecommende(this)">PEOPLE ALSO BOUGHT</span>
+            </div>
+
+            <div id="related-product-id" class="related-product-wrapper">
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/desktop-2.png" alt="fashion">
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Apple Watch</p>
+                        <p>$399.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/apple-watch.png" alt="fashion">
+                            <div class="card-tag left"><span>2-3 DAYS</span></div>
+                            <div class="card-tag right"><span>NEW</span></div>
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Apple Watch</p>
+                        <p>$399.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="people-also-bought-id" class="people-also-bought-wrapper">
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/banner_watch.png" alt="fashion">
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Apple Watch</p>
+                        <p>$399.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/shoe.jpg" alt="fashion">
+                            <div class="card-tag left"><span>2-3 DAYS</span></div>
+                            <div class="card-tag right"><span>NEW</span></div>
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Apple Watch</p>
+                        <p>$399.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--********** Related product section end here ***********-->
 
 
 
@@ -587,6 +843,41 @@
 
         function move_top(){
             document.documentElement.scrollTop=0
+        }
+
+        function tglDetailGrp(self){
+            border_tgl = self.parentNode.getElementsByClassName('active')
+            border_tgl[0].classList.remove('active')
+            self.classList.add('active')
+        }
+
+        function tglHeight(self){
+            descp_text = self.parentNode
+            height = descp_text.offsetHeight
+
+            if(height == '85'){
+                descp_text.style.height = 'auto'
+            } else {
+                descp_text.style.height = '85px'
+            }
+        }
+
+        function tglRecommende(self){
+            border_tgl = self.parentNode.getElementsByClassName('most-v-border')
+            border_tgl[0].classList.remove("most-v-border")
+            self.classList.add('most-v-border')
+
+            related_product = document.getElementById('related-product-id')
+            also_bought = document.getElementById('people-also-bought-id')
+            
+
+            if (self.id == 'related-product-text'){
+                related_product.style.display = 'flex'
+                also_bought.style.display = 'none'
+            } else {
+                related_product.style.display = 'none'
+                also_bought.style.display = 'flex'
+            }
         }
 
         function tglMostview(self){
