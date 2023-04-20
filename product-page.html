@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default"
+        disabledhref="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d" />
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-df1bd4d47fc6bf066625b27b61ccafe7.css?vsn=d" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css" />
+
+    <!-- font family cdn link -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Owl Carousel css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./assets/css/product-page.css">
+
+    <title>E-Commerce</title>
+</head>
+<body>
+    <button id="move_page_btn" onclick="move_top()"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+    <!--********** Home section start here ***********-->
+    <section class="home">
+        <header class="desktop-view-header">
+            <!-- header top-nav -->
+            <!-- header top-nav -->
+            <div class="container-fluid top-nav-wrapper">
+                <div class="container">
+                    <div class="row top-nav">
+                        <div class="col-md-5 top-nav-menu">
+                            <a href="./index.html"><i class="fa-regular fa-house"></i> Home</a>
+                            <a href="#"><i class="fa-regular fa-circle-star"></i> About Us</a>
+                            <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
+                            <div class="dropdown show">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownFAQLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-circle-question"></i> FAQ
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownFAQLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 currency">
+                            <div class="dropdown show lang-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownLangLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./assets/image/united-kingdom.png" alt="uk"> English
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownLangLink">
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/india.png" alt="india">
+                                        Hindi</a>
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/russia.png" alt="russia">
+                                        Russian</a>
+                                    <a class="dropdown-item" href="#"><img src="./assets/image/japan.png" alt="japan">
+                                        Japan</a>
+                                </div>
+                            </div>
+                            <div class="dropdown show">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-dollar-sign"></i> US Dollar
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownCurrLink">
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-euro-sign"></i> Euro</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-indian-rupee-sign"></i>
+                                        Rupees</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-regular fa-ruble-sign"></i> Ruble</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 delivery">
+                            <div class="dropdown show mome-dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMoMeLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-regular fa-user-minus"></i> More Menus
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMoMeCurrLink">
+                                    <a class="dropdown-item" href="#">Address</a>
+                                    <a class="dropdown-item" href="#">Contact Us</a>
+                                    <a class="dropdown-item" href="#">Suggestion</a>
+                                </div>
+                            </div>
+                            <a href="#"><i class="fa-regular fa-truck"></i> Delivery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top-nav end-->
+
+            <!-- header middel-nav start-->
+            <div class="container-fluid middel-nav-wrapper">
+                <div class="container">
+                    <div class="row middel-nav">
+                        <div class="logo">
+                            <h1>JOURNAL</h1>
+                        </div>
+                        <div class="search">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn dropdown-toggle common-bg" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="">All</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <div class="input-group-append">
+                                    <a href="./search-page.html" class="input-group-text common-bg">
+                                        <span>
+                                            <i class="fa-regular fa-magnifying-glass"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signup">
+                            <div class="signup-container">
+                                <div class="login-div">
+                                    <a href="#">
+                                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                                        <p>Login</p>
+                                    </a>
+                                </div>
+                                <div class="register-div">
+                                    <a href="#">
+                                        <i class="fa-regular fa-pen-to-square fa-2xl"></i>
+                                        <p>Register</p>
+                                    </a>
+                                </div>
+                                <div class="wishlist-div">
+                                    <a href="#">
+                                        <i class="fa-regular fa-heart fa-2xl"></i>
+                                        <p>Wishlist</p>
+                                    </a>
+                                </div>
+                                <div class="compare-div">
+                                    <a href="#">
+                                        <div>
+                                            <i class="fa-regular fa-arrow-right-arrow-left" style="font-size: 15px;"></i>
+                                        </div>
+                                        <p style="padding-top: 3px;">Compare</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart">
+                            <div class="cart-container">
+                                <span>0 item(s)- $ 0.00</span>
+                                <a href="#" class="common-bg"><i class="fa-regular fa-cart-shopping fa-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header middel-nav end-->
+
+            <!-- header bottom-nav start-->
+            <div class="container-fluid bottom-nav-wrapper">
+                <div class="container">
+                    <div class="row bottom-nav">
+                        <div class="col-md-8 bottom-nav-menu">
+                            <span id="menu-span-id"><i class="fa-regular fa-bars-staggered"></i> ALL DEPARTMENTS <span
+                                    id="sale-span">Sale</span></span>
+                            <span>MULTILEVEL</span>
+                            <span id="megamenu-span">MEGAMENU <span id="new-span">New</span></span>
+                            <span id="fullwidth-span">FULLWIDTH</span>
+                        </div>
+                        <div class="col-md-4 phone-number">
+                            <span class="menu-span"><i class="fa-regular fa-phone-volume"></i> 1.800.555.6789</span>
+                            <span class="menu-span"><i class="fa-regular fa-message"></i> BLOG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header bottom-nav end-->
+
+        <!-- mobile view nav bar start -->
+        <header class="mobile-view-header">
+            <div class="mv-top-nav">
+                <div class="container">
+                    <div class="mv-signup">
+                        <div class="mv-login-div">
+                            <i class="fa-solid fa-circle-user fa-xl"></i>
+                            <span>Login</span>
+                        </div>
+                        <div class="mv-register-div">
+                            <i class="fa-regular fa-pen-to-square fa-xl"></i>
+                            <span>Register</span>
+                        </div>
+                    </div>
+                    <div class="mv-currency">
+                        <div class="dropdown show currency-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownCurrLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-regular fa-dollar-sign"></i> US Dollar
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownCurrLink">
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-euro-sign"></i> Euro</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-indian-rupee-sign"></i>
+                                    Rupees</a>
+                                <a class="dropdown-item" href="#"><i class="fa-regular fa-ruble-sign"></i> Ruble</a>
+                            </div>
+                        </div>
+                        <div class="dropdown show lang-dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownLangLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="./assets/image/united-kingdom.png" alt="uk"> English
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLangLink">
+                                <a class="dropdown-item" href="#"><img src="./assets/image/india.png" alt="india">
+                                    Hindi</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/russia.png" alt="russia">
+                                    Russian</a>
+                                <a class="dropdown-item" href="#"><img src="./assets/image/japan.png" alt="japan">
+                                    Japan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mv-bottom-nav">
+                <div class="container">
+                    <div class="logo">
+                        <h1>JOURNAL</h1>
+                    </div>
+                    <div class="mv-menu">
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                        <i class="fa-regular fa-cart-shopping fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile view nav bar end -->
+    </section>
+    <!--********** Home section end here ***********-->
+
+
+
+    <!--********** Main section start here ***********-->
+    <main class="main-section">
+        <div class="home-icon-wrapper">
+            <div class="container home-icon">
+                <p>
+                    <a href="./index.html"><i class="fa-regular fa-house"></i> &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="./search-page.html">Search &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#">Apple Cinema 30</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="search-heading-wrapper">
+            <div class="container search-heading-container">
+                <h2>Apple Cinema 30</h2>
+                <hr class="common-divider">
+            </div>
+        </div>
+
+        <!-- main content section start here -->
+        <section class="main-content">
+            <div class="container">
+                <div class="main-content-container">
+
+                    <!-- product image section start here -->
+                    <section class="prdt-img-section">
+                        <div class="multi-img-wrapper">
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                        </div>
+
+
+                        <div id="prdt-image-carousel" class="carousel" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#prdt-image-carousel" data-slide-to="0" class="active"></li>
+                                  <li data-target="#prdt-image-carousel" data-slide-to="1"></li>
+                                  <li data-target="#prdt-image-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="focused-img-wrapper">
+                                        <div id="img-zoom" class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="focused-img-wrapper">
+                                        <div class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="focused-img-wrapper">
+                                        <div class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+
+                    </section>
+
+                    <!-- product image section end here -->
+
+                    <!-- product description section start here -->
+                    <section class="prdt-descp-section">
+                        <div class="prdt-descp-wrapper">
+                            <div class="detail-grp">
+                                <span id="detail-descp" class="active" onclick="tglDetailGrp(this)">DESCRIPTION</span>
+                                <span id="detail-specf" onclick="tglDetailGrp(this)">SPECIFICATIONS</span>
+                                <span id="detail-review" onclick="tglDetailGrp(this)">REVIEWS</span>
+                                <span id="detail-custom" onclick="tglDetailGrp(this)">CUSTOM TABS</span>
+                            </div>
+
+                            <div class="descp-text-wrapper">
+                                <p class="descp-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim incidunt magni adipisci natus, beatae nesciunt at fugiat consectetur harum, illo dolores ullam fuga cumque officiis. Repellat illum soluta facilis ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa delectus labore perspiciatis ipsa eius, repellat perferendis, minus veritatis dolor tenetur rem at, reiciendis ea? Nobis numquam architecto iusto possimus error!</p>
+                                <button class="descp-btn" onclick="tglHeight(this)"><i class="fa-solid fa-angle-down"></i> Show More</button>
+                            </div>
+
+                            <div class="star-wrapper">
+                                <span class="star">
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-solid fa-star" style="color: #d4d626;"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="write-review">
+                                    <a href="#">Based on 1 reviews.</a>
+                                    -
+                                    <a href="#">Write a review</a>
+                                </span>
+                            </div>
+
+                            <div class="price-stock-wrapper">
+                                <div class="price-wrapper">
+                                    <p class="original-price"><strike>78.46 $</strike></p>
+                                    <p class="discount-price">70.61 $</p>
+                                    <p class="offer-price">Ex Tax: 70.61 $</p>
+                                    <p class="offer-price">Price in reward points: 400</p>
+                                    <ul class="offer-price" style="list-style-type: none;">
+                                        <li>10 or more 69.04$</li>
+                                        <li>20 or more 60.41$</li>
+                                        <li>30 or more 51.78$</li>
+                                    </ul>
+                                </div>
+                                <div class="stock-wrapper">
+                                    <div class="stock-left">
+                                        <p class="in-stock"><i class="fa-solid fa-check"></i> IN STOCK</p>
+                                        <ul>
+                                            <li>Reward Points: 100</li>
+                                            <li>Model: Product 15</li>
+                                            <li>Weight: 12.50kg</li>
+                                            <li>Dimension: 1.00cm x 2.00cm x 3.00cm</li>
+                                        </ul>
+                                    </div>
+                                    <div class="stock-right">
+                                        <div class="stock-img">
+                                            <img src="./assets/image/apple-logo.png" alt="apple-logo">
+                                            <p><a href="#">apple</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="select-wrapper">
+                                <div class="select-bottom">
+                                    <label for="another">Another Select <span>*</span></label>
+                                    <select name="another" id="another">
+                                        <option value="Random">---Please Select---</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                    </select>
+                                </div>
+                                <div class="select-bottom">
+                                    <label for="another">Select List <span>*</span></label>
+                                    <select name="another" id="another">
+                                        <option value="Random">---Another Select---</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                        <option value="Random">Random</option>
+                                    </select>
+                                </div>
+
+                                <div class="radio select-bottom">
+                                    <label for="radio">Radio <span>*</span></label>
+                                    <button>Small (+7.85$)</button>
+                                    <button>Medium (+15.69$)</button>
+                                    <button>Large (+23.54$)</button>
+                                </div>
+
+                                <div class="single-choice select bottom">
+                                    <label for="choice">Single choice (with image) <span>*</span></label>
+                                    <span style="background-color: aqua;"></span>
+                                    <span style="background-color: violet;"></span>
+                                    <span style="background-color: skyblue;"></span>
+                                    <span style="background-color: red;"></span>
+                                </div>
+
+                                <div class="text select-bottom">
+                                    <label for="choice">Text<span>*</span></label>
+                                    <input class="common-input" type="text" placeholder="test">
+                                </div>
+
+                                <div class="textarea select-bottom">
+                                    <label for="choice">Textarea<span>*</span></label>
+                                    <textarea placeholder="TextArea" rows="6"></textarea>
+                                </div>
+
+                                <div class="file select-bottom">
+                                    <label for="choice">File</label>
+                                    <button><i class="fa-solid fa-arrow-up-from-bracket"></i> UPLOAD FILE</button>
+                                </div>
+
+                                <div class="date select-bottom">
+                                    <label for="choice">Date<span>*</span></label>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="2011-02-22">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="date select-bottom">
+                                    <label for="choice">Time<span>*</span></label>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="22:55">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="date select-bottom">
+                                    <label for="choice">Date & Time<span>*</span></label>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="2011-02-22 22:55">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom-btn-grp select-bottom">
+                                <input type="number" id="quantity" min="1" max="5" value="1">
+                                <button class="add-cart"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+
+                                <button class="buy-now"><img src="./assets/image/circle-dollar.png" alt=""> <span class="tgl-btn-grp">BUY NOW</span> </button>
+
+                                <button class="que"><i class="fa-regular fa-circle-question"></i></button>
+
+                                <div class="wl-comp">
+                                    <span style="padding-right: 8px;"><i class="fa-regular fa-heart" style="color: #e41111;"></i> <span class="tgl-btn-grp">Add Wish List</span></span>
+
+                                    <span><i class="fa-solid fa-arrow-right-arrow-left" style="color: #1e4a94;"></i> <span class="tgl-btn-grp">Compare This Product</span></span>
+                                </div>
+                            </div>
+
+                            <div class="min-quantity select-bottom">
+                                <p><i class="fa-solid fa-circle-info"></i> This product has a minimum quantity of 2</p>
+                            </div>
+
+                            <div class="social-grp select-bottom">
+                                <span><i class="fa-brands fa-facebook"></i></span>
+                                <span><i class="fa-brands fa-twitter"></i></span>
+                                <span><i class="fa-brands fa-pinterest-p"></i></span>
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                <span><i class="fa-solid fa-plus"></i></span>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- product description section end here -->
+                </div>
+            </div>
+        </section>
+        <!-- main content section end here -->
+    </main>
+    <!--********** Main section end here ***********-->
+
+
+    <!--********** Related product section start here ***********-->
+    <section class="related-ppl-bought-wrapper">
+        <div class="container">
+            <div style="padding-bottom: 20px;">
+                <span id="related-product-text" class="common-text related-v-border" onclick="tglRecommende(this)">RELATED PRODUCTS</span>
+                <span id="people-also-bought-text" class="common-text" onclick="tglRecommende(this)">PEOPLE ALSO BOUGHT</span>
+            </div>
+
+            <div id="related-product-id" class="related-product-wrapper">
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/desktop-2.png" alt="fashion">
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Desktop</p>
+                        <p>$399.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/apple-watch.png" alt="fashion">
+                            <div class="card-tag left"><span>2-3 DAYS</span></div>
+                            <div class="card-tag right"><span>NEW</span></div>
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Apple Watch</p>
+                        <p>$421.00</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="people-also-bought-id" class="people-also-bought-wrapper">
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/banner_watch.png" alt="fashion">
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Watch</p>
+                        <p>$39.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-product-card">
+                    <div class="related-product-img">
+                        <div class="common-tag">
+                            <img src="./assets/image/shoe.jpg" alt="fashion">
+                            <div class="card-tag left"><span>2-3 DAYS</span></div>
+                            <div class="card-tag right"><span>NEW</span></div>
+                        </div>
+                    </div>
+                    <div class="related-product-card-content">
+                        <p>Shoe</p>
+                        <p>$99.0</p>
+                        <hr>
+                        <div class="related-product-btn">
+                            <a href="#" class="btn">Add to Cart</a>
+                            <div class="related-product-wish-compare">
+                                <a href="#"><i class="fa-regular fa-heart fa-lg"></i></a>
+                                <a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--********** Related product section end here ***********-->
+
+
+
+    <!--********** Most Viewed section start here ***********-->
+    <section class="most-viewed-section">
+        <div class="container">
+            <div style="padding-bottom: 20px;">
+                <span id="recently-view-text" class="common-text most-v-border" onclick="tglMostview(this)">RECENTLY VIEWED</span>
+                <span id="most-view-text" class="common-text" onclick="tglMostview(this)">MOST VIEWED</span>
+            </div>
+
+            <!-- recent view owl-carousel start here -->
+            <div id="recent-view-card" class="recent-view-container">
+                <div class="most-view-product">
+                    <div class="product-img">
+                        <img src="./assets/image/sunglass.png" alt="">
+                    </div>
+                    <div class="product-detail">
+                        <p>Sunglasses</p>
+                        <p>$397.00</p>
+                        <div>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-right-left"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- most view owl-carousel start here -->
+            <div id="most-view-carousel" class="owl-carousel owl-theme" style="display: none;">
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/sunglass.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Sunglasses</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/headphone.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Headphone</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/water-watch.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Watch</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="most-view-product">
+                        <div class="product-img">
+                            <img src="./assets/image/digital_camera.png" alt="">
+                        </div>
+                        <div class="product-detail">
+                            <p>Camera</p>
+                            <p>$397.00</p>
+                            <div>
+                                <i class="fa-regular fa-cart-shopping"></i>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- most view owl carousel end -->
+        </div>
+    </section>
+    <!--********** Most Viewed section end here ***********-->
+
+
+
+    <!--********** Footer section start here ***********-->
+    <section class="footer-section">
+        <!-- social html here -->
+        <div class="social-wrapper">
+            <div class="container">
+                <div class="social-container">
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-skype"></i>
+                    </a></div>
+                    <div class="logo-container"><a href="#">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- information html here -->
+        <div class="information-wrapper">
+            <div class="container">
+                <div class="information-container">
+                    <div class="information-link-container">
+                        <p class="common-text">About Us</p>
+                        <hr>
+                        <a href="#">About Us</a>
+                        <a href="#">Delivery</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Condition</a>
+                        <a href="#">Custom Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Customer Service</p>
+                        <hr>
+                        <a href="#">Contact</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Site Map</a>
+                        <a href="#">Brands</a>
+                        <a href="#">Unlimited Links</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">My Account</p>
+                        <hr>
+                        <a href="#">My Account</a>
+                        <a href="#">Order History</a>
+                        <a href="#">Affiliates</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Gift Certificates</a>
+                    </div>
+                    <div class="information-link-container">
+                        <p class="common-text">Newsletter</p>
+                        <hr>
+                        <p class="newsletter-text">Stay up to date with news and promsearchotions by signing up for 
+                            our newsletter
+                        </p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">Send</button>
+                            </div>
+                        </div>
+                        <div class="agree-terms-checkbox">
+                            <input type="checkbox" id="agree_terms" name="agree_terms">
+                            <label for="agree_terms">I have read and agree to the <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom footer html here -->
+        <div class="bottom-footer-wrapper">
+            <div class="container bottom-footer-container">
+                <div class="copyright-date">
+                    <p>Copyright <i class="fa-regular fa-copyright"></i> 2014, Your Store, All Rights Reserved</p>
+                </div>
+                <div class="card-brands">
+                    <i class="fa-brands fa-cc-visa fa-2xl"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-2xl"></i>
+                    <i class="fa-brands fa-cc-amex fa-2xl"></i>
+                    <i class="fa-brands fa-cc-discover fa-2xl"></i>
+                    <i class="fa-brands fa-cc-paypal fa-2xl"></i>
+                    <i class="fa-brands fa-cc-stripe fa-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--********** Footer section end here ***********-->
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- owl carousel js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!--******** script start here ********-->
+    <script>
+        window.onresize = function() {
+            let width = window.innerWidth;
+            let tgl_slide = document.getElementById('prdt-image-carousel')
+            if (width<768){
+                tgl_slide.classList.add('slide')
+            } else {
+                tgl_slide.classList.remove('slide')
+            }
+        }
+
+        const img_zoom = document.querySelector("#img-zoom");
+
+        img_zoom.addEventListener("mousemove", (e) => {
+            img_zoom.style.backgroundPositionX = -e.offsetX + "px";
+            img_zoom.style.backgroundPositionY = -e.offsetY + "px";
+        });
+
+    </script>
+
+    <script>
+        window.addEventListener('scroll',()=>{
+            let height = window.pageYOffset;
+            let move_page = document.getElementById('move_page_btn')
+            if (height>100) {
+                move_page.style.display = 'block'
+                move_page.style.transition = '200ms linear'
+            } else {
+                move_page.style.display = 'none'
+            }
+        })
+
+
+        function move_top(){
+            document.documentElement.scrollTop=0
+        }
+
+        function tglDetailGrp(self){
+            border_tgl = self.parentNode.getElementsByClassName('active')
+            border_tgl[0].classList.remove('active')
+            self.classList.add('active')
+        }
+
+        function tglHeight(self){
+            descp_text = self.parentNode
+            height = descp_text.offsetHeight
+
+            if(height == '85'){
+                descp_text.style.height = 'auto'
+                self.innerHTML = '<i class="fa-solid fa-angle-up"></i> Show Less'
+            } else {
+                descp_text.style.height = '85px'
+                self.innerHTML = '<i class="fa-solid fa-angle-down"></i> Show More'
+            }
+        }
+
+        function tglRecommende(self){
+            border_tgl = self.parentNode.getElementsByClassName('related-v-border')
+            border_tgl[0].classList.remove("related-v-border")
+            self.classList.add('related-v-border')
+
+            related_product = document.getElementById('related-product-id')
+            also_bought = document.getElementById('people-also-bought-id')
+            
+
+            if (self.id == 'related-product-text'){
+                related_product.style.display = 'flex'
+                also_bought.style.display = 'none'
+            } else {
+                related_product.style.display = 'none'
+                also_bought.style.display = 'flex'
+            }
+        }
+
+        function tglMostview(self){
+            border_tgl = self.parentNode.getElementsByClassName('most-v-border')
+            border_tgl[0].classList.remove("most-v-border")
+            self.classList.add('most-v-border')
+
+            recent_view = document.getElementById('recent-view-card')
+            most_view = document.getElementById('most-view-carousel')
+            
+
+            if (self.id == 'most-view-text'){
+                recent_view.style.display = 'none'
+                most_view.style.display = 'block'
+            } else {
+                recent_view.style.display = 'flex'
+                most_view.style.display = 'none'
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('#most-view-carousel').owlCarousel({
+            loop: true,
+            autoplay:true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                945: {
+                    items: 3
+                },
+                1400: {
+                    items: 4
+                }
+            }
+            })
+        });
+    </script>
+    <!--******** script end here ********-->
+
+    
+</body>
+</html>
