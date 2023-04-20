@@ -270,7 +270,11 @@
     <main class="main-section">
         <div class="home-icon-wrapper">
             <div class="container home-icon">
-                <p><i class="fa-regular fa-house"></i> <i class="fa-solid fa-arrow-right"></i> Search</p>
+                <p>
+                    <a href="./index.html"><i class="fa-regular fa-house"></i> &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="./search-page.html">Search &nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#">Apple Cinema 30</a>
+                </p>
             </div>
         </div>
         
@@ -296,14 +300,47 @@
                             <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
                             <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
                         </div>
-                        <div class="focused-img-wrapper">
-                            <div class="focus-img common-tag">
-                                <img src="./assets/image/desktop.png" alt="desktop">
-                                <div class="card-tag right top"><span>-70%</span></div>
-                                <div class="card-tag right bottom"><span>HOT</span></div>
-                            </div>
-                        </div>
+
+
+                        <div id="prdt-image-carousel" class="carousel" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#prdt-image-carousel" data-slide-to="0" class="active"></li>
+                                  <li data-target="#prdt-image-carousel" data-slide-to="1"></li>
+                                  <li data-target="#prdt-image-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="focused-img-wrapper">
+                                        <div id="img-zoom" class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="focused-img-wrapper">
+                                        <div class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="focused-img-wrapper">
+                                        <div class="focus-img common-tag">
+                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <div class="card-tag right top"><span>-70%</span></div>
+                                            <div class="card-tag right bottom"><span>HOT</span></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+
                     </section>
+
                     <!-- product image section end here -->
 
                     <!-- product description section start here -->
@@ -368,7 +405,7 @@
                             </div>
 
                             <div class="select-wrapper">
-                                <div>
+                                <div class="select-bottom">
                                     <label for="another">Another Select <span>*</span></label>
                                     <select name="another" id="another">
                                         <option value="Random">---Please Select---</option>
@@ -377,7 +414,7 @@
                                         <option value="Random">Random</option>
                                     </select>
                                 </div>
-                                <div>
+                                <div class="select-bottom">
                                     <label for="another">Select List <span>*</span></label>
                                     <select name="another" id="another">
                                         <option value="Random">---Another Select---</option>
@@ -387,14 +424,14 @@
                                     </select>
                                 </div>
 
-                                <div class="radio">
+                                <div class="radio select-bottom">
                                     <label for="radio">Radio <span>*</span></label>
                                     <button>Small (+7.85$)</button>
                                     <button>Medium (+15.69$)</button>
                                     <button>Large (+23.54$)</button>
                                 </div>
 
-                                <div class="single-choice">
+                                <div class="single-choice select bottom">
                                     <label for="choice">Single choice (with image) <span>*</span></label>
                                     <span style="background-color: aqua;"></span>
                                     <span style="background-color: violet;"></span>
@@ -402,41 +439,47 @@
                                     <span style="background-color: red;"></span>
                                 </div>
 
-                                <div class="text">
+                                <div class="text select-bottom">
                                     <label for="choice">Text<span>*</span></label>
                                     <input class="common-input" type="text" placeholder="test">
                                 </div>
 
-                                <div class="textarea">
+                                <div class="textarea select-bottom">
                                     <label for="choice">Textarea<span>*</span></label>
                                     <textarea placeholder="TextArea" rows="6"></textarea>
                                 </div>
 
-                                <div class="file">
+                                <div class="file select-bottom">
                                     <label for="choice">File</label>
                                     <button><i class="fa-solid fa-arrow-up-from-bracket"></i> UPLOAD FILE</button>
                                 </div>
 
-                                <div class="date">
+                                <div class="date select-bottom">
                                     <label for="choice">Date<span>*</span></label>
-                                    <input class="common-input" type="text" placeholder="2011-02-22">
-                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="2011-02-22">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
                                 </div>
 
-                                <div class="date">
+                                <div class="date select-bottom">
                                     <label for="choice">Time<span>*</span></label>
-                                    <input class="common-input" type="text" placeholder="22:55">
-                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="22:55">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
                                 </div>
 
-                                <div class="date">
+                                <div class="date select-bottom">
                                     <label for="choice">Date & Time<span>*</span></label>
-                                    <input class="common-input" type="text" placeholder="2011-02-22 22:55">
-                                    <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    <div class="calendar-wrapper">
+                                        <input class="common-input" type="text" placeholder="2011-02-22 22:55">
+                                        <span class="common-calendar"><i class="fa-solid fa-calendar-days"></i></span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="bottom-btn-grp">
+                            <div class="bottom-btn-grp select-bottom">
                                 <input type="number" id="quantity" min="1" max="5" value="1">
                                 <button class="add-cart"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
 
@@ -451,11 +494,11 @@
                                 </div>
                             </div>
 
-                            <div class="min-quantity">
+                            <div class="min-quantity select-bottom">
                                 <p><i class="fa-solid fa-circle-info"></i> This product has a minimum quantity of 2</p>
                             </div>
 
-                            <div class="social-grp">
+                            <div class="social-grp select-bottom">
                                 <span><i class="fa-brands fa-facebook"></i></span>
                                 <span><i class="fa-brands fa-twitter"></i></span>
                                 <span><i class="fa-brands fa-pinterest-p"></i></span>
@@ -466,8 +509,6 @@
                         </div>
                     </section>
                     <!-- product description section end here -->
-
-
                 </div>
             </div>
         </section>
@@ -475,11 +516,12 @@
     </main>
     <!--********** Main section end here ***********-->
 
+
     <!--********** Related product section start here ***********-->
     <section class="related-ppl-bought-wrapper">
         <div class="container">
             <div style="padding-bottom: 20px;">
-                <span id="related-product-text" class="common-text most-v-border" onclick="tglRecommende(this)">RELATED PRODUCTS</span>
+                <span id="related-product-text" class="common-text related-v-border" onclick="tglRecommende(this)">RELATED PRODUCTS</span>
                 <span id="people-also-bought-text" class="common-text" onclick="tglRecommende(this)">PEOPLE ALSO BOUGHT</span>
             </div>
 
@@ -491,7 +533,7 @@
                         </div>
                     </div>
                     <div class="related-product-card-content">
-                        <p>Apple Watch</p>
+                        <p>Desktop</p>
                         <p>$399.0</p>
                         <hr>
                         <div class="related-product-btn">
@@ -514,7 +556,7 @@
                     </div>
                     <div class="related-product-card-content">
                         <p>Apple Watch</p>
-                        <p>$399.0</p>
+                        <p>$421.00</p>
                         <hr>
                         <div class="related-product-btn">
                             <a href="#" class="btn">Add to Cart</a>
@@ -535,8 +577,8 @@
                         </div>
                     </div>
                     <div class="related-product-card-content">
-                        <p>Apple Watch</p>
-                        <p>$399.0</p>
+                        <p>Watch</p>
+                        <p>$39.0</p>
                         <hr>
                         <div class="related-product-btn">
                             <a href="#" class="btn">Add to Cart</a>
@@ -557,8 +599,8 @@
                         </div>
                     </div>
                     <div class="related-product-card-content">
-                        <p>Apple Watch</p>
-                        <p>$399.0</p>
+                        <p>Shoe</p>
+                        <p>$99.0</p>
                         <hr>
                         <div class="related-product-btn">
                             <a href="#" class="btn">Add to Cart</a>
@@ -585,7 +627,7 @@
                 <span id="recently-view-text" class="common-text most-v-border" onclick="tglMostview(this)">RECENTLY VIEWED</span>
                 <span id="most-view-text" class="common-text" onclick="tglMostview(this)">MOST VIEWED</span>
             </div>
-            <!-- <hr class="most-viewed-divider"> -->
+
             <!-- recent view owl-carousel start here -->
             <div id="recent-view-card" class="recent-view-container">
                 <div class="most-view-product">
@@ -828,6 +870,26 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
+    <!--******** script start here ********-->
+    <script>
+        window.onresize = function() {
+            let width = window.innerWidth;
+            let tgl_slide = document.getElementById('prdt-image-carousel')
+            if (width<768){
+                tgl_slide.classList.add('slide')
+            } else {
+                tgl_slide.classList.remove('slide')
+            }
+        }
+
+        const img_zoom = document.querySelector("#img-zoom");
+
+        img_zoom.addEventListener("mousemove", (e) => {
+            img_zoom.style.backgroundPositionX = -e.offsetX + "px";
+            img_zoom.style.backgroundPositionY = -e.offsetY + "px";
+        });
+
+    </script>
 
     <script>
         window.addEventListener('scroll',()=>{
@@ -840,6 +902,7 @@
                 move_page.style.display = 'none'
             }
         })
+
 
         function move_top(){
             document.documentElement.scrollTop=0
@@ -857,15 +920,17 @@
 
             if(height == '85'){
                 descp_text.style.height = 'auto'
+                self.innerHTML = '<i class="fa-solid fa-angle-up"></i> Show Less'
             } else {
                 descp_text.style.height = '85px'
+                self.innerHTML = '<i class="fa-solid fa-angle-down"></i> Show More'
             }
         }
 
         function tglRecommende(self){
-            border_tgl = self.parentNode.getElementsByClassName('most-v-border')
-            border_tgl[0].classList.remove("most-v-border")
-            self.classList.add('most-v-border')
+            border_tgl = self.parentNode.getElementsByClassName('related-v-border')
+            border_tgl[0].classList.remove("related-v-border")
+            self.classList.add('related-v-border')
 
             related_product = document.getElementById('related-product-id')
             also_bought = document.getElementById('people-also-bought-id')
@@ -920,6 +985,8 @@
             })
         });
     </script>
+    <!--******** script end here ********-->
 
+    
 </body>
 </html>
