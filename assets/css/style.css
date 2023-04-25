@@ -245,6 +245,10 @@ body{
     align-items: center;
 }
 
+.signup-container:hover{
+    cursor: pointer;
+}
+
 .signup-container p{
     font-size: 14px;
     margin-bottom: 0;
