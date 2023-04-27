@@ -84,17 +84,25 @@ function login_fun(){
     const user_name = document.getElementById('login-user-name').value
     const password = document.getElementById('login-password').value
 
-    user_details = JSON.parse(get_item('user'))
-    user_detail = user_details[user_name]
+    let user_details = JSON.parse(get_item('user'))
+
+    try {
+        let user_detail = user_details[user_name]
 
 
-    if(!user_detail){
-        alert('Enter correct USER NAME')
-        return
-    }else if(user_detail.password === password){
-        set_item('login-status',true)
-        window.location.href = './index.html'+'?'+'user='+user_name
-        console.log('login success')
+        if(!user_detail){
+            alert('Enter correct USER NAME')
+            return
+        }else if(user_detail.password === password){
+            user_details[user_name].loginStatus = true
+            set_item('user',user_details)
+            set_item('login-status',true)
+            window.location.href = './index.html'+'?'+'user='+user_name
+            console.log('login success')
+        }
+    } catch (error) {
+        alert('user name does not exist please create your account')
+        console.log(error)
     }
 
 
@@ -104,11 +112,13 @@ function login_fun(){
 // set user function
 function set_user(user_name,email,password){
     let set_status =false
+    let login_status = false
     let user = {}
     let obj= {
          "userName": user_name,
          "email": email,
-         "password":password
+         "password":password,
+         "loginStatus":login_status
     }
 
     let db_user = get_item('user')
@@ -118,7 +128,6 @@ function set_user(user_name,email,password){
     }
 
     user[user_name]=obj
-    user = JSON.stringify(user)
 
     set_status = set_item('user',user)
     return set_status
@@ -129,8 +138,9 @@ function set_user(user_name,email,password){
 // localStorage set item function
 function set_item(key,value){
 
-     localStorage.setItem(key,value)
-     return true
+    value = JSON.stringify(value)
+    localStorage.setItem(key,value)
+    return true
 
 }
 
