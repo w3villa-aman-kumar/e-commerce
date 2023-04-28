@@ -163,7 +163,6 @@ function set_user(user_name, email, password) {
  ** Login and Logout Function ***
  ********************************/
 function loginFun() {
-	console.log('in loginFun')
 	const user_name = document.getElementById('login-user-name').value
 	const password = document.getElementById('login-password').value
     
@@ -171,6 +170,7 @@ function loginFun() {
 
     if (user_details === null){
         alert('Please register your account')
+        return
     }
 	
 	let user_detail = user_details[user_name]
