@@ -84,19 +84,33 @@ function registerFun() {
 	const email = document.getElementById('register-email').value
 	const password = document.getElementById('register-password').value
 	const confirm_password = document.getElementById('register-cnf-password').value
-
+    let user_details = JSON.parse(get_item('user'))
 
 	if (user_name === '') {
 		alert('user name cannot be empty!')
 		return
-	}
+	} else {
+        for (detail in user_details){
+            if (user_name === detail){
+                alert('user name is already taken. Please input another username')
+                return
+            }
+        }
+    }
 
 	const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 	if (!email.match(email_regex)) {
 		alert('You have entered an wrong email. Please enter a valid email address ex = "abc@gmail.com"')
 		return
-	}
+	} else {
+        for (detail in user_details){
+            if (email === user_details[detail].email){
+                alert('user is already registered with this email. Please use some other email')
+                return
+            }
+        }
+    }
 
 	if (password.length < 6) {
 		alert('Password length must be atleast of 6 character')
