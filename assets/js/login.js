@@ -4,7 +4,7 @@
  window.onload = function() {
 	const url_path = window.location.pathname
 
-	if (url_path === '/login.html') {
+	if (url_path === '/e-commerce/login.html') {
 		signUpInPage()
 
 		const login_btn = document.getElementById('login-btn')
