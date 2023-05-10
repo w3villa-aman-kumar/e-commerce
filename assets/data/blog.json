@@ -1,0 +1,84 @@
+{
+    "blogs" : [
+        {
+            "img" : "./assets/image/journal.jpg",
+            "date" : "02 Aug",
+            "posted" : "Admin",
+            "comments" : 145,
+            "views" : 19906,
+            "categories" : "latest post",
+            "title" : "Journal Blog is Here",
+            "body" : "The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page in up to 4 columns and change the configuration per breakpoint for the best article layout on any screen width. The Journal blog i.."
+        },
+        {
+            "img" : "./assets/image/leather-bag.jpg",
+            "date" : "13 July",
+            "posted" : "Admin",
+            "comments" : 118,
+            "views" : 7760,
+            "categories" : "latest post",
+            "title" : "Best Leather Bags",
+            "body" : "Best Opencart theme options you can find in any theme? Decide for yourself by visiting one our demo admin, user/pass: demo/demo. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page i.."
+        },
+        {
+            "img" : "./assets/image/blog-reading.jpg",
+            "date" : "08 Mar",
+            "posted" : "Admin",
+            "comments" : 138,
+            "views" : 6773,
+            "categories" : "latest post",
+            "title" : "Another Blog Post",
+            "body" : "Another blog post.  Write unlimited blog articles, or have someone write them for you with partial admin access. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page in up to 4 column.."
+        },
+        {
+            "img" : "./assets/image/leather-bag.jpg",
+            "date" : "13 July",
+            "posted" : "Admin",
+            "comments" : 118,
+            "views" : 7760,
+            "categories" : "latest post",
+            "title" : "Best Leather Bags",
+            "body" : "Best Opencart theme options you can find in any theme? Decide for yourself by visiting one our demo admin, user/pass: demo/demo. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page i.."
+        },
+        {
+            "img" : "./assets/image/leather-bag.jpg",
+            "date" : "13 July",
+            "posted" : "Admin",
+            "comments" : 118,
+            "views" : 7760,
+            "categories" : "most read",
+            "title" : "Best Leather Bags",
+            "body" : "Best Opencart theme options you can find in any theme? Decide for yourself by visiting one our demo admin, user/pass: demo/demo. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page i.."
+        },
+        {
+            "img" : "./assets/image/blog-reading.jpg",
+            "date" : "08 Mar",
+            "posted" : "Admin",
+            "comments" : 138,
+            "views" : 6773,
+            "categories" : "most read",
+            "title" : "Another Blog Post",
+            "body" : "Another blog post.  Write unlimited blog articles, or have someone write them for you with partial admin access. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page in up to 4 column.."
+        },
+        {
+            "img" : "./assets/image/journal.jpg",
+            "date" : "02 Aug",
+            "posted" : "Admin",
+            "comments" : 145,
+            "views" : 19906,
+            "categories" : "most read",
+            "title" : "Journal Blog is Here",
+            "body" : "The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page in up to 4 columns and change the configuration per breakpoint for the best article layout on any screen width. The Journal blog i.."
+        },
+        {
+            "img" : "./assets/image/leather-bag.jpg",
+            "date" : "13 July",
+            "posted" : "Admin",
+            "comments" : 118,
+            "views" : 7760,
+            "categories" : "most read",
+            "title" : "Best Leather Bags",
+            "body" : "Best Opencart theme options you can find in any theme? Decide for yourself by visiting one our demo admin, user/pass: demo/demo. The Journal 3 blog has been greatly improved and it now comes with the most advanced set of typography tools, including custom drop-cap support as well as optional newspaper-like fluid columns. You can break up the page i.."
+        }
+    ]
+}

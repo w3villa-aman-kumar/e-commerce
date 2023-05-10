@@ -1,0 +1,310 @@
+{
+    "products" : [
+        {
+            "id" : 1,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model 519",
+            "name" : "Headphone",
+            "price" : "$999.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 2,
+            "img" : "./assets/image/high_heel.png",
+            "company" : "NY Fashion",
+            "model" : "Model 206",
+            "name" : "Maria Pump",
+            "price" : "$425.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 3,
+            "img" : "./assets/image/smart_tv.png",
+            "company" : "Toshiba",
+            "model" : "Model 60",
+            "name" : "Toshiba Smart Tv",
+            "price" : "$599.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 4,
+            "img" : "./assets/image/digital_camera.png",
+            "company" : "Sony",
+            "model" : "Model 19",
+            "name" : "Digital Camera",
+            "price" : "$2189.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 5,
+            "img" : "./assets/image/smart_tv.png",
+            "company" : "Toshiba",
+            "model" : "Model 60",
+            "name" : "Toshiba Smart Tv",
+            "price" : "$999.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 6,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Headphone",
+            "price" : "$999.00",
+            "categories" : "Featured"
+        },
+        {
+            "id" : 7,
+            "img" : "./assets/image/product-img/latest-1.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Modern Chair",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 8,
+            "img" : "./assets/image/product-img/latest-2.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Yellow Modern",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 9,
+            "img" : "./assets/image/product-img/latest-3.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Lazy Armchair",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 10,
+            "img" : "./assets/image/product-img/latest-4.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Grey Chair",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 11,
+            "img" : "./assets/image/product-img/latest-2.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Modern Chair",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 12,
+            "img" : "./assets/image/product-img/latest-1.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Grey Chair",
+            "price" : "$999.00",
+            "categories" : "Latest"
+        },
+        {
+            "id" : 13,
+            "img" : "./assets/image/product-img/latest-1.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Grey Chair",
+            "price" : "$999.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 14,
+            "img" : "./assets/image/high_heel.png",
+            "company" : "NY Fashion",
+            "model" : "Model 206",
+            "name" : "Maria Pump",
+            "price" : "$425.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 15,
+            "img" : "./assets/image/smart_tv.png",
+            "company" : "Toshiba",
+            "model" : "Model 60",
+            "name" : "Toshiba Smart Tv",
+            "price" : "$599.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 16,
+            "img" : "./assets/image/product-img/latest-3.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Lazy Armchair",
+            "price" : "$999.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 17,
+            "img" : "./assets/image/product-img/latest-4.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Grey Chair",
+            "price" : "$999.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 18,
+            "img" : "./assets/image/product-img/latest-2.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Modern Chair",
+            "price" : "$999.00",
+            "categories" : "Bestsellers"
+        },
+        {
+            "id" : 19,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model 519",
+            "name" : "Headphone",
+            "price" : "$999.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 20,
+            "img" : "./assets/image/high_heel.png",
+            "company" : "NY Fashion",
+            "model" : "Model 206",
+            "name" : "Maria Pump",
+            "price" : "$425.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 21,
+            "img" : "./assets/image/smart_tv.png",
+            "company" : "Toshiba",
+            "model" : "Model 60",
+            "name" : "Toshiba Smart Tv",
+            "price" : "$599.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 22,
+            "img" : "./assets/image/digital_camera.png",
+            "company" : "Sony",
+            "model" : "Model 19",
+            "name" : "Digital Camera",
+            "price" : "$2189.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 23,
+            "img" : "./assets/image/smart_tv.png",
+            "company" : "Toshiba",
+            "model" : "Model 60",
+            "name" : "Toshiba Smart Tv",
+            "price" : "$999.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 24,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Headphone",
+            "price" : "$999.00",
+            "categories" : "Specials"
+        },
+        {
+            "id" : 25,
+            "img" : "./assets/image/product-img/new-fashion-1.jpg",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Bodycorn Dress",
+            "price" : "$399.00",
+            "categories" : "New fashion"
+        },
+        {
+            "id" : 26,
+            "img" : "./assets/image/product-img/new-fashion-2.jpg",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Black Dress",
+            "price" : "$589.00",
+            "categories" : "New fashion"
+        },
+        {
+            "id" : 27,
+            "img" : "./assets/image/product-img/new-fashion-3.jpg",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Jacob Sweater",
+            "price" : "$489.00",
+            "categories" : "New fashion"
+        },
+        {
+            "id" : 28,
+            "img" : "./assets/image/product-img/new-fashion-4.jpg",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "T-Shirt",
+            "price" : "$392.00",
+            "categories" : "New fashion"
+        },
+        {
+            "id" : 29,
+            "img" : "./assets/image/product-img/new-fashion-5.jpg",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Jeans",
+            "price" : "$599.00",
+            "categories" : "New fashion"
+        },
+        {
+            "id" : 30,
+            "img" : "./assets/image/sunglass.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Sunglass",
+            "price" : "$599.00",
+            "categories" : "most view"
+        },
+        {
+            "id" : 31,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Headphone",
+            "price" : "$99.00",
+            "categories" : "most view"
+        },
+        {
+            "id" : 32,
+            "img" : "./assets/image/water-watch.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Watch",
+            "price" : "$290.00",
+            "categories" : "most view"
+        },
+        {
+            "id" : 33,
+            "img" : "./assets/image/digital_camera.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Camera",
+            "price" : "$397.00",
+            "categories" : "most view"
+        },
+        {
+            "id" : 34,
+            "img" : "./assets/image/headphone.png",
+            "company" : "Erickson",
+            "model" : "Model519",
+            "name" : "Headphone",
+            "price" : "$240.00",
+            "categories" : "most view"
+        }
+    ]
+}

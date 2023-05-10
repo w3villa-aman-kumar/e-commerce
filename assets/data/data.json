@@ -1,0 +1,114 @@
+{
+    "top categories": [
+        {
+            "img" : "./assets/image/whyBuy-img/fashion.jpg",
+            "name" : "FASHION"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/bag.jpg",
+            "name" : "BAG"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty.jpg",
+            "name" : "HEALTH & BEAUTY"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/shoe.jpg",
+            "name" : "SHOE"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/home_decor.jpg",
+            "name" : "HOME DECOR"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty.jpg",
+            "name" : "HEALTH & BEAUTY"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/shoe.jpg",
+            "name" : "SHOE"
+        }
+    ],
+    "electronics" : [
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-1.jpg",
+            "name" : "HEADPHONE"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-2.jpg",
+            "name" : "GAME"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-3.jpg",
+            "name" : "CAMERA"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-4.jpg",
+            "name" : "EARPOD"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-5.jpg",
+            "name" : "CAMERA"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-1.jpg",
+            "name" : "HEADPHONE"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/electronic-2.jpg",
+            "name" : "GAME"
+        }
+    ],
+    "beauty" : [
+        {
+            "img" : "./assets/image/whyBuy-img/beauty-1.jpg",
+            "name" : "ACCESORIES"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty-2.jpg",
+            "name" : "BODY"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty-3.jpg",
+            "name" : "LIPSTICK"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty-4.jpg",
+            "name" : "MAKEUP"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/beauty-5.jpg",
+            "name" : "MASCARA"
+        }
+    ],
+    "fashion" : [
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-1.jpg",
+            "name" : "ACCESORIES"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-2.jpg",
+            "name" : "DRESSES"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-3.jpg",
+            "name" : "PANTS"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-4.jpg",
+            "name" : "T-SHIRTS"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-5.jpg",
+            "name" : "TOPS"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-1.jpg",
+            "name" : "ACCESORIES"
+        },
+        {
+            "img" : "./assets/image/whyBuy-img/fashion-2.jpg",
+            "name" : "DRESSES"
+        }
+    ]
+}
