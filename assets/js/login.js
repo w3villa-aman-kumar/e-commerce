@@ -1,76 +1,67 @@
-/********************************
- ******** window on load ********
- ********************************/
- window.onload = function() {
-	const url_path = window.location.pathname
+const loginBtn = document.getElementsByClassName('login')
+const registerBtn = document.getElementsByClassName('register')
+const modal = document.getElementById('modal-section')
+const modalClose =document.getElementById('modal-cross')
+const loginForm = document.getElementById('login-form-wrap')
+const registerForm = document.getElementById('register-form-wrap')
+const register = document.getElementById('modalRegister')
+const login = document.getElementById('modalLogin')
 
-	if (url_path === '/e-commerce/login.html') {
-		signUpInPage()
 
-		const login_btn = document.getElementById('login-btn')
-		login_btn.addEventListener('click', loginFun)
 
-		const register_btn = document.getElementById('register-btn');
-		register_btn.addEventListener('click', registerFun)
+//display user name and logout
+let login_status = get_item('login-status')
 
-	} else {
-		tglLiReIndexPage()
+if (login_status === 'true') {
 
-		let login_status = get_item('login-status')
+	displayUserName()
 
-		if (login_status === 'true') {
-			displayUserName()
+	const logout = document.getElementsByClassName("register")
 
-			const logout = document.getElementById("register")
-			logout.addEventListener('click', logoutFun)
-		}
+	for (i=0; i<logout.length; i++) { 
+		logout[i].addEventListener('click', logoutFun)
 	}
+
+
+} else {
+
+	for (i=0; i<registerBtn.length; i++) {
+			//register modal open
+			registerBtn[i].addEventListener('click', showRegisterModal)
+
+
+			//login modal open
+			loginBtn[i].addEventListener('click', showLoginModal)
+	}
+		
+		
+	//login and register click
+	register.addEventListener('click', registerFun)
+	login.addEventListener('click', loginFun)
+
 }
 
 
+//modal close click
+modalClose.addEventListener('click', () => modal.style.display = 'none')
 
-// toggel login and register on index page function
-function tglLiReIndexPage() {
-	const login = document.getElementById('login')
-	const register = document.getElementById('register')
+//show login modal
+function showLoginModal() {
 
-	login.addEventListener('click', () => {
-		window.location.href = './login.html' + '?' + 'operation=login'
-	})
+	modal.style.display = 'block'
 
-	register.addEventListener('click', () => {
-		window.location.href = './login.html' + '?' + 'operation=register'
-	})
+	loginForm.style.display = 'block'
+	registerForm.style.display = 'none'
 }
 
 
+//show register modal
+function showRegisterModal() {
 
-// toggel signin and signup on login page function
-function signUpInPage() {
-	const sign_up = document.getElementById('login-sign_up')
-	const sign_in = document.getElementById('register-sign_in')
+	modal.style.display = 'block'
 
-	sign_in.addEventListener('click', () => {
-		window.location.href = './login.html' + '?' + 'operation=login'
-	})
-
-	sign_up.addEventListener('click', () => {
-		window.location.href = './login.html' + '?' + 'operation=register'
-	})
-
-	const url_params = new URLSearchParams(window.location.search)
-	const operation = url_params.get('operation')
-
-	const login_main = document.getElementById("login-main")
-	const register_main = document.getElementById("register-main")
-
-	if (operation == 'register') {
-		login_main.style.display = 'none'
-		register_main.style.display = 'block'
-	} else if (operation == 'login') {
-		login_main.style.display = 'block'
-		register_main.style.display = 'none'
-	}
+	registerForm.style.display = 'block'
+	loginForm.style.display = 'none'
 
 }
 
@@ -79,19 +70,21 @@ function signUpInPage() {
 /********************************
  ******** Register Function ********
  ********************************/
+//register function
 function registerFun() {
-	const user_name = document.getElementById('register-user-name').value
-	const email = document.getElementById('register-email').value
-	const password = document.getElementById('register-password').value
-	const confirm_password = document.getElementById('register-cnf-password').value
-    let user_details = JSON.parse(get_item('user'))
+	const userName = document.getElementById('registerUsername').value
+	const email = document.getElementById('registerEmail').value
+	const password = document.getElementById('registerPassword').value
+	const cnfPassword = document.getElementById('registerCnfPassword').value
 
-	if (user_name === '') {
+	let userDetails = JSON.parse(get_item('user'))
+
+	if (userName === '') {
 		alert('user name cannot be empty!')
 		return
 	} else {
-        for (detail in user_details){
-            if (user_name === detail){
+        for (detail in userDetails){
+            if (userName === detail){
                 alert('user name is already taken. Please input another username')
                 return
             }
@@ -104,8 +97,8 @@ function registerFun() {
 		alert('You have entered an wrong email. Please enter a valid email address ex = "abc@gmail.com"')
 		return
 	} else {
-        for (detail in user_details){
-            if (email === user_details[detail].email){
+        for (detail in userDetails){
+            if (email === userDetails[detail].email){
                 alert('user is already registered with this email. Please use some other email')
                 return
             }
@@ -117,28 +110,30 @@ function registerFun() {
 		return
 	}
 
-	if (confirm_password != password) {
+	if (cnfPassword != password) {
 		alert('Password and Confirm password does not match')
 		return
 	}
 
-	let set_bool = set_user(user_name, email, password)
+	let set_bool = set_user(userName, email, password)
 	if (set_bool) {
 		alert('registered sucessfully')
 
-		window.location.href = './login.html' + '?' + 'operation=login'
+		loginForm.style.display = 'block'
+		registerForm.style.display = 'none'
 	}
+
 }
 
 
 
 // set user function
-function set_user(user_name, email, password) {
+function set_user(userName, email, password) {
 	let set_status = false
 	let login_status = false
 	let user = {}
 	let new_user = {
-		"userName": user_name,
+		"userName": userName,
 		"email": email,
 		"password": password,
 		"loginStatus": login_status
@@ -150,7 +145,7 @@ function set_user(user_name, email, password) {
 		user = JSON.parse(db_user)
 	}
 
-	user[user_name] = new_user
+	user[email] = new_user
 
 	set_status = set_item('user', user)
 	return set_status
@@ -162,25 +157,25 @@ function set_user(user_name, email, password) {
 /********************************
  ** Login and Logout Function ***
  ********************************/
-function loginFun() {
-	const user_name = document.getElementById('login-user-name').value
-	const password = document.getElementById('login-password').value
+ function loginFun() {
+	const email = document.getElementById('loginEmail').value
+	const password = document.getElementById('loginPassword').value
     
-    let user_details = JSON.parse(get_item('user'))
+    let userDetails = JSON.parse(get_item('user'))
 
-    if (user_details === null){
+    if (userDetails === null){
         alert('Please register your account')
         return
     }
 	
-	let user_detail = user_details[user_name]
+	let user_detail = userDetails[email]
 
 	if (!user_detail) {
 		alert('Enter correct USER NAME')
 		return
 	} else if (user_detail.password === password) {
-		user_details[user_name].loginStatus = true
-		set_item('user', user_details)
+		userDetails[email].loginStatus = true
+		set_item('user', userDetails)
 		set_item('login-status', true)
 		window.location.href = './index.html'
 	} else {
@@ -191,47 +186,48 @@ function loginFun() {
 
 
 
-// log out function
-function logoutFun() {
+//display user name function
+function displayUserName() {
+	console.log('in display user name')
+	let userName
 
-	let user_name
+	let userDetails = JSON.parse(get_item('user'))
 
-	let user_details = JSON.parse(get_item('user'))
-
-	for (detail in user_details) {
-		if (user_details[detail].loginStatus === true) {
-			user_name = detail
+	for (detail in userDetails) {
+		if (userDetails[detail].loginStatus === true) {
+			userName = userDetails[detail].userName
 		}
 	}
 
-	user_details[user_name].loginStatus = false
-	set_item('user', user_details)
+	const user_text = document.getElementsByClassName('login-text')
+	const logout_text = document.getElementsByClassName('register-text')
 
-	set_item('login-status', false)
-	window.location.href = "./index.html"
+	for (i = 0; i<user_text.length; i++) {
+
+		user_text[i].innerHTML = userName
+		logout_text[i].innerHTML = 'Logout'
+	}
 
 }
 
 
 
-//display user name function
-function displayUserName() {
-	console.log('in display user name')
-	let user_name
+// log out function
+function logoutFun() {
 
-	let user_details = JSON.parse(get_item('user'))
+	let userDetails = JSON.parse(get_item('user'))
 
-	for (detail in user_details) {
-		if (user_details[detail].loginStatus === true) {
-			user_name = detail
+	for (detail in userDetails) {
+		if (userDetails[detail].loginStatus === true) {
+
+			userDetails[detail].loginStatus = false
 		}
 	}
 
-	const user_text = document.getElementById('login-text')
-	const logout_text = document.getElementById('register-text')
+	set_item('user', userDetails)
 
-	user_text.innerHTML = user_name
-	logout_text.innerHTML = 'Logout'
+	set_item('login-status', false)
+	window.location.href = "./index.html"
 
 }
 
@@ -244,7 +240,6 @@ function set_item(key, value) {
 	return true
 
 }
-
 
 
 // localStorage get item function

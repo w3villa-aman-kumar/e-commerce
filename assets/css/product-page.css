@@ -28,6 +28,126 @@ body{
     font-family: var(--Montserrat);
 }
 
+/* modal css start here */
+#modal-section {
+    display: none;
+}
+
+#login-form-wrap {
+    display: none;
+}
+
+#register-form-wrap {
+    display: none;
+}
+
+.overlay-body {
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    background-color: black;
+    z-index: 999;
+    position: fixed;
+}
+
+
+.custom-modal {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    background-color: var(--white);
+    z-index: 999;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    animation: 3s slidein;
+    transition: ease-in;
+}
+
+@keyframes slidein {
+    from {top: 0%;}
+
+    to {
+        top: 50%;
+    }
+}
+
+
+
+.modal-wrapper {
+    padding: 20px;
+}
+
+.mdl-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mdl-header span{
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+}
+
+.modal-wrapper button {
+    border: none;
+    background-color: transparent;
+}
+
+.modal-wrapper label{
+    font-size: 1.2em;
+    color: var(--bright-grey);
+    font-weight: bold;
+}
+
+.modal-wrapper input {
+    float: right;
+    width: 60%;
+    border: 1px solid var(--gray);
+    color: var(--bright-grey);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.username-wrap, .email-wrap, .password-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username-wrap, .email-wrap, .password-wrap {
+    padding-bottom: 30px;
+}
+
+.forgot-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.forgot-wrap button{
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.forgot-wrap button:hover{
+    color: #041562;
+}
+
+.login-btn-wrap button {
+    width: 100%;
+    background-color: var(--lapis-blue);
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+.login-btn-wrap button:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
 /* common css start here */
 .owl-carousel .owl-stage {
     display: flex;

@@ -39,6 +39,69 @@
     <title>E-Commerce</title>
 </head>
 <body>
+        <!-- login modal start here -->
+        <section class="overlay-body" id="modal-section">
+            <div class="custom-modal" id="custom-modal-login">
+                <div class="modal-wrapper">
+                    <div class="mdl-header">
+                        <span>Hello Again! 👋</span>
+                        <button id="modal-cross"><i class="fa-regular fa-circle-xmark fa-lg"></i></button>
+                    </div>
+                    <hr>
+                    <div id="login-form-wrap">
+                        <div class="email-wrap">
+                            <label for="">E-mail Address</label>
+                            <input id="loginEmail" type="email" placeholder="Email">
+                        </div>
+                        <div class="password-wrap">
+                            <label for="">Password</label>
+                            <input id="loginPassword" type="password" placeholder="Password">
+                        </div>
+        
+                        <div class="forgot-wrap">
+                            <button>Forgot Password</button>
+                            <button onclick="showRegisterModal()">Register !</button>
+                        </div>
+        
+                        <div class="login-btn-wrap">
+                            <button id="modalLogin">Login</button>
+                        </div>
+                    </div>
+    
+                    <div id="register-form-wrap">
+                        <div class="username-wrap">
+                            <label for="">User Name</label>
+                            <input id="registerUsername" type="text" placeholder="User Name">
+                        </div>
+                        <div class="email-wrap">
+                            <label for="">E-mail Address</label>
+                            <input id="registerEmail" type="email" placeholder="Email">
+                        </div>
+                        <div class="password-wrap">
+                            <label for="">Password</label>
+                            <input id="registerPassword" type="password" placeholder="Password">
+                        </div>
+        
+                        <div class="password-wrap">
+                            <label for=""> Confirm Password</label>
+                            <input id="registerCnfPassword" type="password" placeholder="Confirm Password">
+                        </div>
+        
+                        <div class="forgot-wrap">
+                            <button>Forgot Password</button>
+                            <button onclick="showLoginModal()">Login !</button>
+                        </div>
+        
+                        <div class="login-btn-wrap">
+                            <button id="modalRegister">Register</button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <!-- login modal end here -->
+
     <button id="move_page_btn" onclick="move_top()"><i class="fa-solid fa-arrow-up"></i></button>
 
 
@@ -144,15 +207,15 @@
                         <div class="signup">
                             <div class="signup-container">
                                 <div class="login-div">
-                                    <a id="login">
+                                    <a class="login">
                                         <i class="fa-solid fa-circle-user fa-2xl"></i>
-                                        <p id="login-text">Login</p>
+                                        <p class="login-text">Login</p>
                                     </a>
                                 </div>
                                 <div class="register-div">
-                                    <a id="register">
+                                    <a class="register">
                                         <i class="fa-regular fa-pen-to-square fa-2xl"></i>
-                                        <p id="register-text">Register</p>
+                                        <p class="register-text">Register</p>
                                     </a>
                                 </div>
                                 <div class="wishlist-div">
@@ -208,13 +271,13 @@
             <div class="mv-top-nav">
                 <div class="container">
                     <div class="mv-signup">
-                        <div class="mv-login-div">
+                        <div class="mv-login-div login">
                             <i class="fa-solid fa-circle-user fa-xl"></i>
-                            <span>Login</span>
+                            <span class="login-text">Login</span>
                         </div>
-                        <div class="mv-register-div">
+                        <div class="mv-register-div register">
                             <i class="fa-regular fa-pen-to-square fa-xl"></i>
-                            <span>Register</span>
+                            <span class="register-text">Register</span>
                         </div>
                     </div>
                     <div class="mv-currency">
@@ -1093,7 +1156,6 @@
             })
         });
     </script>
-
     <script src="./assets/js/login.js"></script>
 
 </body>
