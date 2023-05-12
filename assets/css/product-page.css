@@ -60,7 +60,7 @@ body{
     z-index: 999;
     opacity: 1;
     transform: translate(-50%,-50%);
-    animation: 3s slidein;
+    animation: 1.5s slidein;
     transition: ease-in;
 }
 
@@ -316,6 +316,10 @@ body{
     font-size: 25px;
 }
 
+.signup-container a{
+    text-decoration: none;
+}
+
 .middel-nav .cart{
     text-align: right;
     color: var(--primary-grey);
@@ -392,6 +396,10 @@ body{
     margin: auto;
     border: 2px solid;
     width: 29px;
+}
+
+.login-div:hover, .register-div:hover, .wishlist-div:hover, .compare-div:hover{
+    transform: scale(1.1);
 }
 
 /* header section bottom-nav */
@@ -494,6 +502,14 @@ body{
 
 .mv-currency .currency-dropdown{
     padding-right: 10px;
+}
+
+.mv-login-div:hover, .mv-register-div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border-radius: 5px;
+    border: black solid 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 /********** mobile view header css end ************/
 
