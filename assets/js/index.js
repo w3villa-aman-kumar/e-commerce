@@ -1,14 +1,14 @@
 // calling data handler function
 const urlPath = window.location.pathname
 
-if (urlPath == "/index.html") {
+if (urlPath == "/e-commerce/index.html") {
 	dataHandler()
-} else if (urlPath == "/wishlist.html") {
+} else if (urlPath == "/e-commerce/wishlist.html") {
 	loadWlHtml()
 	displayWlItem()
-} else if (urlPath == "/search-page.html") {
+} else if (urlPath == "/e-commerce/search-page.html") {
 	displaywlCount()
-} else if (urlPath == "/product-page.html") {
+} else if (urlPath == "/e-commerce/product-page.html") {
 	displaywlCount()
 }
 
