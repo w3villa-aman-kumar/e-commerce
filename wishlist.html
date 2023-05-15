@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default"
+        disabledhref="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d" />
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-df1bd4d47fc6bf066625b27b61ccafe7.css?vsn=d" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css" />
+
+    <!-- font family cdn link -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Owl Carousel css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Custom CSS File -->
+    <base href="/">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>E-Commerce</title>
+</head>
+<body>
+
+    <section id="header-part"></section>
+
+    <main>
+        <div class="home-icon-wrapper">
+            <div class="container home-icon">
+                <p><i class="fa-regular fa-house"></i> <i class="fa-solid fa-arrow-right"></i> Wishlist</p>
+            </div>
+        </div>
+
+        <div class="search-heading-wrapper">
+            <div class="container search-heading-container">
+                <h2>My Wish List</h2>
+                <hr>
+            </div>
+        </div>
+
+        <section class="wishlist-section">
+            <div class="container">
+                <table id="wishlist-table">
+                    <thead>
+                        <tr>
+                            <th>IMAGE</th>
+                            <th class="item-name">PRODUCT NAME</th>
+                            <th>MODEL</th>
+                            <th>UNIT PRICE</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wl-table-body">
+                        <!-- <tr>
+                            <td><img src="./assets/image/white-watch.png" alt="" srcset=""></td>
+                            <td class="item-name">Water Watch</td>
+                            <td>Model 205</td>
+                            <td>$204.00</td>
+                            <td>
+                                <button id="wishlist-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                                <button id="wishlist-remove"><i class="fa-solid fa-xmark"></i></button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <section id="footer-part"></section>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- owl carousel js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    
+    <script>
+        window.addEventListener('scroll',()=>{
+            let height = window.pageYOffset;
+            let move_page = document.getElementById('move_page_btn')
+            if (height>100) {
+                move_page.style.display = 'block'
+                move_page.style.transition = '200ms linear'
+            } else {
+                move_page.style.display = 'none'
+            }
+        })
+
+        function move_top(){
+            document.documentElement.scrollTop=0
+        }
+
+        function tglMostview(self){
+            border_tgl = self.parentNode.getElementsByClassName('most-v-border')
+            border_tgl[0].classList.remove("most-v-border")
+            self.classList.add('most-v-border')
+
+            recent_view = document.getElementById('recent-view-card')
+            most_view = document.getElementById('most-view-carousel')
+
+            if (self.id == 'most-view-text'){
+                recent_view.style.display = 'none'
+                most_view.style.display = 'block'
+            } else {
+                recent_view.style.display = 'flex'
+                most_view.style.display = 'none'
+            }
+        }
+
+    </script>
+
+    <script src="./assets/js/index.js"></script>
+
+</body>
+</html>

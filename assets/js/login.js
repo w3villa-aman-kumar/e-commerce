@@ -141,7 +141,9 @@ function set_user(userName, email, password) {
 
 	let db_user = get_item('user')
 
-	if (db_user != null) {
+	if (db_user != null) {Login
+
+
 		user = JSON.parse(db_user)
 	}
 
