@@ -8,6 +8,7 @@ if ((urlPath == "/index.html") || (urlPath == "/") ) {
 	loadHtml()
 	displayWlItem()
 } else if (urlPath == "/search-page.html") {
+	filterSearch()
 	displaywlCount()
 	displayCartCount()
 } else if (urlPath == "/product-page.html") {
@@ -883,3 +884,121 @@ function get_item(key) {
 	let key_value = localStorage.getItem(key)
 	return key_value
 }
+
+
+
+/********************************
+ **** Product search feature *****
+ ********************************/
+const searchBtn =  document.getElementById('search-id')
+const searchInput = document.querySelector('.form-control')
+searchBtn.style.pointerEvents = 'none'
+
+
+searchInput.addEventListener("input", ()=>{
+	searchBtn.style.pointerEvents = 'auto'
+})
+
+
+searchBtn.addEventListener('click', () => {
+	window.location.href = './search-page.html'+'?'+'product='+searchInput.value
+})
+
+
+async function filterSearch() {
+	console.log('in filter search')
+	const searchedCard = document.getElementById('searched-card-div-id')
+
+	let response = await fetch("./assets/data/product.json")
+	let data = await response.json()
+
+	const url_params = new URLSearchParams(window.location.search)
+	const product = url_params.get('product')
+
+	let searchedCardHtml
+	let productCount = 0
+
+	if (product == '' ) {
+		searchedCard.innerHTML = 'no results found'
+		return
+	}
+
+	for (i in data.products) {
+		if (data.products[i].name.toLowerCase().match(product)) {
+
+			productCount++
+
+			let {
+				id,
+				img,
+				company,
+				model,
+				name,
+				price,
+				description
+			} = data.products[i]
+
+			searchedCardHtml = `<div class="common-search searched-card-grid">
+									<div class="search-card-img common-tag">
+										<img onclick="window.location.href = 'product-page.html'" src="${img}" alt="headphone">
+										<div class="card-tag right top"><span>-70%</span></div>
+										<div class="card-tag right bottom"><span>HOT</span></div>
+									</div>
+
+									<div class="search-card-bottom">
+										<div class="search-seller">
+											<a href="#">${company}</a>
+											<p>${model}</p>
+										</div>
+										<div class="search-details">
+											<p class="search-card-title">${name}</p>
+											<p class="search-price">${price} <strike>$3,299.00</strike></p>
+											<div class="search-button">
+												<div class="search-add-cart">
+													<input type="number" id="quantity" min="1" max="5" value="1">
+													<button class="btn" onclick="setAddToCart(${id})">Add to Cart</button>
+												</div>
+												<div class="search-wishlist">
+													<a id="${id}" onclick="setWishList(this)"><i class="fa-regular fa-heart fa-lg"></i></a>
+													<a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="search-buy-now">
+											<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+											<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+										</div>
+									</div>
+
+									<!-- search-card list view bottom -->
+									<div class="search-card-bottom-list">
+										<p class="top-title"><span>Brand: <a href="#">${company}</a></span> <span>Model: ${model}</span></p>
+										<p class="search-card-title">${name}</p>
+										<p class="search-desc">${description}</p>
+										<div class="search-price-container">
+											<p class="search-price"><span style="color:orange;">${price}</span> <strike>78.46$</strike></p>
+											<p>Ex Tax:70.61 $</p>
+										</div>
+										<div class="search-button-list">
+											<input type="number" id="quantity" min="1" max="5" value="1">
+											<button onclick="setAddToCart(${id})"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+											<div onclick="setWishList(this)" id="${id}"><i class="fa-regular fa-heart"></i></div>
+											<div><i class="fa-solid fa-right-left"></i></div>
+										</div>
+										<div class="search-buy-now">
+											<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+											<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+										</div>
+									</div>
+								</div>`
+			searchedCard.insertAdjacentHTML("beforeend",searchedCardHtml)
+		}
+	}
+
+	if (productCount == 0 ) {
+		searchedCard.innerHTML = 'no results found'
+	}
+}
+
+/** Product search feature end here **/
+
