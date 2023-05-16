@@ -402,11 +402,11 @@ body{
     transform: scale(1.1);
 }
 
-.wishlist-div {
+.wishlist-div, .ac-div {
     position: relative;
 }
 
-.wl-number {
+.wl-number, .ac-number {
     position: absolute;
     top: 0;
     right: 4px;
@@ -416,6 +416,12 @@ body{
     height: 18px;
     border-radius: 20px;
     font-size: 12px;
+    text-align: center;
+}
+
+.cart-container .ac-number {
+    top: -5px;
+    right: 0;
 }
 
 /* header section bottom-nav */

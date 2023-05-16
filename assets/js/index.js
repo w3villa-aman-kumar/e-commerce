@@ -5,12 +5,17 @@ urlPath = urlPath.replace('/e-commerce','')
 if ((urlPath == "/index.html") || (urlPath == "/") ) {
 	dataHandler()
 } else if (urlPath == "/wishlist.html") {
-	loadWlHtml()
+	loadHtml()
 	displayWlItem()
 } else if (urlPath == "/search-page.html") {
 	displaywlCount()
+	displayCartCount()
 } else if (urlPath == "/product-page.html") {
 	displaywlCount()
+	displayCartCount()
+} else if (urlPath == '/add-cart.html') {
+    loadHtml()
+	displayCartItem()
 }
 
 
@@ -20,6 +25,7 @@ function dataHandler() {
 
 	//display wishlist count
 	displaywlCount()
+	displayCartCount()
 
 	//display why buy section
 	displayWhybuy()
@@ -151,7 +157,7 @@ async function displayFeaturedProduct(category = 'featured') {
                                                 <div class="fp-button">
                                                     <div class="fp-add-cart">
                                                         <input type="number" id="quantity" min="1" max="5" value="1">
-                                                        <button class="btn">Add to Cart</button>
+                                                        <button class="btn" onclick="setAddToCart(${id})">Add to Cart</button>
                                                     </div>
                                                     <div class="fp-wishlist">
                                                         <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)"><i onmouseover="addHeartBg(this)" onmouseout="removeHeartBg(this)" class="fa-regular fa-heart fa-lg"></i></a>
@@ -213,7 +219,7 @@ async function displayNewfashion(category = 'new fashion') {
                                             <p>${price}</p>
                                             <hr>
                                             <div class="new-fashion-btn">
-                                                <a href="javascript:void(0);" class="btn">Add to Cart</a>
+                                                <a href="javascript:void(0);" class="btn" onclick="setAddToCart(${id})">Add to Cart</a>
                                                 <div class="new-fashion-wish-compare">
                                                     <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)"><i onmouseover="addHeartBg(this)" onmouseout="removeHeartBg(this)" class="fa-regular fa-heart fa-lg"></i></a>
                                                     <a href="javascript:void(0);"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
@@ -321,7 +327,7 @@ async function displayMostView(category = 'most view') {
                                         <p>${name}</p>
                                         <p>${price}</p>
                                         <div>
-                                            <a>
+                                            <a onclick="setAddToCart(${id})">
                                                 <i class="fa-regular fa-cart-shopping"></i>
                                             </a>
                                             <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)">
@@ -539,7 +545,7 @@ function peopleSayingCarousel() {
  ********************************/
 
 //load header and footer of wishlist html page
-function loadWlHtml() {
+function loadHtml() {
 
 	fetch("./header.html")
 		.then(response => {
@@ -548,6 +554,7 @@ function loadWlHtml() {
 		.then(data => {
 			document.getElementById("header-part").innerHTML = data;
 			displaywlCount()
+			displayCartCount()
 		});
 
 	fetch("./footer.html")
@@ -721,6 +728,141 @@ function removeWLItem(self) {
     }
 }
 
+
+
+/********************************
+ **** Add to cart function *****
+ ********************************/
+function setAddToCart(id) {
+	let addCart = []
+
+	let db_addcart = JSON.parse(get_item('addCart'))
+
+	if (db_addcart)
+		addCart = db_addcart
+
+	if (addCart.includes(id)) {
+		alert("Product already exist in addcart! ")
+	} else {
+		addCart.push(id)
+
+		set_item('addCart', addCart)
+	}    
+
+	displayCartCount()
+}
+
+
+// display all the item in cart
+async function displayCartItem() {
+	console.log('in displayCartItem')
+	const cartId = JSON.parse(get_item('addCart'))
+    const table = document.getElementById('addcart-table')
+	const tableBody = document.getElementById('ac-table-body')
+	let acHtml
+
+	let response = await fetch("./assets/data/product.json")
+	let data = await response.json()
+	let i
+
+    
+    if (cartId.length == 0) {
+        table.innerHTML = ''
+        table.parentElement.innerHTML = 'Your cart is empty'
+        return
+    }
+
+
+	for (value in cartId) {
+		i = 0
+		while (i < data.products.length) {
+			if (data.products[i].id == Number(cartId[value])) {
+
+				let {
+					img,
+					model,
+					name,
+					price
+				} = data.products[i]
+
+				acHtml = `<tr id="tr-${cartId[value]}">
+							<td><img src="${img}" alt="" srcset=""></td>
+							<td class="item-name">${name}</td>
+							<td>${model}</td>
+							<td>${price}</td>
+							<td>$204.00</td>
+							<td>
+								<button id="wishlist-cart" class="wishlist-action"><i class="fa fa-refresh"></i></button>
+								<input type="number" value="1">
+								<button id="${cartId[value]}" class="wishlist-action" onclick="removeCartItem (this)"><i class="fa-solid fa-xmark"></i></button>
+							</td>
+						  </tr>`
+				break
+			} else {
+				i++
+			}
+		}
+
+		tableBody.insertAdjacentHTML("beforeend", acHtml)
+	}
+}
+
+
+//display number of item in cart
+async function displayCartCount() {
+    const db_addcart = JSON.parse(get_item('addCart'))
+	const cartCount = document.getElementById('cart-count')
+	const cartBox = document.querySelector('.ac-number')
+
+    let response = await fetch("./assets/data/product.json")
+	let data = await response.json()
+    let i
+    let itemCount=0
+    let itemTotalCost = 0
+    
+    for (value in db_addcart) {
+		i = 0
+		while (i < data.products.length) {
+			if (data.products[i].id == Number(db_addcart[value])) { 
+                itemCount++;
+                itemTotalCost += Number(data.products[i].price.replace('$',''))
+                i++
+                break
+            } else {
+                i++
+            }
+        }
+    }
+
+    cartCount.innerHTML = `${itemCount} item(s) - $${itemTotalCost}.00`
+	cartBox.innerHTML = itemCount
+    
+}
+
+
+// remove items from cart
+function removeCartItem (self) {
+    const table = document.getElementById('addcart-table')
+	let db_addcart = JSON.parse(get_item('addCart'))
+
+	db_addcart = db_addcart.filter((value) => {
+		return value != self.id
+	})
+
+	set_item('addCart', db_addcart)
+    displaywlCount()
+
+	const removeHtml = document.getElementById(`tr-${self.id}`)
+	removeHtml.remove()
+
+    if (db_addcart.length == 0) {
+        table.innerHTML = ''
+        table.parentElement.innerHTML = 'Your cart is empty'
+        return
+    }
+
+	displayCartCount()
+}
 
 
 /********************************

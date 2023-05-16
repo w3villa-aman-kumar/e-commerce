@@ -470,11 +470,11 @@ body{
     transform: scale(1.1);
 }
 
-.wishlist-div {
+.wishlist-div, .ac-div {
     position: relative;
 }
 
-.wl-number {
+.wl-number, .ac-number {
     position: absolute;
     top: 0;
     right: 4px;
@@ -484,6 +484,12 @@ body{
     height: 18px;
     border-radius: 20px;
     font-size: 12px;
+    text-align: center;
+}
+
+.cart-container .ac-number {
+    top: -5px;
+    right: 0;
 }
 
 /* header section bottom-nav */
@@ -1634,33 +1640,33 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* wishlist css start here */
-.wishlist-section{
+.wishlist-section, .addcart-section{
     padding-bottom: 30px;
 }
 
-#wishlist-table{
+#wishlist-table, #addcart-table{
     width: 100%;
     border: 1px solid var(--light-grey);
 }
 
-#wishlist-table thead{
+#wishlist-table thead, #addcart-table thead{
     background-color: var(--light-grey);
 }
 
-#wishlist-table thead th{
+#wishlist-table thead th, #addcart-table thead th{
     padding: 8px 0;
 }
 
-#wishlist-table img{
+#wishlist-table img, #addcart-table img{
     width: 100px;
     height: 100px;
 }
 
-#wishlist-table td,th{
+#wishlist-table td,th, #addcart-table td,th{
     text-align: center;
 }
 
-#wishlist-table .item-name{
+#wishlist-table .item-name, #addcart-table .item-name{
     text-align: left;
 }
 
@@ -1678,6 +1684,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 .wishlist-action:last-child {
     background-color: red;
+}
+
+#ac-table-body input{
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-grey);
 }
 
 
