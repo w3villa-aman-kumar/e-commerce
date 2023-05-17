@@ -830,6 +830,11 @@ body{
 
 
 /* searched card item css start here */
+.search-card-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .searched-item-div{
     padding: 40px 0;
     border-bottom: 1px solid var(--light-grey);

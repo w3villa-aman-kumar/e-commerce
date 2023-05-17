@@ -36,6 +36,10 @@
     <!-- Custom CSS File -->
     <link rel="stylesheet" href="./assets/css/product-page.css">
 
+    <!-- script file -->
+    <script defer src="./assets/js/index.js"></script>
+    <script defer src="./assets/js/login.js"></script>
+
     <title>E-Commerce</title>
 </head>
 <body>
@@ -359,12 +363,12 @@
                     <!-- product image section start here -->
                     <section class="prdt-img-section">
                         <div class="multi-img-wrapper">
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
-                            <div class="multi-img"><img src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
+                            <div class="multi-img"><img class="left-img-grp" src="./assets/image/desktop.png" alt="desktop"></div>
                         </div>
 
 
@@ -378,7 +382,7 @@
                                   <div class="carousel-item active">
                                     <div class="focused-img-wrapper">
                                         <div id="img-zoom" class="focus-img common-tag">
-                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <img class="prdt-img" src="./assets/image/desktop.png" alt="desktop">
                                             <div class="card-tag right top"><span>-70%</span></div>
                                             <div class="card-tag right bottom"><span>HOT</span></div>
                                         </div>
@@ -387,7 +391,7 @@
                                   <div class="carousel-item">
                                     <div class="focused-img-wrapper">
                                         <div class="focus-img common-tag">
-                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <img class="prdt-img" src="./assets/image/desktop.png" alt="desktop">
                                             <div class="card-tag right top"><span>-70%</span></div>
                                             <div class="card-tag right bottom"><span>HOT</span></div>
                                         </div>
@@ -396,7 +400,7 @@
                                   <div class="carousel-item">
                                     <div class="focused-img-wrapper">
                                         <div class="focus-img common-tag">
-                                            <img src="./assets/image/desktop.png" alt="desktop">
+                                            <img class="prdt-img" src="./assets/image/desktop.png" alt="desktop">
                                             <div class="card-tag right top"><span>-70%</span></div>
                                             <div class="card-tag right bottom"><span>HOT</span></div>
                                         </div>
@@ -659,7 +663,7 @@
                 <div class="related-product-card">
                     <div class="related-product-img">
                         <div class="common-tag">
-                            <img src="./assets/image/shoe.jpg" alt="fashion">
+                            <img src="./assets/image/whyBuy-img/shoe.jpg" alt="fashion">
                             <div class="card-tag left"><span>2-3 DAYS</span></div>
                             <div class="card-tag right"><span>NEW</span></div>
                         </div>
@@ -937,8 +941,6 @@
         crossorigin="anonymous"></script>
 
     <!--******** script start here ********-->
-
-    <script src="./assets/js/index.js"></script>
     
     <script>
         window.onresize = function() {
@@ -951,12 +953,12 @@
             }
         }
 
-        const img_zoom = document.querySelector("#img-zoom");
+        // const img_zoom = document.querySelector("#img-zoom");
 
-        img_zoom.addEventListener("mousemove", (e) => {
-            img_zoom.style.backgroundPositionX = -e.offsetX + "px";
-            img_zoom.style.backgroundPositionY = -e.offsetY + "px";
-        });
+        // img_zoom.addEventListener("mousemove", (e) => {
+        //     img_zoom.style.backgroundPositionX = -e.offsetX + "px";
+        //     img_zoom.style.backgroundPositionY = -e.offsetY + "px";
+        // });
 
     </script>
 
@@ -1054,9 +1056,7 @@
             })
         });
     </script>
-    <!--******** script end here ********-->
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/login.js"></script>
+
     
 </body>
 </html>

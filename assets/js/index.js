@@ -1,6 +1,7 @@
 // calling data handler function
-let urlPath = window.location.pathname
-urlPath = urlPath.replace('/e-commerce','')
+let url_path = window.location.pathname
+console.log(url_path)
+urlPath = url_path.replace('/e-commerce','')
 
 if ((urlPath == "/index.html") || (urlPath == "/") ) {
 	dataHandler()
@@ -12,6 +13,7 @@ if ((urlPath == "/index.html") || (urlPath == "/") ) {
 	displaywlCount()
 	displayCartCount()
 } else if (urlPath == "/product-page.html") {
+	displayProduct()
 	displaywlCount()
 	displayCartCount()
 } else if (urlPath == '/add-cart.html') {
@@ -939,8 +941,8 @@ async function filterSearch() {
 			} = data.products[i]
 
 			searchedCardHtml = `<div class="common-search searched-card-grid">
-									<div class="search-card-img common-tag">
-										<img onclick="window.location.href = 'product-page.html'" src="${img}" alt="headphone">
+									<div class="search-card-img common-tag" onclick="window.location.href = './product-page.html'+'?'+'product-id=${id}'">
+										<img src="${img}" alt="headphone">
 										<div class="card-tag right top"><span>-70%</span></div>
 										<div class="card-tag right bottom"><span>HOT</span></div>
 									</div>
@@ -1002,3 +1004,29 @@ async function filterSearch() {
 
 /** Product search feature end here **/
 
+/********************************
+ **** Product page feature *****
+ ********************************/
+async function displayProduct() {
+	const prdt_multi_img = document.querySelectorAll('.left-img-grp')
+	const prdt_img = document.querySelectorAll('.prdt-img')
+	const descp_html = document.querySelector('.descp-text')
+	const price_html =document.querySelector('.discount-price')
+
+	let response = await fetch("./assets/data/product.json")
+	let data = await response.json()
+
+	const url_params = new URLSearchParams(window.location.search)
+	const product_id = url_params.get('product-id')
+
+	for (i in data.products) {
+		if (data.products[i].id == product_id) {
+			const {img, price, company, description} = data.products[i]
+
+			prdt_multi_img.forEach(element => element.src=img)
+			prdt_img.forEach(element => element.src=img)
+			descp_html.innerHTML = description
+			price_html.innerHTML = price
+		}
+	}
+}
