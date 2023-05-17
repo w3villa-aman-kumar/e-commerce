@@ -1,6 +1,5 @@
 // calling data handler function
 let url_path = window.location.pathname
-console.log(url_path)
 urlPath = url_path.replace('/e-commerce','')
 
 if ((urlPath == "/index.html") || (urlPath == "/") ) {
@@ -901,6 +900,12 @@ searchInput.addEventListener("input", ()=>{
 	searchBtn.style.pointerEvents = 'auto'
 })
 
+searchInput.addEventListener('keypress', (event) => {
+	if (event.key === "Enter") {
+		searchBtn.click()
+	}
+})
+
 
 searchBtn.addEventListener('click', () => {
 	window.location.href = './search-page.html'+'?'+'product='+searchInput.value
@@ -1012,6 +1017,7 @@ async function displayProduct() {
 	const prdt_img = document.querySelectorAll('.prdt-img')
 	const descp_html = document.querySelector('.descp-text')
 	const price_html =document.querySelector('.discount-price')
+	const prdt_name_html = document.querySelectorAll('.prdt-name')
 
 	let response = await fetch("./assets/data/product.json")
 	let data = await response.json()
@@ -1021,12 +1027,13 @@ async function displayProduct() {
 
 	for (i in data.products) {
 		if (data.products[i].id == product_id) {
-			const {img, price, company, description} = data.products[i]
+			const {img, price, name, company, description} = data.products[i]
 
 			prdt_multi_img.forEach(element => element.src=img)
 			prdt_img.forEach(element => element.src=img)
 			descp_html.innerHTML = description
 			price_html.innerHTML = price
+			prdt_name_html.forEach(element => element.innerHTML = name)
 		}
 	}
 }
