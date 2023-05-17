@@ -1,3 +1,19 @@
+function tglItemIn(element) {
+	const megamenu_content = document.querySelector(element)
+	const overlay = document.querySelector('.section-overlay')
+	
+	megamenu_content.style.display = 'block'
+	overlay.style.display = 'block'
+}
+
+function tglItemOut(element) {
+	const megamenu_content = document.querySelector(element)
+	const overlay = document.querySelector('.section-overlay')
+
+	megamenu_content.style.display = 'none'
+	overlay.style.display = 'none'
+}
+
 // calling data handler function
 let url_path = window.location.pathname
 urlPath = url_path.replace('/e-commerce','')

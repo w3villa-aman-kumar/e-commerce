@@ -311,6 +311,7 @@ body{
  **************************************/
 .home{
     font-weight: bold;
+    position: relative;
 }
 
 /* Header container .top-nav css */
@@ -495,17 +496,13 @@ body{
 /* header section bottom-nav */
 .bottom-nav-wrapper{
     background-color: var(--primary-blue);
+    position: relative;
 }
 
 .bottom-nav span{
     padding: 15px 15px;
     color: white;
     display: inline-block;
-}
-
-#menu-span-id{
-    background-color: var(--sunglow);
-    color: black;
 }
 
 #sale-span{
@@ -533,10 +530,187 @@ body{
     text-align: end;
 }
 
-.phone-number span:last-child{
-    background-color: var(--sunglow);
-    color: var(--black);
+/* bottom-nav hover css start here */
+.bottom-nav-left-hover {
+    position: relative;
 }
+
+.bottom-nav-left-hover:first-child, .bottom-nav-right-hover:last-child {
+    background-color: var(--sunglow);
+    color: black;
+}
+
+.bottom-nav-left-hover:hover, .bottom-nav-right-hover:hover {
+    background-color: var(--white);
+    color: black;
+    cursor: pointer;
+}
+
+.all-dpt-hover, .multilevel-hover {
+    list-style-type: none;
+    background-color: var(--white);
+    color: var(--primary-grey);
+    font-weight: 600;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 52px;
+    display: none;
+}
+
+.all-dpt-hover li, .multilevel-hover li{
+    padding: 10px 0;
+    padding-left: 20px;
+}
+
+.all-dpt-hover li i{
+    padding-right: 10px;
+}
+
+.section-overlay {
+    position: absolute;
+    height: 77%;
+    background-color: #000000;
+    opacity: 0.3;
+    width: 100%;
+    z-index: 99;
+    bottom: 0;
+    display: none;
+}
+
+
+.multilevel-hover {
+    width: 200%;
+}
+
+.multilevel-submenu {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    background-color: white;
+    list-style-type: none;
+    top: 0;
+    display: none;
+}
+
+.multilevel-hover > li:hover .multilevel-submenu{
+    display: block;
+}
+
+.bottom-nav-wrapper .container {
+    position: relative;
+}
+
+.megamenu-content-wrapper {
+    position: absolute;
+    width: 98%;
+    padding: 20px 10px;
+    top: 100%;
+    z-index: 999;
+    background-color: var(--white);
+    display: none;
+}
+
+.megmenu-content {
+    display: flex;
+}
+
+.megamenu-item {
+    flex: 1 1 0;
+}
+
+.megamenu-item ul li {
+    list-style-type: none;
+    padding: 5px 0;
+    font-weight: 600;
+    color: var(--primary-grey);
+}
+
+.megamenu-item ul li:hover {
+    color: var(--lapis-blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.megamenu-item:not(:last-child) {
+    border-right: 1px solid var(--primary-grey);
+}
+
+.megamenu-item:not(:first-child) {
+    padding-left: 15px;
+}
+
+.megamenu-item img {
+    width: 100%;
+    height: 75%;
+    top: 3%;
+    position: relative;
+}
+
+/* fullwidth css start here */
+.fullwidth-wrapper {
+    background-color: var(--white);
+    width: 100%;
+    top: 50px;
+    z-index: 999;
+    position: absolute;
+    display: none;
+    left: 0 ;
+    padding: 40px 0;
+}
+
+.fullwidth-flex-wrap {
+    display: flex;
+    column-gap: 35px;
+}
+
+.fullwidth-content:not(:last-child) {
+    flex: 1 1 0;
+}
+
+.fullwidth-content:last-child {
+    flex: 2 2 0;
+}
+
+.fullwidth-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.fullwidth-inner {
+    display: flex;
+    column-gap: 20px;
+}
+
+.fullwidth-inner img {
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.fullwidth-item p {
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    color: var(--primary-grey);
+}
+
+.fullwidth-item a {
+    font-size: 14px;
+    color: var(--primary-grey);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* .fullwidth-inner img, .fullwidth-text {
+    flex: 1 1 0;
+} */
+
+/* bottom-nav hover css end her */
 
 
 /* home banner css */
