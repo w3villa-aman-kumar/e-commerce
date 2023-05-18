@@ -705,11 +705,6 @@ body{
     text-decoration: underline;
 }
 
-
-/* .fullwidth-inner img, .fullwidth-text {
-    flex: 1 1 0;
-} */
-
 /* bottom-nav hover css end her */
 
 
@@ -974,6 +969,11 @@ body{
     color: var(--black);
     font-weight: bold;
 }
+
+.top-category-img:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 /********** Why Buy section css end here ************/
 
 
@@ -1003,6 +1003,17 @@ body{
    border-radius: 10px;
    margin: auto;
    border: 1px solid lightgrey;
+}
+
+.featured-products-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
+.fp-card-img:hover img{
+    transform: scale(1.2);
+    animation-duration: 2s;
+    transition: ease-in-out;
 }
 
 .fp-card-img{
@@ -1221,6 +1232,17 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 1px 0;
     background-color: var(--flamingo-orange);
 }
+
+.new-fashion-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
+.new-fashion-img:hover img{
+    transform: scale(1.2);
+    animation-duration: 2s;
+    transition: ease-in-out;
+}
 /********** Featured Category section css end here ************/
 
 
@@ -1379,6 +1401,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 .blog-card-content a{
     color: var(--primary-grey);
+}
+
+.blog-card-wrapper:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    cursor: pointer;
+}
+
+.blog-card-wrapper:hover .blog-card-header{
+    transform: scale(1.1);
+    animation-duration: 2s;
+    transition: ease-in-out;
 }
 /********** From Our Blog css end here ************
 

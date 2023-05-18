@@ -1,49 +1,49 @@
-function tglItemIn(element) {
-	const megamenu_content = document.querySelector(element)
-	const overlay = document.querySelector('.section-overlay')
-	
-	megamenu_content.style.display = 'block'
-	overlay.style.display = 'block'
-}
+// Loading url path
+let urlPath = window.location.pathname
 
-function tglItemOut(element) {
-	const megamenu_content = document.querySelector(element)
-	const overlay = document.querySelector('.section-overlay')
+urlPath = urlPath.replace('/e-commerce','')
 
-	megamenu_content.style.display = 'none'
-	overlay.style.display = 'none'
-}
+//common functionality to render
+displaywlCount()
+displayCartCount()
 
-// calling data handler function
-let url_path = window.location.pathname
-urlPath = url_path.replace('/e-commerce','')
 
-if ((urlPath == "/index.html") || (urlPath == "/") ) {
+//render data on different url
+if ((urlPath == "/index.html") || (urlPath == "/") ){
+
 	dataHandler()
+
 } else if (urlPath == "/wishlist.html") {
+
 	loadHtml()
 	displayWlItem()
+
 } else if (urlPath == "/search-page.html") {
+
 	filterSearch()
-	displaywlCount()
-	displayCartCount()
+	mostViewCarousel()
+
 } else if (urlPath == "/product-page.html") {
+
 	displayProduct()
-	displaywlCount()
-	displayCartCount()
+	mostViewCarousel()
+
 } else if (urlPath == '/add-cart.html') {
+
     loadHtml()
 	displayCartItem()
+
 }
 
 
 
-//home page dataHandler function decleration
-function dataHandler() {
 
-	//display wishlist count
-	displaywlCount()
-	displayCartCount()
+/***********************************
+ ***** Home page functionality *****
+ ***********************************/
+
+ //home page dataHandler function decleration
+function dataHandler() {
 
 	//display why buy section
 	displayWhybuy()
@@ -56,6 +56,9 @@ function dataHandler() {
 	//display new fashion section
 	displayNewfashion()
 
+	//shop by brand carousel
+	shopBrandCarousel()
+
 	//display our blog section
 	displayOurBlog()
 	tglCategory('btn-grp-blog', displayOurBlog)
@@ -66,12 +69,10 @@ function dataHandler() {
 	//display people saying section
 	displayPeopleSaying()
 
-
 }
 
 
-
-//toggel different category section
+//toggel different category of html section
 function tglCategory(btnId, displayFun) {
 	let btnCategory = document.getElementById(btnId)
 	let current_active = btnCategory.getElementsByClassName("active")
@@ -92,8 +93,27 @@ function tglCategory(btnId, displayFun) {
 }
 
 
+//toggel item in on hover
+function tglItemIn(element) {
+	const megamenu_content = document.querySelector(element)
+	const overlay = document.querySelector('.section-overlay')
+	
+	megamenu_content.style.display = 'block'
+	overlay.style.display = 'block'
+}
 
-//Render whybuy section
+
+//toggel item out on hover
+function tglItemOut(element) {
+	const megamenu_content = document.querySelector(element)
+	const overlay = document.querySelector('.section-overlay')
+
+	megamenu_content.style.display = 'none'
+	overlay.style.display = 'none'
+}
+
+
+//render whybuy section html
 async function displayWhybuy(category = 'top categories') {
 	const whyBuy = document.getElementById('why-buy-container')
 	const topCategory = document.getElementById("top-category-carousel")
@@ -115,13 +135,13 @@ async function displayWhybuy(category = 'top categories') {
 		} = data[category][i];
 
 		whyBuyHtml += `<div class="item top-category-item">
-                    <div class="top-category-img">
-                        <img src="${img}">
-                    </div>
-                    <div class="top-category-btn">
-                        <a href="javascript:void(0);" class="btn">${name}</a>
-                    </div>
-                    </div>`
+                    		<div class="top-category-img">
+                    		    <img src="${img}">
+                    		</div>
+                    		<div class="top-category-btn">
+                    		    <a href="javascript:void(0);" class="btn">${name}</a>
+                    		</div>
+                       </div>`
 	}
 
 	whyBuyHtml += `</div>`
@@ -130,8 +150,7 @@ async function displayWhybuy(category = 'top categories') {
 }
 
 
-
-//render featured product
+//render featured product section html
 async function displayFeaturedProduct(category = 'featured') {
 	const featuredProduct = document.getElementById('featured-product-container')
 	const fpCarousel = document.getElementById('featured-product-carousel')
@@ -201,7 +220,7 @@ async function displayFeaturedProduct(category = 'featured') {
 }
 
 
-//render new fashion
+//render new fashion section html
 async function displayNewfashion(category = 'new fashion') {
 	const newFashionWrap = document.getElementById('new-fashion-wrap')
 	const nfCarousel = document.getElementById('new-fashion-carousel')
@@ -257,7 +276,7 @@ async function displayNewfashion(category = 'new fashion') {
 }
 
 
-//render our blog
+//render our blog section html
 async function displayOurBlog(category = 'latest post') {
 	const ourBlog = document.getElementById('our-blog-container')
 	const obCarousel = document.getElementById('our-blog-cards')
@@ -313,7 +332,7 @@ async function displayOurBlog(category = 'latest post') {
 }
 
 
-// render most view
+// render most view section html
 async function displayMostView(category = 'most view') {
 	const mostView = document.getElementById('most-view-container')
 	const mvCarousel = document.getElementById('most-view-carousel')
@@ -369,7 +388,7 @@ async function displayMostView(category = 'most view') {
 }
 
 
-//render people saying
+//render people saying section html
 async function displayPeopleSaying() {
 	const peopleSaying = document.getElementById('feedback-container')
 	const psCarousel = document.getElementById('feedback-carousel')
@@ -407,162 +426,16 @@ async function displayPeopleSaying() {
 
 }
 
+/***** Home page functionality end  *****/
 
-// whyBuy carousel function
-function topCategoryCarousel() {
-	$('#top-category-carousel').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			1: {
-				items: 1
-			},
-			700: {
-				items: 2
-			},
-			900: {
-				items: 3
-			},
-			1400: {
-				items: 4
-			},
-			1600: {
-				items: 5
-			}
-		}
-	})
-}
-
-
-// featured product Carousel
-function featuredProductCarousel() {
-	$('#featured-product-carousel').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			1: {
-				items: 1
-			},
-			700: {
-				items: 2
-			},
-			1200: {
-				items: 3
-			},
-			1600: {
-				items: 4
-			}
-		}
-	})
-}
-
-//new fashion carousel
-function newFashionCarousel() {
-	$('#new-fashion-carousel').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			576: {
-				items: 2
-			},
-			769: {
-				items: 1
-			},
-			900: {
-				items: 2
-			},
-			1200: {
-				items: 3
-			},
-			1600: {
-				items: 4
-			}
-		}
-	})
-}
-
-
-
-//our blog Carousel
-function ourBlogCarousel() {
-	$('#our-blog-cards').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 2
-			},
-			1000: {
-				items: 3
-			}
-		}
-	})
-}
-
-//most view carousel
-function mostViewCarousel() {
-	$('#most-view-carousel').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			0: {
-				items: 2
-			},
-			945: {
-				items: 3
-			},
-			1400: {
-				items: 4
-			}
-		}
-	})
-}
-
-
-//people saying carousel
-function peopleSayingCarousel() {
-	$('#feedback-carousel').owlCarousel({
-		loop: true,
-		autoplay: true,
-		margin: 10,
-		nav: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 2
-			},
-			1000: {
-				items: 3
-			}
-		}
-	})
-}
 
 
 
 /********************************
- ******** Wishlist feature ********
+ ***** Helper functionality *****
  ********************************/
 
-//load header and footer of wishlist html page
+//load header and footer of html page
 function loadHtml() {
 
 	fetch("./header.html")
@@ -590,7 +463,6 @@ function loadHtml() {
 }
 
 
-
 //function for loading js file
 function loadJS(FILE_URL, async = true) {
 	let scriptEle = document.createElement("script");
@@ -612,9 +484,16 @@ function loadJS(FILE_URL, async = true) {
 	});
 }
 
+/***** Helper functionality end *****/
 
 
-//display all item in wishlist
+
+
+/**********************************
+ ***** Wishlist functionality *****
+ **********************************/
+
+//display all product in wishlist
 async function displayWlItem() {
 	console.log('in displaywlItem')
 	const wishlistId = JSON.parse(get_item('wishList'))
@@ -668,7 +547,7 @@ async function displayWlItem() {
 }
 
 
-//display number of item in wishlist
+//display count of product in wishlist
 function displaywlCount() {
 
 	const uiWishlist = document.querySelector(".wl-number")
@@ -686,6 +565,7 @@ function displaywlCount() {
 
 }
 
+
 //add heart icon bg
 function addHeartBg(self) {
 	self.classList.remove('fa-regular')
@@ -702,7 +582,7 @@ function removeHeartBg(self) {
 }
 
 
-//add to wishlist
+//add product to wishlist
 function setWishList(self) {
 	let wish_list = []
 
@@ -724,7 +604,7 @@ function setWishList(self) {
 }
 
 
-//remove from wishlist
+//remove product from wishlist
 function removeWLItem(self) {
     const table = document.getElementById('wishlist-table')
 	let db_wishlist = JSON.parse(get_item('wishList'))
@@ -746,11 +626,16 @@ function removeWLItem(self) {
     }
 }
 
+/***** Wishlist functionality end *****/
 
 
-/********************************
- **** Add to cart function *****
- ********************************/
+
+
+/*************************************
+ ***** Add to cart functionality *****
+ *************************************/
+
+ //set item to cart
 function setAddToCart(id) {
 	let addCart = []
 
@@ -826,7 +711,7 @@ async function displayCartItem() {
 }
 
 
-//display number of item in cart
+//display count of item in cart
 async function displayCartCount() {
     const db_addcart = JSON.parse(get_item('addCart'))
 	const cartCount = document.getElementById('cart-count')
@@ -882,40 +767,26 @@ function removeCartItem (self) {
 	displayCartCount()
 }
 
-
-/********************************
- **** LocalStorage function *****
- ********************************/
-
-// localStorage set item function
-function set_item(key, value) {
-	value = JSON.stringify(value)
-	localStorage.setItem(key, value)
-	return true
-
-}
-
-
-// localStorage get item function
-function get_item(key) {
-	let key_value = localStorage.getItem(key)
-	return key_value
-}
+/***** Add to cart functionality end *****/
 
 
 
-/********************************
- **** Product search feature *****
- ********************************/
+
+/************************************
+ **** Search page functionality *****
+ ************************************/
 const searchBtn =  document.getElementById('search-id')
 const searchInput = document.querySelector('.form-control')
 searchBtn.style.pointerEvents = 'none'
 
 
+//enable search button on input
 searchInput.addEventListener("input", ()=>{
 	searchBtn.style.pointerEvents = 'auto'
 })
 
+
+//Search product input field enter keypress event
 searchInput.addEventListener('keypress', (event) => {
 	if (event.key === "Enter") {
 		searchBtn.click()
@@ -923,11 +794,13 @@ searchInput.addEventListener('keypress', (event) => {
 })
 
 
+// search button click
 searchBtn.addEventListener('click', () => {
 	window.location.href = './search-page.html'+'?'+'product='+searchInput.value
 })
 
 
+//Filter and display searched product
 async function filterSearch() {
 	console.log('in filter search')
 	const searchedCard = document.getElementById('searched-card-div-id')
@@ -1023,11 +896,16 @@ async function filterSearch() {
 	}
 }
 
-/** Product search feature end here **/
+/***** Search page functionality end here *****/
 
-/********************************
- **** Product page feature *****
- ********************************/
+
+
+
+/*************************************
+ **** Product page functionality *****
+ *************************************/
+
+ //display product detail
 async function displayProduct() {
 	const prdt_multi_img = document.querySelectorAll('.left-img-grp')
 	const prdt_img = document.querySelectorAll('.prdt-img')
@@ -1053,3 +931,221 @@ async function displayProduct() {
 		}
 	}
 }
+
+/***** Product page functionality end ******/
+
+
+
+
+/*************************************
+ **** LocalStorage functionality *****
+ *************************************/
+
+// localStorage set item function
+function set_item(key, value) {
+	value = JSON.stringify(value)
+	localStorage.setItem(key, value)
+	return true
+
+}
+
+
+// localStorage get item function
+function get_item(key) {
+	let key_value = localStorage.getItem(key)
+	return key_value
+}
+
+/***** LocalStorage functionality ******/
+
+
+
+
+/*********************************************
+ **** Owl carousel for different section *****
+ *********************************************/
+
+// whyBuy carousel function
+function topCategoryCarousel() {
+	$('#top-category-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			1: {
+				items: 1
+			},
+			700: {
+				items: 2
+			},
+			900: {
+				items: 3
+			},
+			1400: {
+				items: 4
+			},
+			1600: {
+				items: 5
+			}
+		}
+	})
+}
+
+
+// featured product Carousel
+function featuredProductCarousel() {
+	$('#featured-product-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			1: {
+				items: 1
+			},
+			700: {
+				items: 2
+			},
+			1200: {
+				items: 3
+			},
+			1600: {
+				items: 4
+			}
+		}
+	})
+}
+
+
+//new fashion carousel
+function newFashionCarousel() {
+	$('#new-fashion-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			576: {
+				items: 2
+			},
+			769: {
+				items: 1
+			},
+			900: {
+				items: 2
+			},
+			1200: {
+				items: 3
+			},
+			1600: {
+				items: 4
+			}
+		}
+	})
+}
+
+
+//our blog Carousel
+function ourBlogCarousel() {
+	$('#our-blog-cards').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 2
+			},
+			1000: {
+				items: 3
+			}
+		}
+	})
+}
+
+
+//most view carousel
+function mostViewCarousel() {
+	$('#most-view-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			0: {
+				items: 2
+			},
+			945: {
+				items: 3
+			},
+			1400: {
+				items: 4
+			}
+		}
+	})
+}
+
+
+//people saying carousel
+function peopleSayingCarousel() {
+	$('#feedback-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 2
+			},
+			1000: {
+				items: 3
+			}
+		}
+	})
+}
+
+
+//shop by brand carousel
+function shopBrandCarousel () {
+	$('#shop-brand-carousel').owlCarousel({
+		loop: true,
+		autoplay:true,
+		margin: 10,
+		nav: false,
+		responsive: {
+			0: {
+				items: 1
+			},
+			400: {
+				items: 3
+			},
+			600: {
+				items: 4
+			},
+			800: {
+				items: 5
+			},
+			1000: {
+				items: 6
+			},
+			1200: {
+				items: 7
+			},
+			1400: {
+				items: 9
+			}
+		}
+	})
+}
+
+/***** owl carousel section end here *****/

@@ -1,3 +1,4 @@
+//Dom element variable
 const loginBtn = document.getElementsByClassName('login')
 const registerBtn = document.getElementsByClassName('register')
 const modal = document.getElementById('modal-section')
@@ -28,12 +29,9 @@ if (login_status === 'true') {
 	for (i=0; i<registerBtn.length; i++) {
 			//register modal open
 			registerBtn[i].addEventListener('click', showRegisterModal)
-
-
 			//login modal open
 			loginBtn[i].addEventListener('click', showLoginModal)
-	}
-		
+	}	
 		
 	//login and register click
 	register.addEventListener('click', registerFun)
@@ -42,10 +40,11 @@ if (login_status === 'true') {
 }
 
 
-//modal close click
+//close modal
 modalClose.addEventListener('click', () => modal.style.display = 'none')
 
-//show login modal
+
+//toggel login modal
 function showLoginModal() {
 
 	modal.style.display = 'block'
@@ -55,7 +54,7 @@ function showLoginModal() {
 }
 
 
-//show register modal
+//toggel register modal
 function showRegisterModal() {
 
 	modal.style.display = 'block'
@@ -67,9 +66,11 @@ function showRegisterModal() {
 
 
 
-/********************************
- ******** Register Function ********
- ********************************/
+
+/**********************************
+ ***** Register Functionality *****
+ **********************************/
+
 //register function
 function registerFun() {
 	const userName = document.getElementById('registerUsername').value
@@ -126,8 +127,7 @@ function registerFun() {
 }
 
 
-
-// set user function
+// set user to localstorage
 function set_user(userName, email, password) {
 	let set_status = false
 	let login_status = false
@@ -156,9 +156,11 @@ function set_user(userName, email, password) {
 
 
 
-/********************************
- ** Login and Logout Function ***
- ********************************/
+/******************************************
+ ***** Login and Logout Functionality *****
+ ******************************************/
+
+ //login function
  function loginFun() {
 	const email = document.getElementById('loginEmail').value
 	const password = document.getElementById('loginPassword').value
@@ -187,8 +189,7 @@ function set_user(userName, email, password) {
 }
 
 
-
-//display user name function
+//display user name
 function displayUserName() {
 	console.log('in display user name')
 	let userName
@@ -213,7 +214,6 @@ function displayUserName() {
 }
 
 
-
 // log out function
 function logoutFun() {
 
@@ -233,7 +233,14 @@ function logoutFun() {
 
 }
 
+/***** Login and Logout Functionality *****/
 
+
+
+
+/*************************************
+ **** LocalStorage functionality *****
+ *************************************/
 
 // localStorage set item function
 function set_item(key, value) {
@@ -249,3 +256,5 @@ function get_item(key) {
 	let key_value = localStorage.getItem(key)
 	return key_value
 }
+
+/***** LocalStorage functionality ******/
