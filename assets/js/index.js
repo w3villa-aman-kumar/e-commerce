@@ -3,10 +3,6 @@ let urlPath = window.location.pathname
 
 urlPath = urlPath.replace('/e-commerce','')
 
-//common functionality to render
-displaywlCount()
-displayCartCount()
-
 
 //render data on different url
 if ((urlPath == "/index.html") || (urlPath == "/") ){
@@ -19,12 +15,14 @@ if ((urlPath == "/index.html") || (urlPath == "/") ){
 	displayWlItem()
 
 } else if (urlPath == "/search-page.html") {
-
+	displaywlCount()
+	displayCartCount()
 	filterSearch()
 	mostViewCarousel()
 
 } else if (urlPath == "/product-page.html") {
-
+	displaywlCount()
+	displayCartCount()
 	displayProduct()
 	mostViewCarousel()
 
@@ -44,6 +42,10 @@ if ((urlPath == "/index.html") || (urlPath == "/") ){
 
  //home page dataHandler function decleration
 function dataHandler() {
+
+	//common functionality to render
+	displaywlCount()
+	displayCartCount()
 
 	//display why buy section
 	displayWhybuy()
@@ -72,6 +74,8 @@ function dataHandler() {
 }
 
 
+
+
 //toggel different category of html section
 function tglCategory(btnId, displayFun) {
 	let btnCategory = document.getElementById(btnId)
@@ -89,8 +93,9 @@ function tglCategory(btnId, displayFun) {
 			displayFun(category)
 		})
 	}
-
 }
+
+
 
 
 //toggel item in on hover
@@ -103,6 +108,8 @@ function tglItemIn(element) {
 }
 
 
+
+
 //toggel item out on hover
 function tglItemOut(element) {
 	const megamenu_content = document.querySelector(element)
@@ -111,6 +118,8 @@ function tglItemOut(element) {
 	megamenu_content.style.display = 'none'
 	overlay.style.display = 'none'
 }
+
+
 
 
 //render whybuy section html
@@ -148,6 +157,8 @@ async function displayWhybuy(category = 'top categories') {
 	whyBuy.insertAdjacentHTML("beforeend", whyBuyHtml)
 	topCategoryCarousel()
 }
+
+
 
 
 //render featured product section html
@@ -194,7 +205,7 @@ async function displayFeaturedProduct(category = 'featured') {
                                                 <div class="fp-button">
                                                     <div class="fp-add-cart">
                                                         <input type="number" id="quantity" min="1" max="5" value="1">
-                                                        <button class="btn" onclick="setAddToCart(${id})">Add to Cart</button>
+                                                        <button class="btn common-click" onclick="setAddToCart(${id})">Add to Cart</button>
                                                     </div>
                                                     <div class="fp-wishlist">
                                                         <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)"><i onmouseover="addHeartBg(this)" onmouseout="removeHeartBg(this)" class="fa-regular fa-heart fa-lg"></i></a>
@@ -218,6 +229,8 @@ async function displayFeaturedProduct(category = 'featured') {
 	fpLastElement.insertAdjacentHTML("beforebegin", featuredProductHtml)
 	featuredProductCarousel()
 }
+
+
 
 
 //render new fashion section html
@@ -256,7 +269,7 @@ async function displayNewfashion(category = 'new fashion') {
                                             <p>${price}</p>
                                             <hr>
                                             <div class="new-fashion-btn">
-                                                <a href="javascript:void(0);" class="btn" onclick="setAddToCart(${id})">Add to Cart</a>
+                                                <a href="javascript:void(0);" class="btn common-click" onclick="setAddToCart(${id})">Add to Cart</a>
                                                 <div class="new-fashion-wish-compare">
                                                     <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)"><i onmouseover="addHeartBg(this)" onmouseout="removeHeartBg(this)" class="fa-regular fa-heart fa-lg"></i></a>
                                                     <a href="javascript:void(0);"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
@@ -274,6 +287,8 @@ async function displayNewfashion(category = 'new fashion') {
 
 	newFashionCarousel()
 }
+
+
 
 
 //render our blog section html
@@ -332,6 +347,8 @@ async function displayOurBlog(category = 'latest post') {
 }
 
 
+
+
 // render most view section html
 async function displayMostView(category = 'most view') {
 	const mostView = document.getElementById('most-view-container')
@@ -364,7 +381,7 @@ async function displayMostView(category = 'most view') {
                                         <p>${name}</p>
                                         <p>${price}</p>
                                         <div>
-                                            <a onclick="setAddToCart(${id})">
+                                            <a class="common-click" onclick="setAddToCart(${id})">
                                                 <i class="fa-regular fa-cart-shopping"></i>
                                             </a>
                                             <a id="${id}" class="wl-btn-bg" onclick="setWishList(this)">
@@ -386,6 +403,8 @@ async function displayMostView(category = 'most view') {
 
 	mostViewCarousel()
 }
+
+
 
 
 //render people saying section html
@@ -431,6 +450,10 @@ async function displayPeopleSaying() {
 
 
 
+
+
+
+
 /********************************
  ***** Helper functionality *****
  ********************************/
@@ -463,6 +486,8 @@ function loadHtml() {
 }
 
 
+
+
 //function for loading js file
 function loadJS(FILE_URL, async = true) {
 	let scriptEle = document.createElement("script");
@@ -489,6 +514,10 @@ function loadJS(FILE_URL, async = true) {
 
 
 
+
+
+
+
 /**********************************
  ***** Wishlist functionality *****
  **********************************/
@@ -506,7 +535,7 @@ async function displayWlItem() {
 	let i
 
     
-    if (wishlistId.length == 0) {
+    if (!(wishlistId) || wishlistId.length == 0) {
         table.innerHTML = ''
         table.parentElement.innerHTML = 'Your wishlist is empty'
         return
@@ -547,6 +576,8 @@ async function displayWlItem() {
 }
 
 
+
+
 //display count of product in wishlist
 function displaywlCount() {
 
@@ -566,6 +597,8 @@ function displaywlCount() {
 }
 
 
+
+
 //add heart icon bg
 function addHeartBg(self) {
 	self.classList.remove('fa-regular')
@@ -574,12 +607,16 @@ function addHeartBg(self) {
 }
 
 
+
+
 //remove heart icon bg
 function removeHeartBg(self) {
 	self.classList.remove('fa-solid')
 	self.classList.add('fa-regular')
 	self.style.color = "var(--primary-grey)"
 }
+
+
 
 
 //add product to wishlist
@@ -602,6 +639,8 @@ function setWishList(self) {
 	}
 
 }
+
+
 
 
 //remove product from wishlist
@@ -631,12 +670,22 @@ function removeWLItem(self) {
 
 
 
+
+
+
+
 /*************************************
  ***** Add to cart functionality *****
  *************************************/
 
+//  //add to cart button click effect
+// function addcartClickEffect(self) {
+// 	self.style.background = 'var(--limed-spruce)'
+// }
+
  //set item to cart
 function setAddToCart(id) {
+
 	let addCart = []
 
 	let db_addcart = JSON.parse(get_item('addCart'))
@@ -654,6 +703,8 @@ function setAddToCart(id) {
 
 	displayCartCount()
 }
+
+
 
 
 // display all the item in cart
@@ -711,6 +762,8 @@ async function displayCartItem() {
 }
 
 
+
+
 //display count of item in cart
 async function displayCartCount() {
     const db_addcart = JSON.parse(get_item('addCart'))
@@ -743,6 +796,8 @@ async function displayCartCount() {
 }
 
 
+
+
 // remove items from cart
 function removeCartItem (self) {
     const table = document.getElementById('addcart-table')
@@ -768,6 +823,10 @@ function removeCartItem (self) {
 }
 
 /***** Add to cart functionality end *****/
+
+
+
+
 
 
 
@@ -798,6 +857,8 @@ searchInput.addEventListener('keypress', (event) => {
 searchBtn.addEventListener('click', () => {
 	window.location.href = './search-page.html'+'?'+'product='+searchInput.value
 })
+
+
 
 
 //Filter and display searched product
@@ -852,7 +913,7 @@ async function filterSearch() {
 											<div class="search-button">
 												<div class="search-add-cart">
 													<input type="number" id="quantity" min="1" max="5" value="1">
-													<button class="btn" onclick="setAddToCart(${id})">Add to Cart</button>
+													<button class="btn common-click" onclick="setAddToCart(${id})">Add to Cart</button>
 												</div>
 												<div class="search-wishlist">
 													<a id="${id}" onclick="setWishList(this)"><i class="fa-regular fa-heart fa-lg"></i></a>
@@ -877,7 +938,7 @@ async function filterSearch() {
 										</div>
 										<div class="search-button-list">
 											<input type="number" id="quantity" min="1" max="5" value="1">
-											<button onclick="setAddToCart(${id})"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+											<button class="common-click" onclick="setAddToCart(${id})"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
 											<div onclick="setWishList(this)" id="${id}"><i class="fa-regular fa-heart"></i></div>
 											<div><i class="fa-solid fa-right-left"></i></div>
 										</div>
@@ -897,6 +958,10 @@ async function filterSearch() {
 }
 
 /***** Search page functionality end here *****/
+
+
+
+
 
 
 
@@ -937,6 +1002,10 @@ async function displayProduct() {
 
 
 
+
+
+
+
 /*************************************
  **** LocalStorage functionality *****
  *************************************/
@@ -950,6 +1019,8 @@ function set_item(key, value) {
 }
 
 
+
+
 // localStorage get item function
 function get_item(key) {
 	let key_value = localStorage.getItem(key)
@@ -957,6 +1028,10 @@ function get_item(key) {
 }
 
 /***** LocalStorage functionality ******/
+
+
+
+
 
 
 

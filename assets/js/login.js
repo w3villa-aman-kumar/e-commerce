@@ -127,13 +127,13 @@ function registerFun() {
 }
 
 
-// set user to localstorage
-function set_user(userName, email, password) {
+// set user function
+function set_user(user_name, email, password) {
 	let set_status = false
 	let login_status = false
 	let user = {}
 	let new_user = {
-		"userName": userName,
+		"userName": user_name,
 		"email": email,
 		"password": password,
 		"loginStatus": login_status
@@ -141,14 +141,11 @@ function set_user(userName, email, password) {
 
 	let db_user = get_item('user')
 
-	if (db_user != null) {Login
-
-
+	if (db_user != null) {
 		user = JSON.parse(db_user)
 	}
 
 	user[email] = new_user
-
 	set_status = set_item('user', user)
 	return set_status
 

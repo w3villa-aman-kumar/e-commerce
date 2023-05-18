@@ -168,6 +168,14 @@ body{
 /**************************************
  **** Common class css start here **** 
  **************************************/
+.common-click:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 10px -10px;
+}
+
+.common-click:active {
+    transform: translateY(4px);
+}
+
 .wl-btn-bg{
     cursor: pointer;
 }
