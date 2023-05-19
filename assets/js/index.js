@@ -864,7 +864,7 @@ searchBtn.addEventListener('click', () => {
 //Filter and display searched product
 async function filterSearch() {
 	console.log('in filter search')
-	const searchedCard = document.getElementById('searched-card-div-id')
+	const paginationBtn = document.querySelector('.pagination-number-wrap')
 
 	let response = await fetch("./assets/data/product.json")
 	let data = await response.json()
@@ -872,10 +872,14 @@ async function filterSearch() {
 	const url_params = new URLSearchParams(window.location.search)
 	const product = url_params.get('product')
 
-	let searchedCardHtml
-	let productCount = 0
+	let paginationBtnHtml
+	let productCount = 0,
+		btnCount = 0
 
-	if (product == '' ) {
+	let paginationData = {}
+	let paginationArr = []
+
+	if (product == '') {
 		searchedCard.innerHTML = 'no results found'
 		return
 	}
@@ -884,77 +888,154 @@ async function filterSearch() {
 		if (data.products[i].name.toLowerCase().match(product)) {
 
 			productCount++
+			paginationArr.push(data.products[i])
 
-			let {
-				id,
-				img,
-				company,
-				model,
-				name,
-				price,
-				description
-			} = data.products[i]
 
-			searchedCardHtml = `<div class="common-search searched-card-grid">
-									<div class="search-card-img common-tag" onclick="window.location.href = './product-page.html'+'?'+'product-id=${id}'">
-										<img src="${img}" alt="headphone">
-										<div class="card-tag right top"><span>-70%</span></div>
-										<div class="card-tag right bottom"><span>HOT</span></div>
-									</div>
+			if (productCount % 6 == 1) {
+				btnCount++
+				paginationBtnHtml = `<button class="pagination-number">${btnCount}</button>`
+				paginationBtn.insertAdjacentHTML("beforeend", paginationBtnHtml)
+			}
 
-									<div class="search-card-bottom">
-										<div class="search-seller">
-											<a href="#">${company}</a>
-											<p>${model}</p>
-										</div>
-										<div class="search-details">
-											<p class="search-card-title">${name}</p>
-											<p class="search-price">${price} <strike>$3,299.00</strike></p>
-											<div class="search-button">
-												<div class="search-add-cart">
-													<input type="number" id="quantity" min="1" max="5" value="1">
-													<button class="btn common-click" onclick="setAddToCart(${id})">Add to Cart</button>
-												</div>
-												<div class="search-wishlist">
-													<a id="${id}" onclick="setWishList(this)"><i class="fa-regular fa-heart fa-lg"></i></a>
-													<a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
-												</div>
-											</div>
-										</div>
-										<div class="search-buy-now">
-											<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
-											<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
-										</div>
-									</div>
+			if (productCount % 6 === 0) {
+				paginationData[String(btnCount)] = paginationArr
+				paginationArr = []
+			}
 
-									<!-- search-card list view bottom -->
-									<div class="search-card-bottom-list">
-										<p class="top-title"><span>Brand: <a href="#">${company}</a></span> <span>Model: ${model}</span></p>
-										<p class="search-card-title">${name}</p>
-										<p class="search-desc">${description}</p>
-										<div class="search-price-container">
-											<p class="search-price"><span style="color:orange;">${price}</span> <strike>78.46$</strike></p>
-											<p>Ex Tax:70.61 $</p>
-										</div>
-										<div class="search-button-list">
-											<input type="number" id="quantity" min="1" max="5" value="1">
-											<button class="common-click" onclick="setAddToCart(${id})"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
-											<div onclick="setWishList(this)" id="${id}"><i class="fa-regular fa-heart"></i></div>
-											<div><i class="fa-solid fa-right-left"></i></div>
-										</div>
-										<div class="search-buy-now">
-											<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
-											<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
-										</div>
-									</div>
-								</div>`
-			searchedCard.insertAdjacentHTML("beforeend",searchedCardHtml)
 		}
 	}
 
-	if (productCount == 0 ) {
+	paginationData[btnCount] = paginationArr
+
+
+	if (productCount == 0) {
 		searchedCard.innerHTML = 'no results found'
+	} else {
+		renderProductCard(paginationData['1'])
+		paginateDataFun(paginationData, 1, btnCount)
 	}
+
+}
+
+
+
+
+// toggel data on click paginated button
+function paginateDataFun(paginatedData, currentIndex, lastIndex) {
+	const paginatedBtn = document.querySelectorAll('.pagination-number')
+	const btnPrev = document.querySelector('#left-move')
+	const btnNext = document.querySelector('#right-move')
+
+	paginatedBtn.forEach(element => {
+		element.addEventListener('click', () => {
+			const num = element.innerHTML
+			renderProductCard(paginatedData[num])
+		})
+	})
+
+	btnPrev.addEventListener('click', () => {
+		if (currentIndex > 1) {
+			renderProductCard(paginatedData[--currentIndex])
+		} else {
+			renderProductCard(paginatedData[currentIndex])
+		}
+	})
+
+	btnNext.addEventListener('click', () => {
+		if (currentIndex < lastIndex) {
+			renderProductCard(paginatedData[++currentIndex])
+		} else {
+			renderProductCard(paginatedData[lastIndex])
+		}
+	})
+
+}
+
+
+
+
+// render product card on search page
+function renderProductCard(data) {
+	const searchedCard = document.querySelector('.searched-item-div')
+	const searchedCardDiv = document.getElementById('searched-card-div-id')
+
+	let searchedCardHtml = `<div id="searched-card-div-id" class="searched-card-gd">`
+
+	if (searchedCardDiv) {
+		searchedCard.removeChild(searchedCardDiv)
+	}
+
+	for (i in data) {
+		let {
+			id,
+			img,
+			company,
+			model,
+			name,
+			price,
+			description
+		} = data[i]
+
+		searchedCardHtml += `<div class="common-search searched-card-grid">
+								<div class="search-card-img common-tag" onclick="window.location.href = './product-page.html'+'?'+'product-id=${id}'">
+									<img src="${img}" alt="headphone">
+									<div class="card-tag right top"><span>-70%</span></div>
+									<div class="card-tag right bottom"><span>HOT</span></div>
+								</div>
+	
+								<div class="search-card-bottom">
+									<div class="search-seller">
+										<a href="#">${company}</a>
+										<p>${model}</p>
+									</div>
+									<div class="search-details">
+										<p class="search-card-title">${name}</p>
+										<p class="search-price">${price} <strike>$3,299.00</strike></p>
+										<div class="search-button">
+											<div class="search-add-cart">
+												<input type="number" id="quantity" min="1" max="5" value="1">
+												<button class="btn common-click" onclick="setAddToCart(${id})">Add to Cart</button>
+											</div>
+											<div class="search-wishlist">
+												<a id="${id}" onclick="setWishList(this)"><i class="fa-regular fa-heart fa-lg"></i></a>
+												<a href="#"><i class="fa-regular fa-arrow-right-arrow-left fa-lg"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="search-buy-now">
+										<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+										<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+									</div>
+								</div>
+	
+								<!-- search-card list view bottom -->
+								<div class="search-card-bottom-list">
+									<p class="top-title"><span>Brand: <a href="#">${company}</a></span> <span>Model: ${model}</span></p>
+									<p class="search-card-title">${name}</p>
+									<p class="search-desc">${description}</p>
+									<div class="search-price-container">
+										<p class="search-price"><span style="color:orange;">${price}</span> <strike>78.46$</strike></p>
+										<p>Ex Tax:70.61 $</p>
+									</div>
+									<div class="search-button-list">
+										<input type="number" id="quantity" min="1" max="5" value="1">
+										<button class="common-click" onclick="setAddToCart(${id})"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+										<div onclick="setWishList(this)" id="${id}"><i class="fa-regular fa-heart"></i></div>
+										<div><i class="fa-solid fa-right-left"></i></div>
+									</div>
+									<div class="search-buy-now">
+										<a href="#"><i class="fa-regular fa-dollar-sign"></i> Buy Now</a>
+										<a href="#"><i class="fa-regular fa-circle-question"></i> Question</a>
+									</div>
+								</div>
+							</div>`
+	}
+
+	searchedCardHtml += `</div>`
+
+
+	searchedCard.insertAdjacentHTML("beforeend", searchedCardHtml)
+
 }
 
 /***** Search page functionality end here *****/

@@ -1073,6 +1073,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /**** searched item card section end here ****/
 
+.pagination-link-wrap {
+    display: flex;
+    column-gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.pagination-link-wrap button {
+    width: 30px;
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    background-color: var(--white);
+}
 
  .bottom-text{
     text-align: center;
