@@ -469,7 +469,9 @@ function loadHtml() {
 			document.getElementById("header-part").innerHTML = data;
 			displaywlCount()
 			displayCartCount()
-		});
+			loadJS("./assets/js/login.js")
+		})
+
 
 	fetch("./footer.html")
 		.then(response => {
@@ -478,10 +480,7 @@ function loadHtml() {
 		.then(data => {
 			document.getElementById("footer-part").innerHTML = data;
 			mostViewCarousel()
-		})
-		.then(
-			loadJS("./assets/js/login.js")
-		)
+		});
 
 }
 
